@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memory Map: Freedom Drive & Wilkinson Blvd</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://tile.openstreetmap.org" />
+    <link rel="preconnect" href="https://tiles.openfreemap.org" />
+    <link rel="preconnect" href="https://server.arcgisonline.com" />
+    <link rel="preconnect" href="https://services.arcgisonline.com" />
+    <link href="https://unpkg.com/maplibre-gl@^5.12.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="memory-sidebar" aria-label="Memory collection">
+        <header class="brand-block">
+          <p class="eyebrow">Charlotte, NC</p>
+          <h1>Freedom & Wilkinson Memory Atlas</h1>
+        </header>
+
+        <section class="toolbar" aria-label="Map controls">
+          <button id="addMemoryButton" class="primary-action" type="button">
+            <span aria-hidden="true">+</span>
+            Add memory
+          </button>
+          <button id="resetViewButton" class="icon-action" type="button" title="Reset map view" aria-label="Reset map view">
+            &#8634;
+          </button>
+        </section>
+
+        <section class="memory-stats" aria-label="Map summary">
+          <article>
+            <strong id="buildingCount">0</strong>
+            <span>mapped places</span>
+          </article>
+          <article>
+            <strong id="memoryCount">0</strong>
+            <span>memories</span>
+          </article>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Remembered places</h2>
+            <span id="activeAreaLabel">West Charlotte area</span>
+          </div>
+          <div id="memoryList" class="memory-list"></div>
+        </section>
+      </aside>
+
+      <section class="map-stage" aria-label="Interactive GIS map">
+        <div id="map"></div>
+        <div class="map-badge" aria-hidden="true">
+          <span>3D west Charlotte view</span>
+          <strong>Freedom Dr / Wilkinson Blvd anchors</strong>
+        </div>
+        <section class="angle-controls" aria-label="3D map angle presets">
+          <button type="button" data-bearing="-24" data-pitch="58">Corridor</button>
+          <button type="button" data-bearing="35" data-pitch="64">NE</button>
+          <button type="button" data-bearing="125" data-pitch="64">SE</button>
+          <button type="button" data-bearing="-145" data-pitch="64">West</button>
+          <button type="button" data-bearing="0" data-pitch="18">Top</button>
+        </section>
+
+        <section id="detailPanel" class="detail-panel is-hidden" aria-live="polite">
+          <div class="detail-media">
+            <img id="detailImage" alt="" />
+            <div class="detail-maplet">
+              <span>Zoomed memory view</span>
+              <div id="miniMapShape"></div>
+            </div>
+          </div>
+          <div class="detail-copy">
+            <button id="closeDetailButton" class="close-button" type="button" aria-label="Close memory details">&times;</button>
+            <p id="detailStreet" class="eyebrow"></p>
+            <h2 id="detailTitle"></h2>
+            <p id="detailDescription"></p>
+            <dl class="detail-meta">
+              <div>
+                <dt>Memory year</dt>
+                <dd id="detailYear"></dd>
+              </div>
+              <div>
+                <dt>Building type</dt>
+                <dd id="detailType"></dd>
+              </div>
+            </dl>
+            <div class="detail-actions">
+              <button id="deleteMemoryButton" class="danger-action" type="button">Delete memory</button>
+            </div>
+          </div>
+        </section>
+
+        <form id="memoryForm" class="memory-form is-hidden" aria-label="Add memory dialog">
+          <header>
+            <div>
+              <p class="eyebrow">Add a building memory</p>
+              <h2>Pin a story to this map</h2>
+            </div>
+            <button id="cancelMemoryButton" class="close-button" type="button" aria-label="Cancel">&times;</button>
+          </header>
+          <p id="selectedLocationText" class="location-note">Map location: current view center</p>
+          <label>
+            Building or place name
+            <input id="placeNameInput" name="placeName" required placeholder="Ex. Former corner market" />
+          </label>
+          <label>
+            Street / area
+            <input id="streetInput" name="street" required placeholder="Ex. Wilkinson Blvd near Ashley Rd" />
+          </label>
+          <label>
+            Memory description
+            <textarea id="descriptionInput" name="description" required rows="4" placeholder="What happened here? What image should people remember?"></textarea>
+          </label>
+          <div class="form-grid">
+            <label>
+              Year
+              <input id="yearInput" name="year" type="number" min="1900" max="2026" value="1998" />
+            </label>
+            <label>
+              Building type
+              <select id="typeInput" name="type">
+                <option>Retail</option>
+                <option>Home</option>
+                <option>School</option>
+                <option>Church</option>
+                <option>Industrial</option>
+                <option>Public space</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Memory image
+            <input id="imageInput" name="image" type="file" accept="image/*" />
+          </label>
+          <div id="imagePreviewWrap" class="image-preview is-hidden">
+            <img id="imagePreview" alt="Selected memory preview" />
+          </div>
+          <button class="primary-action" type="submit">Save memory</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/maplibre-gl@^5.12.0/dist/maplibre-gl.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

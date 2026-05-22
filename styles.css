@@ -1,0 +1,841 @@
+:root {
+  color-scheme: light;
+  --ink: #17201b;
+  --muted: #68736e;
+  --line: #d9dfdc;
+  --paper: #f7f5ee;
+  --panel: #fffdfa;
+  --green: #1f6f5b;
+  --green-dark: #134638;
+  --coral: #bd5d45;
+  --gold: #d9ad4f;
+  --blue: #416d8c;
+  --shadow: 0 18px 55px rgba(32, 43, 38, 0.18);
+  --satellite-panel: rgba(16, 30, 26, 0.86);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--paper);
+  overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(300px, 340px) minmax(0, 1fr);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.memory-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100vh;
+  padding: 24px;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  overflow: auto;
+  z-index: 3;
+}
+
+.brand-block h1 {
+  margin: 6px 0 0;
+  font-size: clamp(1.8rem, 3.4vw, 2.45rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--coral);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+}
+
+.primary-action,
+.icon-action,
+.close-button {
+  border: 0;
+  border-radius: 8px;
+}
+
+.primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  color: white;
+  background: var(--green);
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(31, 111, 91, 0.18);
+}
+
+.primary-action:hover,
+.primary-action:focus-visible {
+  background: var(--green-dark);
+}
+
+.icon-action {
+  width: 44px;
+  height: 44px;
+  color: var(--green-dark);
+  background: #e7eee9;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.memory-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.memory-stats article {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfaf6;
+}
+
+.memory-stats strong {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.memory-stats span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.section-heading span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+.memory-list {
+  display: grid;
+  gap: 10px;
+}
+
+.memory-card {
+  width: 100%;
+  padding: 14px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.memory-card:hover,
+.memory-card:focus-visible,
+.memory-card.is-active {
+  border-color: rgba(31, 111, 91, 0.7);
+  box-shadow: 0 10px 22px rgba(23, 32, 27, 0.09);
+  transform: translateY(-1px);
+}
+
+.memory-card strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.memory-card span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.map-stage {
+  position: relative;
+  min-width: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+  background: #dbe4e0;
+  cursor: grab;
+}
+
+#map:active {
+  cursor: grabbing;
+}
+
+.maplibregl-map {
+  overflow: hidden;
+  font: inherit;
+}
+
+.maplibregl-canvas,
+.maplibregl-canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.maplibregl-canvas {
+  outline: none;
+}
+
+.maplibregl-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  z-index: 5;
+}
+
+.maplibregl-control-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.maplibregl-ctrl-top-right,
+.maplibregl-ctrl-bottom-right {
+  position: absolute;
+  right: 12px;
+  pointer-events: auto;
+}
+
+.maplibregl-ctrl-top-right {
+  top: 12px;
+}
+
+.maplibregl-ctrl-bottom-right {
+  bottom: 8px;
+}
+
+.maplibregl-ctrl {
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 27, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 250, 0.94);
+  box-shadow: 0 10px 22px rgba(23, 32, 27, 0.12);
+}
+
+.maplibregl-ctrl button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  color: var(--green-dark);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.maplibregl-ctrl button + button {
+  border-top: 1px solid var(--line);
+}
+
+.maplibregl-ctrl-zoom-in::before {
+  content: "+";
+}
+
+.maplibregl-ctrl-zoom-out::before {
+  content: "-";
+}
+
+.maplibregl-ctrl-compass::before {
+  content: "N";
+  font-size: 0.72rem;
+  letter-spacing: 0;
+}
+
+.maplibregl-ctrl-attrib {
+  padding: 3px 6px;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.maplibregl-ctrl-attrib a {
+  color: var(--green-dark);
+}
+
+.map-badge {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 30;
+  padding: 10px 12px;
+  border: 1px solid rgba(23, 32, 27, 0.12);
+  border-radius: 8px;
+  background: var(--satellite-panel);
+  box-shadow: 0 10px 22px rgba(23, 32, 27, 0.12);
+  pointer-events: none;
+}
+
+.angle-controls {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  z-index: 30;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: min(430px, calc(100% - 104px));
+  padding: 7px;
+  border: 1px solid rgba(23, 32, 27, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 253, 250, 0.92);
+  box-shadow: 0 10px 22px rgba(23, 32, 27, 0.12);
+}
+
+.angle-controls button {
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--green-dark);
+  background: white;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.angle-controls button:hover,
+.angle-controls button:focus-visible {
+  border-color: rgba(31, 111, 91, 0.65);
+  background: #e7eee9;
+}
+
+.map-badge span,
+.map-badge strong {
+  display: block;
+}
+
+.map-badge span {
+  color: #f0c66d;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.map-badge strong {
+  margin-top: 2px;
+  color: white;
+  font-size: 0.84rem;
+}
+
+.map-error {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 360px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 800;
+}
+
+/* Local Leaflet layout fallback. The CDN stylesheet can be blocked in some app-browser contexts. */
+.leaflet-container {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.leaflet-container img.leaflet-tile,
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow {
+  max-width: none;
+  max-height: none;
+}
+
+.leaflet-tile {
+  width: 256px;
+  height: 256px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.leaflet-tile-pane {
+  z-index: 200;
+}
+
+.leaflet-overlay-pane {
+  z-index: 400;
+}
+
+.leaflet-marker-pane {
+  z-index: 600;
+}
+
+.leaflet-tooltip-pane {
+  z-index: 650;
+}
+
+.leaflet-popup-pane {
+  z-index: 700;
+}
+
+.leaflet-control {
+  position: relative;
+  z-index: 800;
+  pointer-events: auto;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  position: absolute;
+  z-index: 900;
+  pointer-events: none;
+}
+
+.leaflet-top {
+  top: 12px;
+}
+
+.leaflet-right {
+  right: 12px;
+}
+
+.leaflet-control-zoom {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 27, 0.14);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 10px 22px rgba(23, 32, 27, 0.12);
+}
+
+.leaflet-control-zoom a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: var(--green-dark);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.leaflet-control-zoom a + a {
+  border-top: 1px solid var(--line);
+}
+
+.leaflet-bottom.leaflet-right {
+  right: 10px;
+  bottom: 8px;
+}
+
+.leaflet-control-attribution {
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: rgba(255, 253, 250, 0.82);
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+.building-marker {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: white;
+  background: var(--coral);
+  border: 3px solid white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(23, 32, 27, 0.26);
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.building-marker.is-active {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.pending-marker {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: white;
+  background: var(--green);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(23, 32, 27, 0.34);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.road-label-marker {
+  padding: 6px 10px;
+  color: #101e1a;
+  background: var(--road-color);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.32),
+    0 0 0 4px rgba(16, 30, 26, 0.28);
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.dialog-marker {
+  min-width: 160px;
+  padding: 9px 10px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid rgba(23, 32, 27, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(23, 32, 27, 0.2);
+}
+
+.dialog-marker strong {
+  display: block;
+  font-size: 0.84rem;
+}
+
+.dialog-marker span {
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.building-footprint {
+  filter: drop-shadow(4px 7px 0 rgba(65, 109, 140, 0.28));
+}
+
+.detail-panel,
+.memory-form {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  bottom: 16px;
+  width: min(390px, calc(100% - 32px));
+  background: var(--panel);
+  border: 1px solid rgba(23, 32, 27, 0.12);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  z-index: 800;
+}
+
+.detail-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.detail-media {
+  position: relative;
+  min-height: 220px;
+  background: #dce4df;
+}
+
+.detail-media img {
+  width: 100%;
+  height: 220px;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-maplet {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  width: 150px;
+  padding: 10px;
+  color: white;
+  background: rgba(19, 70, 56, 0.88);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+}
+
+.detail-maplet span {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+#miniMapShape {
+  height: 82px;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  background:
+    linear-gradient(65deg, transparent 45%, rgba(255, 255, 255, 0.34) 46% 54%, transparent 55%),
+    linear-gradient(145deg, rgba(217, 173, 79, 0.82), rgba(189, 93, 69, 0.72));
+  clip-path: polygon(14% 16%, 88% 9%, 78% 83%, 8% 70%);
+}
+
+.detail-copy {
+  position: relative;
+  padding: 22px;
+}
+
+.detail-copy h2,
+.memory-form h2 {
+  margin: 5px 34px 12px 0;
+  font-size: 1.55rem;
+  line-height: 1.08;
+}
+
+.detail-copy p:not(.eyebrow) {
+  color: #35423c;
+  line-height: 1.55;
+}
+
+.close-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  color: var(--ink);
+  background: #edf1ee;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.detail-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.detail-meta div {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.detail-meta dt {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.detail-meta dd {
+  margin: 4px 0 0;
+  font-weight: 800;
+}
+
+.detail-actions {
+  margin-top: 18px;
+}
+
+.danger-action {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid rgba(189, 93, 69, 0.4);
+  border-radius: 8px;
+  color: #8f3424;
+  background: #fff1ed;
+  font-weight: 900;
+}
+
+.danger-action:hover,
+.danger-action:focus-visible {
+  color: white;
+  background: var(--coral);
+}
+
+.memory-form {
+  max-width: 470px;
+  bottom: auto;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 22px;
+}
+
+.memory-form header {
+  position: relative;
+}
+
+.memory-form label {
+  display: grid;
+  gap: 7px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.83rem;
+  font-weight: 800;
+}
+
+.location-note {
+  margin: 2px 0 4px;
+  padding: 10px 12px;
+  color: var(--green-dark);
+  background: #e7eee9;
+  border: 1px solid rgba(31, 111, 91, 0.18);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.memory-form input,
+.memory-form select,
+.memory-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 11px 12px;
+  color: var(--ink);
+  background: white;
+  resize: vertical;
+}
+
+.memory-form input[type="file"] {
+  padding: 9px;
+}
+
+.image-preview {
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #edf1ee;
+}
+
+.image-preview img {
+  display: block;
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.memory-form .primary-action {
+  width: 100%;
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  .memory-sidebar {
+    height: auto;
+    max-height: 42vh;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .map-stage {
+    height: 58vh;
+  }
+
+  .detail-panel {
+    top: auto;
+    max-height: 72vh;
+    overflow: auto;
+  }
+
+  .angle-controls {
+    left: 12px;
+    top: 12px;
+    max-width: calc(100% - 92px);
+  }
+}
+
+@media (max-width: 560px) {
+  .memory-sidebar {
+    padding: 20px;
+  }
+
+  .brand-block h1 {
+    font-size: 2rem;
+  }
+
+  .detail-panel,
+  .memory-form {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .form-grid,
+  .detail-meta {
+    grid-template-columns: 1fr;
+  }
+}
