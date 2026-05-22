@@ -674,16 +674,22 @@ async function deleteActiveMemory() {
   const shouldDelete = window.confirm(`Delete "${place.name}" from the memory map?`);
   if (!shouldDelete) return;
 
-  if (place.remote && supabaseClient && supabaseConfig.allowPublicDatabaseDeletes) {
-    const { error } = await supabaseClient.from(supabaseTable).delete().eq("id", place.id);
+  if (place.remote && supabaseClient) {
+    const { data, error } = await supabaseClient.rpc("delete_memory", {
+      p_memory_id: place.id,
+      p_creator_token: creatorToken,
+    });
 
     if (error) {
       window.alert("Could not delete this memory from the shared database.");
       console.warn("Could not delete shared memory", error.message);
       return;
     }
-  } else if (place.remote && supabaseClient) {
-    window.alert("Shared database deletion is disabled for public visitors. This memory will only be hidden from this browser session.");
+
+    if (!data) {
+      window.alert("This shared memory can only be deleted from the browser that originally created it.");
+      return;
+    }
   }
 
   const index = memoryPlaces.findIndex((item) => item.id === activeId);

@@ -57,3 +57,26 @@ for insert
 to anon
 with check (bucket_id = 'memory-images');
 
+create or replace function public.delete_memory(
+  p_memory_id uuid,
+  p_creator_token text
+)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  deleted_count integer;
+begin
+  delete from public.memories
+  where id = p_memory_id
+    and creator_token = p_creator_token;
+
+  get diagnostics deleted_count = row_count;
+  return deleted_count > 0;
+end;
+$$;
+
+revoke all on function public.delete_memory(uuid, text) from public;
+grant execute on function public.delete_memory(uuid, text) to anon, authenticated;

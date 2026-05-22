@@ -4,5 +4,4 @@ window.MemoryAtlasConfig = {
   supabaseTable: "memories",
   supabaseBucket: "memory-images",
   showSeedMemoriesWhenDatabaseEmpty: true,
-  allowPublicDatabaseDeletes: false,
 };

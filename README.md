@@ -33,3 +33,5 @@ For a public community version where everyone sees the same submissions, connect
 6. Set `supabaseAnonKey` to your public anon key.
 
 Do not use a Supabase service role key in this browser app. The anon key is expected to be public, and safety comes from Row Level Security policies.
+
+The delete button uses the `delete_memory` database function. It allows a visitor to delete a shared memory only from the same browser session that created it.
