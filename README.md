@@ -16,10 +16,20 @@ An interactive 3D satellite memory map for West Charlotte, centered around Freed
 
 This version is a static GitHub Pages app. Community memories added in the browser are temporary until a shared database is connected.
 
-For a public community version where everyone sees the same submissions, connect a backend such as Supabase for:
+For a public community version where everyone sees the same submissions, connect Supabase for:
 
 - shared memory records
 - uploaded image storage
 - moderation/approval status
 - optional submitter name/contact fields
 
+## Supabase Setup
+
+1. Create a Supabase project.
+2. Open the Supabase SQL Editor.
+3. Run the SQL in `supabase-schema.sql`.
+4. Copy `config.example.js` values into `config.js`.
+5. Set `supabaseUrl` to your project URL.
+6. Set `supabaseAnonKey` to your public anon key.
+
+Do not use a Supabase service role key in this browser app. The anon key is expected to be public, and safety comes from Row Level Security policies.

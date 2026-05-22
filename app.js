@@ -65,7 +65,7 @@ const highlightedRoads = [
   },
 ];
 
-const memoryPlaces = [
+const seedMemoryPlaces = [
   {
     id: "ashley-wilkinson-market",
     name: "Corner Market on Wilkinson",
@@ -148,6 +148,7 @@ const memoryPlaces = [
   },
 ];
 
+let memoryPlaces = [...seedMemoryPlaces];
 let activeId = null;
 let activeMarker = null;
 let mapLayersReady = false;
@@ -177,6 +178,21 @@ const imageInput = document.querySelector("#imageInput");
 const imagePreview = document.querySelector("#imagePreview");
 const imagePreviewWrap = document.querySelector("#imagePreviewWrap");
 const angleControls = document.querySelector(".angle-controls");
+
+const supabaseConfig = window.MemoryAtlasConfig || {};
+const supabaseTable = supabaseConfig.supabaseTable || "memories";
+const supabaseBucket = supabaseConfig.supabaseBucket || "memory-images";
+const supabaseClient =
+  supabaseConfig.supabaseUrl && supabaseConfig.supabaseAnonKey && window.supabase
+    ? window.supabase.createClient(supabaseConfig.supabaseUrl, supabaseConfig.supabaseAnonKey)
+    : null;
+const creatorTokenKey = "memory-atlas-creator-token";
+let creatorToken = localStorage.getItem(creatorTokenKey);
+
+if (!creatorToken) {
+  creatorToken = crypto.randomUUID();
+  localStorage.setItem(creatorTokenKey, creatorToken);
+}
 
 if (!window.maplibregl) {
   document.querySelector("#map").innerHTML =
@@ -651,12 +667,24 @@ function openMemory(id) {
   });
 }
 
-function deleteActiveMemory() {
+async function deleteActiveMemory() {
   const place = memoryPlaces.find((item) => item.id === activeId);
   if (!place) return;
 
   const shouldDelete = window.confirm(`Delete "${place.name}" from the memory map?`);
   if (!shouldDelete) return;
+
+  if (place.remote && supabaseClient && supabaseConfig.allowPublicDatabaseDeletes) {
+    const { error } = await supabaseClient.from(supabaseTable).delete().eq("id", place.id);
+
+    if (error) {
+      window.alert("Could not delete this memory from the shared database.");
+      console.warn("Could not delete shared memory", error.message);
+      return;
+    }
+  } else if (place.remote && supabaseClient) {
+    window.alert("Shared database deletion is disabled for public visitors. This memory will only be hidden from this browser session.");
+  }
 
   const index = memoryPlaces.findIndex((item) => item.id === activeId);
   if (index >= 0) memoryPlaces.splice(index, 1);
@@ -679,6 +707,57 @@ function createFootprintFromPoint([lng, lat]) {
   ];
 }
 
+function normalizeRemoteMemory(row) {
+  const coords = [Number(row.lng), Number(row.lat)];
+  const footprint = Array.isArray(row.footprint) ? row.footprint : createFootprintFromPoint(coords);
+
+  return {
+    id: row.id,
+    name: row.place_name,
+    street: row.street,
+    description: row.description,
+    year: Number(row.memory_year) || new Date(row.created_at || Date.now()).getFullYear(),
+    type: row.building_type || "Public space",
+    coords,
+    height: Number(row.height) || 36,
+    footprint,
+    image:
+      row.image_url || "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+    remote: true,
+    creatorToken: row.creator_token,
+  };
+}
+
+async function loadRemoteMemories() {
+  if (!supabaseClient) return;
+
+  const { data, error } = await supabaseClient
+    .from(supabaseTable)
+    .select(
+      "id, place_name, street, description, memory_year, building_type, lng, lat, height, footprint, image_url, creator_token, created_at",
+    )
+    .eq("status", "approved")
+    .order("created_at", { ascending: true });
+
+  if (error) {
+    console.warn("Could not load shared memories", error.message);
+    return;
+  }
+
+  if (data.length > 0 || !supabaseConfig.showSeedMemoriesWhenDatabaseEmpty) {
+    memoryPlaces = data.map(normalizeRemoteMemory);
+  } else {
+    memoryPlaces = [...seedMemoryPlaces];
+  }
+
+  if (activeId && !memoryPlaces.some((place) => place.id === activeId)) {
+    activeId = null;
+    detailPanel.classList.add("is-hidden");
+  }
+
+  renderPlaces();
+}
+
 function readUploadedImage() {
   const file = imageInput.files && imageInput.files[0];
   if (!file) return Promise.resolve(null);
@@ -691,31 +770,96 @@ function readUploadedImage() {
   });
 }
 
+async function uploadMemoryImage(file, memoryId) {
+  if (!file || !supabaseClient) return readUploadedImage();
+
+  const extension = file.name.split(".").pop() || "jpg";
+  const safeExtension = extension.toLowerCase().replace(/[^a-z0-9]/g, "") || "jpg";
+  const objectPath = `${creatorToken}/${memoryId}-${Date.now()}.${safeExtension}`;
+
+  const { error } = await supabaseClient.storage.from(supabaseBucket).upload(objectPath, file, {
+    cacheControl: "3600",
+    upsert: false,
+  });
+
+  if (error) throw error;
+
+  const { data } = supabaseClient.storage.from(supabaseBucket).getPublicUrl(objectPath);
+  return data.publicUrl;
+}
+
 async function addMemoryFromForm(event) {
   event.preventDefault();
 
   const coords = pendingCoords || [map.getCenter().lng, map.getCenter().lat];
-  const uploadedImage = await readUploadedImage();
-  const place = {
-    id: `memory-${Date.now()}`,
+  const memoryId = crypto.randomUUID();
+  const file = imageInput.files && imageInput.files[0];
+  let uploadedImage = null;
+
+  try {
+    uploadedImage = await uploadMemoryImage(file, memoryId);
+  } catch (error) {
+    console.warn("Could not upload image", error.message);
+    window.alert("The image could not be uploaded to shared storage. I will keep a local preview for this browser session.");
+    uploadedImage = await readUploadedImage();
+  }
+
+  const height = 28 + Math.round(Math.random() * 28);
+  const footprint = createFootprintFromPoint(coords);
+  const draftPlace = {
+    id: memoryId,
     name: document.querySelector("#placeNameInput").value,
     street: document.querySelector("#streetInput").value,
     description: document.querySelector("#descriptionInput").value,
     year: Number(document.querySelector("#yearInput").value) || new Date().getFullYear(),
     type: document.querySelector("#typeInput").value,
     coords,
-    height: 28 + Math.round(Math.random() * 28),
-    footprint: createFootprintFromPoint(coords),
+    height,
+    footprint,
     image:
       uploadedImage || "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
   };
+  let savedPlace = draftPlace;
 
-  memoryPlaces.push(place);
+  if (supabaseClient) {
+    const { data, error } = await supabaseClient
+      .from(supabaseTable)
+      .insert({
+        id: memoryId,
+        place_name: draftPlace.name,
+        street: draftPlace.street,
+        description: draftPlace.description,
+        memory_year: draftPlace.year,
+        building_type: draftPlace.type,
+        lng: coords[0],
+        lat: coords[1],
+        height,
+        footprint,
+        image_url: draftPlace.image,
+        creator_token: creatorToken,
+        status: "approved",
+      })
+      .select()
+      .single();
+
+    if (error) {
+      console.warn("Could not save shared memory", error.message);
+      window.alert("The memory was added to this browser session, but it could not be saved to the shared database yet.");
+    } else {
+      savedPlace = normalizeRemoteMemory(data);
+    }
+  }
+
+  if (supabaseClient && savedPlace.remote) {
+    await loadRemoteMemories();
+  } else {
+    memoryPlaces.push(savedPlace);
+  }
   memoryForm.reset();
   imagePreviewWrap.classList.add("is-hidden");
   imagePreview.removeAttribute("src");
   clearPendingLocation();
-  openMemory(place.id);
+  openMemory(savedPlace.id);
 }
 
 function resetMapView() {
@@ -814,6 +958,7 @@ map.on("click", (event) => {
 });
 
 renderPlaces();
+loadRemoteMemories();
 map.on("style.load", setupMapLayers);
 map.on("load", setupMapLayers);
 map.on("idle", setupMapLayers);
@@ -823,6 +968,12 @@ map.on("error", (event) => {
 
 setTimeout(setupMapLayers, 1000);
 setTimeout(setupMapLayers, 2500);
+
+if (supabaseClient) {
+  setInterval(() => {
+    if (memoryForm.classList.contains("is-hidden")) loadRemoteMemories();
+  }, 30000);
+}
 
 window.addEventListener("resize", () => {
   map.resize();
