@@ -162,6 +162,7 @@ const memoryCount = document.querySelector("#memoryCount");
 const memoryList = document.querySelector("#memoryList");
 const detailPanel = document.querySelector("#detailPanel");
 const detailImage = document.querySelector("#detailImage");
+const openImageButton = document.querySelector("#openImageButton");
 const detailStreet = document.querySelector("#detailStreet");
 const detailTitle = document.querySelector("#detailTitle");
 const detailDescription = document.querySelector("#detailDescription");
@@ -178,6 +179,10 @@ const imageInput = document.querySelector("#imageInput");
 const imagePreview = document.querySelector("#imagePreview");
 const imagePreviewWrap = document.querySelector("#imagePreviewWrap");
 const angleControls = document.querySelector(".angle-controls");
+const imageLightbox = document.querySelector("#imageLightbox");
+const lightboxImage = document.querySelector("#lightboxImage");
+const lightboxCaption = document.querySelector("#lightboxCaption");
+const closeImageButton = document.querySelector("#closeImageButton");
 
 const supabaseConfig = window.MemoryAtlasConfig || {};
 const supabaseTable = supabaseConfig.supabaseTable || "memories";
@@ -669,6 +674,22 @@ function openMemory(id) {
   });
 }
 
+function openImageLightbox() {
+  if (!detailImage.src) return;
+
+  lightboxImage.src = detailImage.src;
+  lightboxImage.alt = detailImage.alt || "Full memory image";
+  lightboxCaption.textContent = detailTitle.textContent || "Memory image";
+  imageLightbox.classList.remove("is-hidden");
+}
+
+function closeImageLightbox() {
+  imageLightbox.classList.add("is-hidden");
+  lightboxImage.removeAttribute("src");
+  lightboxImage.removeAttribute("alt");
+  lightboxCaption.textContent = "";
+}
+
 async function deleteActiveMemory() {
   const place = memoryPlaces.find((item) => item.id === activeId);
   if (!place) return;
@@ -912,6 +933,17 @@ closeDetailButton.addEventListener("click", () => {
   activeId = null;
   detailPanel.classList.add("is-hidden");
   renderPlaces();
+});
+
+openImageButton.addEventListener("click", openImageLightbox);
+closeImageButton.addEventListener("click", closeImageLightbox);
+imageLightbox.addEventListener("click", (event) => {
+  if (event.target === imageLightbox) closeImageLightbox();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !imageLightbox.classList.contains("is-hidden")) {
+    closeImageLightbox();
+  }
 });
 
 deleteMemoryButton.addEventListener("click", deleteActiveMemory);

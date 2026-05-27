@@ -601,44 +601,50 @@ button {
 
 .detail-media {
   position: relative;
+  display: block;
+  width: 100%;
   min-height: 220px;
-  background: #dce4df;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #17201b;
+  cursor: zoom-in;
+  overflow: hidden;
 }
 
 .detail-media img {
   width: 100%;
   height: 220px;
   min-height: 220px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
 .detail-maplet {
   position: absolute;
-  left: 14px;
-  bottom: 14px;
-  width: 150px;
-  padding: 10px;
+  left: 12px;
+  bottom: 12px;
+  max-width: calc(100% - 24px);
+  padding: 8px 10px;
   color: white;
   background: rgba(19, 70, 56, 0.88);
   border-radius: 8px;
   backdrop-filter: blur(6px);
+  pointer-events: none;
 }
 
 .detail-maplet span {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 2px;
   font-size: 0.72rem;
   font-weight: 800;
 }
 
-#miniMapShape {
-  height: 82px;
-  border: 2px solid rgba(255, 255, 255, 0.65);
-  background:
-    linear-gradient(65deg, transparent 45%, rgba(255, 255, 255, 0.34) 46% 54%, transparent 55%),
-    linear-gradient(145deg, rgba(217, 173, 79, 0.82), rgba(189, 93, 69, 0.72));
-  clip-path: polygon(14% 16%, 88% 9%, 78% 83%, 8% 70%);
+.view-image-hint {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.68rem;
+  font-weight: 900;
 }
 
 .detail-copy {
@@ -786,6 +792,60 @@ button {
 .memory-form .primary-action {
   width: 100%;
   margin-top: 18px;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 14px;
+  padding: 18px;
+  background: rgba(8, 14, 12, 0.92);
+}
+
+.image-lightbox.is-hidden {
+  display: none;
+}
+
+.lightbox-close {
+  justify-self: end;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.image-lightbox figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 12px;
+  min-height: 0;
+  margin: 0;
+}
+
+.image-lightbox img {
+  align-self: center;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.image-lightbox figcaption {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
