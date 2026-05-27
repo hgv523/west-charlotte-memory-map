@@ -148,7 +148,7 @@ const seedMemoryPlaces = [
   },
 ];
 
-let memoryPlaces = [...seedMemoryPlaces];
+let memoryPlaces = [];
 let activeId = null;
 let activeMarker = null;
 let mapLayersReady = false;

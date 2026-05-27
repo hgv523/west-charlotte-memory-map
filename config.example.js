@@ -3,5 +3,5 @@ window.MemoryAtlasConfig = {
   supabaseAnonKey: "YOUR_SUPABASE_ANON_PUBLIC_KEY",
   supabaseTable: "memories",
   supabaseBucket: "memory-images",
-  showSeedMemoriesWhenDatabaseEmpty: true,
+  showSeedMemoriesWhenDatabaseEmpty: false,
 };
