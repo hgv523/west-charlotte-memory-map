@@ -22,6 +22,41 @@ create table if not exists public.memories (
 
 alter table public.memories enable row level security;
 
+grant usage on schema public to anon, authenticated;
+
+revoke select on public.memories from anon, authenticated;
+grant select (
+  id,
+  place_name,
+  street,
+  description,
+  memory_year,
+  building_type,
+  lng,
+  lat,
+  height,
+  footprint,
+  image_url,
+  status,
+  created_at
+) on public.memories to anon, authenticated;
+
+grant insert (
+  id,
+  place_name,
+  street,
+  description,
+  memory_year,
+  building_type,
+  lng,
+  lat,
+  height,
+  footprint,
+  image_url,
+  creator_token,
+  status
+) on public.memories to anon, authenticated;
+
 drop policy if exists "Public can read approved memories" on public.memories;
 create policy "Public can read approved memories"
 on public.memories

@@ -186,6 +186,8 @@ const supabaseClient =
   supabaseConfig.supabaseUrl && supabaseConfig.supabaseAnonKey && window.supabase
     ? window.supabase.createClient(supabaseConfig.supabaseUrl, supabaseConfig.supabaseAnonKey)
     : null;
+const memorySelectColumns =
+  "id, place_name, street, description, memory_year, building_type, lng, lat, height, footprint, image_url, created_at";
 const creatorTokenKey = "memory-atlas-creator-token";
 let creatorToken = localStorage.getItem(creatorTokenKey);
 
@@ -739,9 +741,7 @@ async function loadRemoteMemories() {
 
   const { data, error } = await supabaseClient
     .from(supabaseTable)
-    .select(
-      "id, place_name, street, description, memory_year, building_type, lng, lat, height, footprint, image_url, creator_token, created_at",
-    )
+    .select(memorySelectColumns)
     .eq("status", "approved")
     .order("created_at", { ascending: true });
 
@@ -845,7 +845,7 @@ async function addMemoryFromForm(event) {
         creator_token: creatorToken,
         status: "approved",
       })
-      .select()
+      .select(memorySelectColumns)
       .single();
 
     if (error) {
