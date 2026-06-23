@@ -7,6 +7,7 @@ An interactive 3D satellite memory map for West Charlotte, centered around Freed
 - 3D satellite/hybrid map
 - Enderly Park IFC model shown as 3D contextual building extrusions
 - Highlighted Freedom Drive and Wilkinson Boulevard anchors
+- Search for Charlotte-area locations and fly the map to a result
 - Click the map to add a memory at that location
 - Upload a memory image
 - Open memory detail panels

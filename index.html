@@ -52,10 +52,15 @@
 
       <section class="map-stage" aria-label="Interactive GIS map">
         <div id="map"></div>
-        <div class="map-badge" aria-hidden="true">
-          <span>3D west Charlotte view</span>
-          <strong>Enderly Park IFC model + memory anchors</strong>
-        </div>
+        <section class="location-search" aria-label="Search map locations">
+          <form id="searchForm" class="search-form" autocomplete="off">
+            <label class="sr-only" for="locationSearchInput">Search map location</label>
+            <input id="locationSearchInput" name="locationSearch" type="search" placeholder="Search a Charlotte location" />
+            <button type="submit">Search</button>
+          </form>
+          <p id="searchStatus" class="search-status" aria-live="polite"></p>
+          <div id="searchResults" class="search-results is-hidden"></div>
+        </section>
         <section class="angle-controls" aria-label="3D map angle presets">
           <button type="button" data-view="enderly">Enderly</button>
           <button type="button" data-bearing="-24" data-pitch="58">Corridor</button>

@@ -170,6 +170,8 @@ let mapLayersReady = false;
 let pendingCoords = null;
 let pendingMarker = null;
 let enderlyModelMarker = null;
+let searchMarker = null;
+let searchCandidates = [];
 const memoryMarkers = new Map();
 const roadLabelMarkers = [];
 
@@ -199,6 +201,10 @@ const imageLightbox = document.querySelector("#imageLightbox");
 const lightboxImage = document.querySelector("#lightboxImage");
 const lightboxCaption = document.querySelector("#lightboxCaption");
 const closeImageButton = document.querySelector("#closeImageButton");
+const searchForm = document.querySelector("#searchForm");
+const locationSearchInput = document.querySelector("#locationSearchInput");
+const searchStatus = document.querySelector("#searchStatus");
+const searchResults = document.querySelector("#searchResults");
 
 const supabaseConfig = window.MemoryAtlasConfig || {};
 const supabaseTable = supabaseConfig.supabaseTable || "memories";
@@ -1033,6 +1039,10 @@ function resetMapView() {
   detailPanel.classList.add("is-hidden");
   memoryForm.classList.add("is-hidden");
   clearPendingLocation();
+  clearSearchMarker();
+  clearSearchResults();
+  locationSearchInput.value = "";
+  setSearchStatus("");
   renderPlaces();
   map.easeTo({
     ...defaultMapView,
@@ -1048,6 +1058,147 @@ function flyToEnderlyModel() {
     bearing: -32,
     duration: 900,
   });
+}
+
+function setSearchStatus(message) {
+  searchStatus.textContent = message;
+}
+
+function clearSearchResults() {
+  searchCandidates = [];
+  searchResults.innerHTML = "";
+  searchResults.classList.add("is-hidden");
+}
+
+function clearSearchMarker() {
+  if (searchMarker) {
+    searchMarker.remove();
+    searchMarker = null;
+  }
+}
+
+function isInsideMapBounds(candidate) {
+  const [[west, south], [east, north]] = corridorBounds;
+  return candidate.lng >= west && candidate.lng <= east && candidate.lat >= south && candidate.lat <= north;
+}
+
+function normalizeSearchCandidate(candidate) {
+  const attributes = candidate.attributes || {};
+  const lng = Number(candidate.location && candidate.location.x);
+  const lat = Number(candidate.location && candidate.location.y);
+
+  if (!Number.isFinite(lng) || !Number.isFinite(lat)) return null;
+
+  return {
+    label: attributes.PlaceName || attributes.ShortLabel || candidate.address || "Search result",
+    detail: attributes.LongLabel || attributes.Place_addr || candidate.address || "Charlotte, NC",
+    lng,
+    lat,
+    score: Number(candidate.score || 0),
+  };
+}
+
+function renderSearchResults(candidates) {
+  searchCandidates = candidates;
+  searchResults.innerHTML = "";
+
+  candidates.forEach((candidate, index) => {
+    const resultButton = document.createElement("button");
+    resultButton.type = "button";
+    resultButton.dataset.index = String(index);
+
+    const label = document.createElement("strong");
+    label.textContent = candidate.label;
+
+    const detail = document.createElement("span");
+    detail.textContent = candidate.detail;
+
+    resultButton.append(label, detail);
+    searchResults.append(resultButton);
+  });
+
+  searchResults.classList.remove("is-hidden");
+}
+
+function selectSearchCandidate(candidate) {
+  clearSearchMarker();
+
+  const element = document.createElement("div");
+  element.className = "search-location-marker";
+  element.title = candidate.label;
+
+  searchMarker = new maplibregl.Marker({
+    element,
+    anchor: "center",
+  })
+    .setLngLat([candidate.lng, candidate.lat])
+    .addTo(map);
+
+  map.easeTo({
+    center: [candidate.lng, candidate.lat],
+    zoom: Math.max(map.getZoom(), 15.35),
+    pitch: Math.max(map.getPitch(), 58),
+    bearing: map.getBearing(),
+    duration: 900,
+  });
+
+  setSearchStatus(candidate.detail);
+  clearSearchResults();
+}
+
+async function searchLocations(event) {
+  event.preventDefault();
+
+  const query = locationSearchInput.value.trim();
+  if (!query) {
+    clearSearchResults();
+    setSearchStatus("Type a place, street, or address.");
+    return;
+  }
+
+  clearSearchResults();
+  setSearchStatus("Searching...");
+
+  const searchText = /charlotte|north carolina|\bnc\b/i.test(query) ? query : `${query}, Charlotte, NC`;
+  const [[west, south], [east, north]] = corridorBounds;
+  const params = new URLSearchParams({
+    SingleLine: searchText,
+    f: "json",
+    outFields: "PlaceName,ShortLabel,LongLabel,Place_addr,Addr_type",
+    maxLocations: "6",
+    sourceCountry: "USA",
+    location: `${defaultMapView.center[0]},${defaultMapView.center[1]}`,
+    searchExtent: `${west},${south},${east},${north}`,
+  });
+  const url = `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?${params}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Search failed with status ${response.status}`);
+
+    const data = await response.json();
+    const candidates = (data.candidates || [])
+      .map(normalizeSearchCandidate)
+      .filter(Boolean)
+      .filter((candidate) => candidate.score >= 55 && isInsideMapBounds(candidate))
+      .slice(0, 5);
+
+    if (candidates.length === 0) {
+      setSearchStatus("No nearby matches found.");
+      return;
+    }
+
+    if (candidates.length === 1) {
+      selectSearchCandidate(candidates[0]);
+      return;
+    }
+
+    renderSearchResults(candidates);
+    setSearchStatus(`${candidates.length} matches found.`);
+  } catch (error) {
+    console.warn("Location search failed", error.message);
+    setSearchStatus("Search is not available right now.");
+  }
 }
 
 function setupMapLayers() {
@@ -1100,6 +1251,16 @@ resetViewButton.addEventListener("click", resetMapView);
 
 memoryForm.addEventListener("submit", addMemoryFromForm);
 
+searchForm.addEventListener("submit", searchLocations);
+
+searchResults.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+  if (!button) return;
+
+  const candidate = searchCandidates[Number(button.dataset.index)];
+  if (candidate) selectSearchCandidate(candidate);
+});
+
 angleControls.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
@@ -1131,7 +1292,14 @@ imageInput.addEventListener("change", () => {
 
 map.on("click", (event) => {
   const target = event.originalEvent.target;
-  if (target.closest(".maplibregl-ctrl") || target.closest(".maplibregl-marker") || target.closest(".angle-controls")) return;
+  if (
+    target.closest(".maplibregl-ctrl") ||
+    target.closest(".maplibregl-marker") ||
+    target.closest(".angle-controls") ||
+    target.closest(".location-search")
+  ) {
+    return;
+  }
   if (memoryForm.contains(event.originalEvent.target) || detailPanel.contains(event.originalEvent.target)) return;
 
   if (map.getLayer("memory-building-extrusions")) {
