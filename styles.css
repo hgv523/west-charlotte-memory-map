@@ -553,19 +553,39 @@ button {
 
 .enderly-model-marker {
   position: relative;
-  padding: 8px 11px;
+  display: grid;
+  gap: 2px;
+  padding: 8px 12px 9px;
   color: #0e211c;
-  background: #b7e7c6;
-  border: 2px solid rgba(255, 255, 255, 0.95);
+  background: #fff3a6;
+  border: 2px solid rgba(255, 255, 255, 0.98);
   border-radius: 8px;
   box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.3),
-    0 0 0 4px rgba(31, 125, 104, 0.28);
+    0 12px 28px rgba(0, 0, 0, 0.34),
+    0 0 0 4px rgba(255, 217, 102, 0.48),
+    0 0 0 9px rgba(31, 125, 104, 0.22);
+  animation: enderly-highlight-pulse 2.8s ease-in-out infinite;
   cursor: pointer;
-  font-size: 0.78rem;
-  font-weight: 950;
   line-height: 1;
   white-space: nowrap;
+}
+
+.enderly-model-marker span,
+.enderly-model-marker strong {
+  display: block;
+}
+
+.enderly-model-marker span {
+  color: #8b3e25;
+  font-size: 0.62rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.enderly-model-marker strong {
+  color: #0e211c;
+  font-size: 0.82rem;
+  font-weight: 950;
 }
 
 .enderly-model-marker::after {
@@ -582,7 +602,24 @@ button {
 }
 
 .enderly-model-marker:hover {
-  background: #d2f2dd;
+  background: #fff8c9;
+}
+
+@keyframes enderly-highlight-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.34),
+      0 0 0 4px rgba(255, 217, 102, 0.5),
+      0 0 0 9px rgba(31, 125, 104, 0.2);
+  }
+
+  50% {
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, 0.34),
+      0 0 0 7px rgba(255, 217, 102, 0.34),
+      0 0 0 14px rgba(31, 125, 104, 0.12);
+  }
 }
 
 .dialog-marker {

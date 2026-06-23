@@ -389,6 +389,34 @@ function highlightedRoadFeatureCollection() {
   };
 }
 
+function enderlyHighlightFeatureCollection() {
+  const [[west, south], [east, north]] = enderlyModel.bounds;
+
+  return {
+    type: "FeatureCollection",
+    features: [
+      {
+        type: "Feature",
+        properties: {
+          name: "Enderly Park IFC model area",
+        },
+        geometry: {
+          type: "Polygon",
+          coordinates: [
+            [
+              [west, south],
+              [east, south],
+              [east, north],
+              [west, north],
+              [west, south],
+            ],
+          ],
+        },
+      },
+    ],
+  };
+}
+
 function getVectorSourceId() {
   const sources = map.getStyle().sources;
   return Object.keys(sources).find((id) => sources[id].type === "vector");
@@ -532,9 +560,25 @@ function addMemoryLayers() {
 function addEnderlyModelLayer() {
   if (map.getSource("enderly-ifc-buildings")) return;
 
+  map.addSource("enderly-ifc-highlight", {
+    type: "geojson",
+    data: enderlyHighlightFeatureCollection(),
+  });
+
   map.addSource("enderly-ifc-buildings", {
     type: "geojson",
     data: enderlyModel.source,
+  });
+
+  map.addLayer({
+    id: "enderly-ifc-highlight-fill",
+    type: "fill",
+    source: "enderly-ifc-highlight",
+    minzoom: 11,
+    paint: {
+      "fill-color": "#f6d365",
+      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 11, 0.1, 14, 0.2, 16, 0.12],
+    },
   });
 
   map.addLayer({
@@ -556,8 +600,22 @@ function addEnderlyModelLayer() {
       ],
       "fill-extrusion-height": ["+", ["get", "height"], 1.4],
       "fill-extrusion-base": 0,
-      "fill-extrusion-opacity": 0.9,
+      "fill-extrusion-opacity": 0.96,
       "fill-extrusion-vertical-gradient": true,
+    },
+  });
+
+  map.addLayer({
+    id: "enderly-ifc-highlight-outline",
+    type: "line",
+    source: "enderly-ifc-highlight",
+    minzoom: 11,
+    paint: {
+      "line-color": "#ffd966",
+      "line-width": ["interpolate", ["linear"], ["zoom"], 11, 3, 14, 6, 16, 8],
+      "line-opacity": 0.96,
+      "line-dasharray": [1.2, 0.75],
+      "line-blur": 0.25,
     },
   });
 
@@ -566,9 +624,9 @@ function addEnderlyModelLayer() {
     type: "line",
     source: "enderly-ifc-buildings",
     paint: {
-      "line-color": "#0b2b24",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 12.5, 0.8, 16, 2.2],
-      "line-opacity": 0.62,
+      "line-color": "#fff3a6",
+      "line-width": ["interpolate", ["linear"], ["zoom"], 12.5, 1.2, 16, 3],
+      "line-opacity": 0.9,
     },
   });
 }
@@ -579,7 +637,7 @@ function addEnderlyModelMarker() {
   const element = document.createElement("button");
   element.className = "enderly-model-marker";
   element.type = "button";
-  element.textContent = "Enderly Park 3D";
+  element.innerHTML = '<span>New IFC model</span><strong>Enderly Park 3D</strong>';
   element.setAttribute("aria-label", "Zoom to Enderly Park 3D model");
   element.addEventListener("click", (event) => {
     event.stopPropagation();
