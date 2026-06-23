@@ -1,4 +1,19 @@
-const charlotteCenter = [-80.918, 35.236];
+const charlotteCenter = [-80.883, 35.2396];
+const defaultMapView = {
+  center: charlotteCenter,
+  zoom: 14.05,
+  pitch: 60,
+  bearing: -28,
+};
+
+const enderlyModel = {
+  center: [-80.8829931, 35.2395826],
+  bounds: [
+    [-80.8859945, 35.2367702],
+    [-80.8799917, 35.2423949],
+  ],
+  source: "./data/enderly-buildings.geojson",
+};
 
 const corridorBounds = [
   [-81.035, 35.17],
@@ -154,6 +169,7 @@ let activeMarker = null;
 let mapLayersReady = false;
 let pendingCoords = null;
 let pendingMarker = null;
+let enderlyModelMarker = null;
 const memoryMarkers = new Map();
 const roadLabelMarkers = [];
 
@@ -270,10 +286,10 @@ const map = new maplibregl.Map({
       },
     ],
   },
-  center: charlotteCenter,
-  zoom: 11.45,
-  pitch: 58,
-  bearing: -24,
+  center: defaultMapView.center,
+  zoom: defaultMapView.zoom,
+  pitch: defaultMapView.pitch,
+  bearing: defaultMapView.bearing,
   minZoom: 10.6,
   maxZoom: 18.5,
   maxBounds: corridorBounds,
@@ -511,6 +527,71 @@ function addMemoryLayers() {
   map.on("mouseleave", "memory-building-extrusions", () => {
     map.getCanvas().style.cursor = "";
   });
+}
+
+function addEnderlyModelLayer() {
+  if (map.getSource("enderly-ifc-buildings")) return;
+
+  map.addSource("enderly-ifc-buildings", {
+    type: "geojson",
+    data: enderlyModel.source,
+  });
+
+  map.addLayer({
+    id: "enderly-ifc-model",
+    type: "fill-extrusion",
+    source: "enderly-ifc-buildings",
+    minzoom: 12.4,
+    paint: {
+      "fill-extrusion-color": [
+        "interpolate",
+        ["linear"],
+        ["get", "height"],
+        2.5,
+        "#b7e7c6",
+        6,
+        "#59c99f",
+        14,
+        "#1f7d68",
+      ],
+      "fill-extrusion-height": ["+", ["get", "height"], 1.4],
+      "fill-extrusion-base": 0,
+      "fill-extrusion-opacity": 0.9,
+      "fill-extrusion-vertical-gradient": true,
+    },
+  });
+
+  map.addLayer({
+    id: "enderly-ifc-footprint-halo",
+    type: "line",
+    source: "enderly-ifc-buildings",
+    paint: {
+      "line-color": "#0b2b24",
+      "line-width": ["interpolate", ["linear"], ["zoom"], 12.5, 0.8, 16, 2.2],
+      "line-opacity": 0.62,
+    },
+  });
+}
+
+function addEnderlyModelMarker() {
+  if (enderlyModelMarker) return;
+
+  const element = document.createElement("button");
+  element.className = "enderly-model-marker";
+  element.type = "button";
+  element.textContent = "Enderly Park 3D";
+  element.setAttribute("aria-label", "Zoom to Enderly Park 3D model");
+  element.addEventListener("click", (event) => {
+    event.stopPropagation();
+    flyToEnderlyModel();
+  });
+
+  enderlyModelMarker = new maplibregl.Marker({
+    element,
+    anchor: "bottom",
+  })
+    .setLngLat(enderlyModel.center)
+    .addTo(map);
 }
 
 function addRoadLabels() {
@@ -896,11 +977,18 @@ function resetMapView() {
   clearPendingLocation();
   renderPlaces();
   map.easeTo({
-    center: charlotteCenter,
-    zoom: 11.45,
-    pitch: 58,
-    bearing: -24,
+    ...defaultMapView,
     duration: 800,
+  });
+}
+
+function flyToEnderlyModel() {
+  map.easeTo({
+    center: enderlyModel.center,
+    zoom: 15.2,
+    pitch: 64,
+    bearing: -32,
+    duration: 900,
   });
 }
 
@@ -910,7 +998,9 @@ function setupMapLayers() {
   try {
     addBase3DBuildings();
     addMemoryLayers();
+    addEnderlyModelLayer();
     addRoadLabels();
+    addEnderlyModelMarker();
     mapLayersReady = true;
     renderPlaces();
     resetMapView();
@@ -955,6 +1045,11 @@ memoryForm.addEventListener("submit", addMemoryFromForm);
 angleControls.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
+
+  if (button.dataset.view === "enderly") {
+    flyToEnderlyModel();
+    return;
+  }
 
   map.easeTo({
     bearing: Number(button.dataset.bearing),

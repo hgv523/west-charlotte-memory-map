@@ -5,16 +5,18 @@ An interactive 3D satellite memory map for West Charlotte, centered around Freed
 ## Current Prototype
 
 - 3D satellite/hybrid map
+- Enderly Park IFC model shown as 3D contextual building extrusions
 - Highlighted Freedom Drive and Wilkinson Boulevard anchors
 - Click the map to add a memory at that location
 - Upload a memory image
 - Open memory detail panels
-- Delete memories from the current browser session
+- Shared memory storage through Supabase
+- Delete memories from the same browser session that created them
 - Rotate, pan, and zoom the map
 
 ## Publishing
 
-This version is a static GitHub Pages app. Community memories added in the browser are temporary until a shared database is connected.
+This version is a static GitHub Pages app. Community memories use Supabase when `config.js` contains the project URL and public anon key.
 
 For a public community version where everyone sees the same submissions, connect Supabase for:
 
@@ -35,3 +37,13 @@ For a public community version where everyone sees the same submissions, connect
 Do not use a Supabase service role key in this browser app. The anon key is expected to be public, and safety comes from Row Level Security policies.
 
 The delete button uses the `delete_memory` database function. It allows a visitor to delete a shared memory only from the same browser session that created it.
+
+## Enderly Park IFC Model
+
+The source IFC file is stored at `assets/Enderly.ifc`. The web map loads the generated GeoJSON layer at `data/enderly-buildings.geojson`.
+
+To regenerate the browser-ready layer after replacing the IFC file, run:
+
+```powershell
+node .\tools\ifc-to-geojson.mjs .\assets\Enderly.ifc .\data\enderly-buildings.geojson
+```

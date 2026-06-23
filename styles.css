@@ -551,6 +551,40 @@ button {
   pointer-events: none;
 }
 
+.enderly-model-marker {
+  position: relative;
+  padding: 8px 11px;
+  color: #0e211c;
+  background: #b7e7c6;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.3),
+    0 0 0 4px rgba(31, 125, 104, 0.28);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.enderly-model-marker::after {
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  border-right: 2px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.95);
+  content: "";
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.enderly-model-marker:hover {
+  background: #d2f2dd;
+}
+
 .dialog-marker {
   min-width: 160px;
   padding: 9px 10px;

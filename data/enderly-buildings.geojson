@@ -1,0 +1,6115 @@
+{
+  "type": "FeatureCollection",
+  "name": "Enderly Park IFC contextual buildings",
+  "metadata": {
+    "source": "Enderly.ifc",
+    "source_crs": "EPSG:32617",
+    "generated_from": "tools/ifc-to-geojson.mjs",
+    "building_count": 135,
+    "bounds": [
+      [
+        -80.8859945,
+        35.2367702
+      ],
+      [
+        -80.8799917,
+        35.2423949
+      ]
+    ],
+    "center": [
+      -80.8829931,
+      35.2395826
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-64",
+        "source_id": "1ZiXT_ugf5vpM$gQBrTrw2",
+        "name": "Contextual Building",
+        "height": 5.5,
+        "base_elevation": 221.66,
+        "centroid_lng": -80.8832592,
+        "centroid_lat": 35.2408642
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.883181,
+              35.2408719
+            ],
+            [
+              -80.8833032,
+              35.2409178
+            ],
+            [
+              -80.8833374,
+              35.2408565
+            ],
+            [
+              -80.8832152,
+              35.2408107
+            ],
+            [
+              -80.883181,
+              35.2408719
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-84",
+        "source_id": "2YVhqF$caX0hexfpNRBgTP",
+        "name": "Contextual Building",
+        "height": 3.3,
+        "base_elevation": 222.93,
+        "centroid_lng": -80.8833696,
+        "centroid_lat": 35.2419251
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8833101,
+              35.2418713
+            ],
+            [
+              -80.8833099,
+              35.2419787
+            ],
+            [
+              -80.8834292,
+              35.2419788
+            ],
+            [
+              -80.8834293,
+              35.2418715
+            ],
+            [
+              -80.8833101,
+              35.2418713
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-112",
+        "source_id": "2eTukqr2d3B7CDKm$rUE3P",
+        "name": "Contextual Building",
+        "height": 4.2,
+        "base_elevation": 225.3,
+        "centroid_lng": -80.8852231,
+        "centroid_lat": 35.239865
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8853004,
+              35.2399887
+            ],
+            [
+              -80.8853746,
+              35.2399218
+            ],
+            [
+              -80.885264,
+              35.2398391
+            ],
+            [
+              -80.885307,
+              35.2398003
+            ],
+            [
+              -80.8852266,
+              35.2397403
+            ],
+            [
+              -80.8851835,
+              35.2397791
+            ],
+            [
+              -80.8851727,
+              35.2397711
+            ],
+            [
+              -80.8850985,
+              35.239838
+            ],
+            [
+              -80.8851703,
+              35.2398915
+            ],
+            [
+              -80.8851449,
+              35.2399144
+            ],
+            [
+              -80.8852047,
+              35.239959
+            ],
+            [
+              -80.88523,
+              35.2399362
+            ],
+            [
+              -80.8853004,
+              35.2399887
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-135",
+        "source_id": "2kv$Lx1C6eT5m4rPXeKmJp",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 222.03,
+        "centroid_lng": -80.8818199,
+        "centroid_lat": 35.2407802
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8817293,
+              35.240811
+            ],
+            [
+              -80.8817936,
+              35.2408392
+            ],
+            [
+              -80.881818,
+              35.2408018
+            ],
+            [
+              -80.8818488,
+              35.2408154
+            ],
+            [
+              -80.8818917,
+              35.2407498
+            ],
+            [
+              -80.8818609,
+              35.2407363
+            ],
+            [
+              -80.8817967,
+              35.240708
+            ],
+            [
+              -80.8817293,
+              35.240811
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-155",
+        "source_id": "2tgBeNMvCBEAY4Rb8Tvwup",
+        "name": "Contextual Building",
+        "height": 3.1,
+        "base_elevation": 227.16,
+        "centroid_lng": -80.8857585,
+        "centroid_lat": 35.2409444
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8856582,
+              35.2409479
+            ],
+            [
+              -80.8857785,
+              35.2410252
+            ],
+            [
+              -80.8858589,
+              35.2409409
+            ],
+            [
+              -80.8857385,
+              35.2408637
+            ],
+            [
+              -80.8856582,
+              35.2409479
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-175",
+        "source_id": "0c17FzlBX8pIE_mZzaTzWr",
+        "name": "Contextual Building",
+        "height": 3.3,
+        "base_elevation": 225.15,
+        "centroid_lng": -80.8826008,
+        "centroid_lat": 35.2417576
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8825426,
+              35.2417695
+            ],
+            [
+              -80.8826199,
+              35.2418042
+            ],
+            [
+              -80.882659,
+              35.2417457
+            ],
+            [
+              -80.8825817,
+              35.241711
+            ],
+            [
+              -80.8825426,
+              35.2417695
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-195",
+        "source_id": "2yEpbkAKD6Vr3cDQ3nL6sk",
+        "name": "Contextual Building",
+        "height": 6.3,
+        "base_elevation": 222.57,
+        "centroid_lng": -80.8856156,
+        "centroid_lat": 35.2419312
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8855449,
+              35.2419284
+            ],
+            [
+              -80.885626,
+              35.2419886
+            ],
+            [
+              -80.8856863,
+              35.2419339
+            ],
+            [
+              -80.8856052,
+              35.2418737
+            ],
+            [
+              -80.8855449,
+              35.2419284
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-219",
+        "source_id": "0wNHL439bEGl7b1iN7XOiC",
+        "name": "Contextual Building",
+        "height": 3.5,
+        "base_elevation": 225.25,
+        "centroid_lng": -80.8824792,
+        "centroid_lat": 35.2420608
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8824171,
+              35.2420208
+            ],
+            [
+              -80.8824511,
+              35.2420544
+            ],
+            [
+              -80.8824024,
+              35.2420876
+            ],
+            [
+              -80.8824586,
+              35.242143
+            ],
+            [
+              -80.8825434,
+              35.2420852
+            ],
+            [
+              -80.8825262,
+              35.2420683
+            ],
+            [
+              -80.8825537,
+              35.2420495
+            ],
+            [
+              -80.8824806,
+              35.2419774
+            ],
+            [
+              -80.8824171,
+              35.2420208
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-239",
+        "source_id": "3rcPNqNhCbfNyh39Ax8Vhr",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 224.44,
+        "centroid_lng": -80.884238,
+        "centroid_lat": 35.2421225
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8841793,
+              35.2420637
+            ],
+            [
+              -80.884186,
+              35.2421854
+            ],
+            [
+              -80.8842966,
+              35.2421813
+            ],
+            [
+              -80.88429,
+              35.2420596
+            ],
+            [
+              -80.8841793,
+              35.2420637
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-259",
+        "source_id": "3LVcEYIt_5NBXKe1JwenrI",
+        "name": "Contextual Building",
+        "height": 3.5,
+        "base_elevation": 224.82,
+        "centroid_lng": -80.8840725,
+        "centroid_lat": 35.2421421
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8840039,
+              35.2420827
+            ],
+            [
+              -80.8840087,
+              35.2422051
+            ],
+            [
+              -80.8841411,
+              35.2422016
+            ],
+            [
+              -80.8841362,
+              35.2420792
+            ],
+            [
+              -80.8840039,
+              35.2420827
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-279",
+        "source_id": "29kk5oS3nO$CxomuSOVMVW",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 223.79,
+        "centroid_lng": -80.8844429,
+        "centroid_lat": 35.2421122
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.884364,
+              35.2420891
+            ],
+            [
+              -80.8843869,
+              35.2421633
+            ],
+            [
+              -80.8845218,
+              35.2421352
+            ],
+            [
+              -80.8844989,
+              35.242061
+            ],
+            [
+              -80.884364,
+              35.2420891
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-299",
+        "source_id": "1ASmZnID$gZIHhT08bMmI4",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 227.92,
+        "centroid_lng": -80.8809434,
+        "centroid_lat": 35.2420341
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8808648,
+              35.2420641
+            ],
+            [
+              -80.8809696,
+              35.2421019
+            ],
+            [
+              -80.8810221,
+              35.242004
+            ],
+            [
+              -80.8809172,
+              35.2419662
+            ],
+            [
+              -80.8808648,
+              35.2420641
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-322",
+        "source_id": "2JB$LMXVsj5q0k1CyKPEy6",
+        "name": "Contextual Building",
+        "height": 3.4,
+        "base_elevation": 223.02,
+        "centroid_lng": -80.8835729,
+        "centroid_lat": 35.2420175
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8834636,
+              35.2420454
+            ],
+            [
+              -80.883586,
+              35.2420983
+            ],
+            [
+              -80.8836272,
+              35.2420342
+            ],
+            [
+              -80.8836563,
+              35.2419887
+            ],
+            [
+              -80.8836008,
+              35.2419647
+            ],
+            [
+              -80.8835716,
+              35.2420101
+            ],
+            [
+              -80.8835048,
+              35.2419813
+            ],
+            [
+              -80.8834636,
+              35.2420454
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-346",
+        "source_id": "2XXKEyBbMEGRglQHuOjxbB",
+        "name": "Contextual Building",
+        "height": 3.8,
+        "base_elevation": 227.32,
+        "centroid_lng": -80.8819879,
+        "centroid_lat": 35.2418763
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8819211,
+              35.2418702
+            ],
+            [
+              -80.8819551,
+              35.2418816
+            ],
+            [
+              -80.8819367,
+              35.2419187
+            ],
+            [
+              -80.8820202,
+              35.2419467
+            ],
+            [
+              -80.8820573,
+              35.2418721
+            ],
+            [
+              -80.8820275,
+              35.2418621
+            ],
+            [
+              -80.8820365,
+              35.2418441
+            ],
+            [
+              -80.8819488,
+              35.2418147
+            ],
+            [
+              -80.8819211,
+              35.2418702
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-368",
+        "source_id": "1nbS2NpmBHB$9h_eaMVM5C",
+        "name": "Contextual Building",
+        "height": 4.6,
+        "base_elevation": 228.36,
+        "centroid_lng": -80.8818238,
+        "centroid_lat": 35.2418266
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.881744,
+              35.2418741
+            ],
+            [
+              -80.8818345,
+              35.2419091
+            ],
+            [
+              -80.8818884,
+              35.2418152
+            ],
+            [
+              -80.8818427,
+              35.2417975
+            ],
+            [
+              -80.8818354,
+              35.2417829
+            ],
+            [
+              -80.8817977,
+              35.2417807
+            ],
+            [
+              -80.881744,
+              35.2418741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-389",
+        "source_id": "0j$A5INrc$Yr0CG5HCV$3S",
+        "name": "Contextual Building",
+        "height": 3.6,
+        "base_elevation": 229.79,
+        "centroid_lng": -80.8815336,
+        "centroid_lat": 35.2417203
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8814537,
+              35.2417255
+            ],
+            [
+              -80.8815449,
+              35.2417628
+            ],
+            [
+              -80.8815618,
+              35.2417697
+            ],
+            [
+              -80.8816078,
+              35.2416939
+            ],
+            [
+              -80.8814997,
+              35.2416497
+            ],
+            [
+              -80.8814537,
+              35.2417255
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-409",
+        "source_id": "2Db3s$7GTSSIgkWfOvlutL",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 224.71,
+        "centroid_lng": -80.8829222,
+        "centroid_lat": 35.2416208
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.882829,
+              35.2416262
+            ],
+            [
+              -80.8829445,
+              35.2416953
+            ],
+            [
+              -80.8830153,
+              35.2416155
+            ],
+            [
+              -80.8828999,
+              35.2415464
+            ],
+            [
+              -80.882829,
+              35.2416262
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-429",
+        "source_id": "3ThGdCqXB9K2dxggJoLypN",
+        "name": "Contextual Building",
+        "height": 4.3,
+        "base_elevation": 229.31,
+        "centroid_lng": -80.8810844,
+        "centroid_lat": 35.2415316
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8810178,
+              35.2415489
+            ],
+            [
+              -80.8811091,
+              35.2415853
+            ],
+            [
+              -80.8811511,
+              35.2415142
+            ],
+            [
+              -80.8810598,
+              35.2414779
+            ],
+            [
+              -80.8810178,
+              35.2415489
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-451",
+        "source_id": "3xIR$kADlgMCt6KDNuX8mY",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 227.81,
+        "centroid_lng": -80.8804681,
+        "centroid_lat": 35.241422
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.880392,
+              35.2414434
+            ],
+            [
+              -80.8805241,
+              35.2414972
+            ],
+            [
+              -80.880572,
+              35.241418
+            ],
+            [
+              -80.8804598,
+              35.2413723
+            ],
+            [
+              -80.8804402,
+              35.2414047
+            ],
+            [
+              -80.8804202,
+              35.2413966
+            ],
+            [
+              -80.880392,
+              35.2414434
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-474",
+        "source_id": "2JR2gynPJaqXggCyu1eBzE",
+        "name": "Contextual Building",
+        "height": 3.5,
+        "base_elevation": 226.75,
+        "centroid_lng": -80.8814819,
+        "centroid_lat": 35.2412022
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8813988,
+              35.2412259
+            ],
+            [
+              -80.8814469,
+              35.2412492
+            ],
+            [
+              -80.8814978,
+              35.2412739
+            ],
+            [
+              -80.8815517,
+              35.2411992
+            ],
+            [
+              -80.8815008,
+              35.2411745
+            ],
+            [
+              -80.8815126,
+              35.2411581
+            ],
+            [
+              -80.8814645,
+              35.2411347
+            ],
+            [
+              -80.8813988,
+              35.2412259
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-496",
+        "source_id": "3yOuK1qpKJzEyQsFWWFYfh",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 217.55,
+        "centroid_lng": -80.8847675,
+        "centroid_lat": 35.2412228
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8847974,
+              35.2412698
+            ],
+            [
+              -80.8848545,
+              35.241211
+            ],
+            [
+              -80.8847317,
+              35.2411306
+            ],
+            [
+              -80.8846663,
+              35.2411979
+            ],
+            [
+              -80.8847734,
+              35.241268
+            ],
+            [
+              -80.8847817,
+              35.2412595
+            ],
+            [
+              -80.8847974,
+              35.2412698
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-516",
+        "source_id": "0EmLX3ymph$BDCnQprK5X1",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 227.05,
+        "centroid_lng": -80.8813099,
+        "centroid_lat": 35.2411532
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8812447,
+              35.2411737
+            ],
+            [
+              -80.8813368,
+              35.2412061
+            ],
+            [
+              -80.8813752,
+              35.2411327
+            ],
+            [
+              -80.8812831,
+              35.2411003
+            ],
+            [
+              -80.8812447,
+              35.2411737
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-536",
+        "source_id": "1XKeLcObHQCZSLVM5BWkD2",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 217.5,
+        "centroid_lng": -80.8845864,
+        "centroid_lat": 35.2410877
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.884518,
+              35.2411234
+            ],
+            [
+              -80.8846115,
+              35.2411509
+            ],
+            [
+              -80.8846548,
+              35.2410519
+            ],
+            [
+              -80.8845612,
+              35.2410244
+            ],
+            [
+              -80.884518,
+              35.2411234
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-558",
+        "source_id": "0dMztmAzop2vrx05oTo$2H",
+        "name": "Contextual Building",
+        "height": 4.5,
+        "base_elevation": 222.33,
+        "centroid_lng": -80.8826238,
+        "centroid_lat": 35.2410682
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8825728,
+              35.2410486
+            ],
+            [
+              -80.8825999,
+              35.2410622
+            ],
+            [
+              -80.8825832,
+              35.2410847
+            ],
+            [
+              -80.8826721,
+              35.2411293
+            ],
+            [
+              -80.8827153,
+              35.2410714
+            ],
+            [
+              -80.8825993,
+              35.2410131
+            ],
+            [
+              -80.8825728,
+              35.2410486
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-578",
+        "source_id": "0ITrqrcYEA$7HI3g9S7Xy5",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 226.99,
+        "centroid_lng": -80.8807479,
+        "centroid_lat": 35.2410064
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8806737,
+              35.2410361
+            ],
+            [
+              -80.8807574,
+              35.2410737
+            ],
+            [
+              -80.8808221,
+              35.2409766
+            ],
+            [
+              -80.8807384,
+              35.2409391
+            ],
+            [
+              -80.8806737,
+              35.2410361
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-598",
+        "source_id": "1To3qUUtxEyZvXBuFEGJEM",
+        "name": "Contextual Building",
+        "height": 3.8,
+        "base_elevation": 221.74,
+        "centroid_lng": -80.882415,
+        "centroid_lat": 35.2409972
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8823416,
+              35.24102
+            ],
+            [
+              -80.8824374,
+              35.2410588
+            ],
+            [
+              -80.8824883,
+              35.2409743
+            ],
+            [
+              -80.8823925,
+              35.2409355
+            ],
+            [
+              -80.8823416,
+              35.24102
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-620",
+        "source_id": "0K7xt6CP3bLhN_fpybSTMo",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 221.45,
+        "centroid_lng": -80.8821884,
+        "centroid_lat": 35.2409275
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8821416,
+              35.2409253
+            ],
+            [
+              -80.882166,
+              35.240936
+            ],
+            [
+              -80.8821539,
+              35.2409545
+            ],
+            [
+              -80.8822176,
+              35.2409825
+            ],
+            [
+              -80.8822697,
+              35.2409026
+            ],
+            [
+              -80.8821815,
+              35.240864
+            ],
+            [
+              -80.8821416,
+              35.2409253
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-640",
+        "source_id": "0Rs2BNfQfNTzadpSug25vh",
+        "name": "Contextual Building",
+        "height": 4.6,
+        "base_elevation": 222,
+        "centroid_lng": -80.8830601,
+        "centroid_lat": 35.2407617
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8829869,
+              35.2407865
+            ],
+            [
+              -80.8830702,
+              35.2408261
+            ],
+            [
+              -80.8831333,
+              35.240737
+            ],
+            [
+              -80.88305,
+              35.2406973
+            ],
+            [
+              -80.8829869,
+              35.2407865
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-660",
+        "source_id": "2550ROzUMiAjRO3__14pFd",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 224.83,
+        "centroid_lng": -80.8808936,
+        "centroid_lat": 35.2407513
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8808224,
+              35.240781
+            ],
+            [
+              -80.8809107,
+              35.2408154
+            ],
+            [
+              -80.8809649,
+              35.2407215
+            ],
+            [
+              -80.8808765,
+              35.2406872
+            ],
+            [
+              -80.8808224,
+              35.240781
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-684",
+        "source_id": "0zBXWeRemLDC9_eBJH7k4b",
+        "name": "Contextual Building",
+        "height": 3.4,
+        "base_elevation": 225.5,
+        "centroid_lng": -80.8810642,
+        "centroid_lat": 35.2405178
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8811052,
+              35.2405563
+            ],
+            [
+              -80.8811173,
+              35.2405365
+            ],
+            [
+              -80.8810881,
+              35.2405245
+            ],
+            [
+              -80.8811161,
+              35.2404784
+            ],
+            [
+              -80.881012,
+              35.2404359
+            ],
+            [
+              -80.8809622,
+              35.240518
+            ],
+            [
+              -80.8810515,
+              35.2405545
+            ],
+            [
+              -80.8810613,
+              35.2405384
+            ],
+            [
+              -80.8811052,
+              35.2405563
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-704",
+        "source_id": "2G3xcTbbTnHQfD1PfA0blF",
+        "name": "Contextual Building",
+        "height": 4.5,
+        "base_elevation": 226.25,
+        "centroid_lng": -80.8858707,
+        "centroid_lat": 35.2404406
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8857772,
+              35.2404829
+            ],
+            [
+              -80.8858337,
+              35.2405228
+            ],
+            [
+              -80.8859642,
+              35.2403983
+            ],
+            [
+              -80.8859077,
+              35.2403584
+            ],
+            [
+              -80.8857772,
+              35.2404829
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-728",
+        "source_id": "0UG1vfQZ$N_aFdYiVcXFp1",
+        "name": "Contextual Building",
+        "height": 3.4,
+        "base_elevation": 222.26,
+        "centroid_lng": -80.8820641,
+        "centroid_lat": 35.2403883
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8819962,
+              35.2403953
+            ],
+            [
+              -80.8820338,
+              35.2404098
+            ],
+            [
+              -80.8820237,
+              35.2404276
+            ],
+            [
+              -80.8820719,
+              35.2404461
+            ],
+            [
+              -80.8820821,
+              35.2404283
+            ],
+            [
+              -80.8821164,
+              35.2403683
+            ],
+            [
+              -80.8821373,
+              35.2403319
+            ],
+            [
+              -80.8820513,
+              35.2402988
+            ],
+            [
+              -80.8819962,
+              35.2403953
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-748",
+        "source_id": "3Jv$z_yPKJOTCj7z6zs_jg",
+        "name": "Contextual Building",
+        "height": 3.8,
+        "base_elevation": 227.56,
+        "centroid_lng": -80.8855766,
+        "centroid_lat": 35.240333
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8854412,
+              35.2403698
+            ],
+            [
+              -80.885541,
+              35.2404464
+            ],
+            [
+              -80.8857121,
+              35.2402961
+            ],
+            [
+              -80.8856123,
+              35.2402196
+            ],
+            [
+              -80.8854412,
+              35.2403698
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-770",
+        "source_id": "32OwbU4QVQiDF5f9FsdeLO",
+        "name": "Contextual Building",
+        "height": 4.3,
+        "base_elevation": 219.41,
+        "centroid_lng": -80.8848534,
+        "centroid_lat": 35.2401312
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8847288,
+              35.2400509
+            ],
+            [
+              -80.8847768,
+              35.2400891
+            ],
+            [
+              -80.884708,
+              35.2401472
+            ],
+            [
+              -80.8849515,
+              35.2403409
+            ],
+            [
+              -80.8851235,
+              35.2401953
+            ],
+            [
+              -80.8848321,
+              35.2399635
+            ],
+            [
+              -80.8847288,
+              35.2400509
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-794",
+        "source_id": "05bCMCkg6VsQOzticr_N$U",
+        "name": "Contextual Building",
+        "height": 4.5,
+        "base_elevation": 223.6,
+        "centroid_lng": -80.8801687,
+        "centroid_lat": 35.2395871
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8801812,
+              35.2396376
+            ],
+            [
+              -80.8801958,
+              35.2396098
+            ],
+            [
+              -80.8802324,
+              35.2396227
+            ],
+            [
+              -80.8802623,
+              35.2395658
+            ],
+            [
+              -80.8801415,
+              35.2395231
+            ],
+            [
+              -80.8801276,
+              35.2395495
+            ],
+            [
+              -80.8801116,
+              35.2395801
+            ],
+            [
+              -80.880097,
+              35.2396079
+            ],
+            [
+              -80.8801812,
+              35.2396376
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-814",
+        "source_id": "36bmd6rrxRPheRsryKCnix",
+        "name": "Contextual Building",
+        "height": 4.6,
+        "base_elevation": 223.05,
+        "centroid_lng": -80.8802544,
+        "centroid_lat": 35.2394194
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8801958,
+              35.239448
+            ],
+            [
+              -80.8802921,
+              35.2394659
+            ],
+            [
+              -80.8803129,
+              35.2393907
+            ],
+            [
+              -80.8802166,
+              35.2393728
+            ],
+            [
+              -80.8801958,
+              35.239448
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-834",
+        "source_id": "2EM_ZKFXC8nnzFVCn0m71c",
+        "name": "Contextual Building",
+        "height": 4.3,
+        "base_elevation": 222.96,
+        "centroid_lng": -80.8841879,
+        "centroid_lat": 35.2392809
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8840234,
+              35.2392875
+            ],
+            [
+              -80.8842013,
+              35.2394155
+            ],
+            [
+              -80.8843524,
+              35.2392742
+            ],
+            [
+              -80.8841745,
+              35.2391462
+            ],
+            [
+              -80.8840234,
+              35.2392875
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-854",
+        "source_id": "06mMSQO8C3ggPpFnAM1E1Z",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 223.21,
+        "centroid_lng": -80.8803026,
+        "centroid_lat": 35.2392441
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8802448,
+              35.2392795
+            ],
+            [
+              -80.8803283,
+              35.2392994
+            ],
+            [
+              -80.8803605,
+              35.2392086
+            ],
+            [
+              -80.8802769,
+              35.2391887
+            ],
+            [
+              -80.8802448,
+              35.2392795
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-883",
+        "source_id": "19Wp78FWfFIvLGxfnJulKU",
+        "name": "Contextual Building",
+        "height": 4.7,
+        "base_elevation": 225.79,
+        "centroid_lng": -80.8853218,
+        "centroid_lat": 35.2390299
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8852855,
+              35.2391892
+            ],
+            [
+              -80.8853187,
+              35.2391571
+            ],
+            [
+              -80.8853205,
+              35.2391583
+            ],
+            [
+              -80.8853903,
+              35.2391082
+            ],
+            [
+              -80.8854988,
+              35.2390306
+            ],
+            [
+              -80.8854763,
+              35.2389986
+            ],
+            [
+              -80.8853905,
+              35.2389985
+            ],
+            [
+              -80.8853906,
+              35.2389007
+            ],
+            [
+              -80.8853093,
+              35.2388505
+            ],
+            [
+              -80.8852452,
+              35.2389005
+            ],
+            [
+              -80.8852451,
+              35.2390103
+            ],
+            [
+              -80.8851898,
+              35.2390102
+            ],
+            [
+              -80.8851222,
+              35.2390756
+            ],
+            [
+              -80.8852855,
+              35.2391892
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-903",
+        "source_id": "2yUP7V5DcZFUNtA2U6YaIu",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 223.48,
+        "centroid_lng": -80.8845235,
+        "centroid_lat": 35.2382974
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8843389,
+              35.2382507
+            ],
+            [
+              -80.884612,
+              35.2384383
+            ],
+            [
+              -80.884708,
+              35.2383441
+            ],
+            [
+              -80.8844349,
+              35.2381566
+            ],
+            [
+              -80.8843389,
+              35.2382507
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-925",
+        "source_id": "3iGYx0CqHR5S0MaS21ya3E",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 218.48,
+        "centroid_lng": -80.8806027,
+        "centroid_lat": 35.2383493
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.880512,
+              35.2383558
+            ],
+            [
+              -80.8805718,
+              35.2384231
+            ],
+            [
+              -80.8806751,
+              35.2383613
+            ],
+            [
+              -80.8806385,
+              35.2383201
+            ],
+            [
+              -80.8806209,
+              35.2383307
+            ],
+            [
+              -80.8805977,
+              35.2383046
+            ],
+            [
+              -80.880512,
+              35.2383558
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-945",
+        "source_id": "3rxotRvIsJeKaPZGVQkWMn",
+        "name": "Contextual Building",
+        "height": 4.2,
+        "base_elevation": 212.97,
+        "centroid_lng": -80.8811095,
+        "centroid_lat": 35.2381248
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8810118,
+              35.2380808
+            ],
+            [
+              -80.8811172,
+              35.2382159
+            ],
+            [
+              -80.8812071,
+              35.2381687
+            ],
+            [
+              -80.8811017,
+              35.2380336
+            ],
+            [
+              -80.8810118,
+              35.2380808
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-965",
+        "source_id": "1OV_SKDkips9u3F1VFaVvO",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 230.76,
+        "centroid_lng": -80.8805845,
+        "centroid_lat": 35.2417712
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8806,
+              35.2418211
+            ],
+            [
+              -80.8806469,
+              35.2417663
+            ],
+            [
+              -80.8805689,
+              35.2417214
+            ],
+            [
+              -80.8805221,
+              35.2417762
+            ],
+            [
+              -80.8806,
+              35.2418211
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-985",
+        "source_id": "0rN7VXesBslZxa3azEAJ3E",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 224.36,
+        "centroid_lng": -80.8838811,
+        "centroid_lat": 35.2421438
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8838116,
+              35.2421862
+            ],
+            [
+              -80.8839306,
+              35.242202
+            ],
+            [
+              -80.8839505,
+              35.2421015
+            ],
+            [
+              -80.8838315,
+              35.2420857
+            ],
+            [
+              -80.8838116,
+              35.2421862
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1013",
+        "source_id": "2lGkLGxazXh4qIsJPVVyDN",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 225.46,
+        "centroid_lng": -80.8822718,
+        "centroid_lat": 35.2421217
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8822408,
+              35.2421891
+            ],
+            [
+              -80.8822851,
+              35.242162
+            ],
+            [
+              -80.8822976,
+              35.2421757
+            ],
+            [
+              -80.8823367,
+              35.2421517
+            ],
+            [
+              -80.8823242,
+              35.242138
+            ],
+            [
+              -80.8823442,
+              35.2421257
+            ],
+            [
+              -80.8822906,
+              35.2420669
+            ],
+            [
+              -80.8822729,
+              35.2420777
+            ],
+            [
+              -80.8822513,
+              35.242054
+            ],
+            [
+              -80.8822047,
+              35.2420826
+            ],
+            [
+              -80.8822263,
+              35.2421063
+            ],
+            [
+              -80.8821872,
+              35.2421303
+            ],
+            [
+              -80.8822408,
+              35.2421891
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1033",
+        "source_id": "1RfcweseyaxQzKoIYPDCjn",
+        "name": "Contextual Building",
+        "height": 4.3,
+        "base_elevation": 228.6,
+        "centroid_lng": -80.8811477,
+        "centroid_lat": 35.2421021
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8810722,
+              35.2421453
+            ],
+            [
+              -80.8811571,
+              35.2421772
+            ],
+            [
+              -80.8812231,
+              35.2420589
+            ],
+            [
+              -80.8811383,
+              35.242027
+            ],
+            [
+              -80.8810722,
+              35.2421453
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1053",
+        "source_id": "1UrUZKS5FUJEtyFXGoCaab",
+        "name": "Contextual Building",
+        "height": 3.6,
+        "base_elevation": 223.48,
+        "centroid_lng": -80.8837193,
+        "centroid_lat": 35.2420943
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8836611,
+              35.2421353
+            ],
+            [
+              -80.8837618,
+              35.2421467
+            ],
+            [
+              -80.8837775,
+              35.2420533
+            ],
+            [
+              -80.8836768,
+              35.2420418
+            ],
+            [
+              -80.8836611,
+              35.2421353
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1077",
+        "source_id": "3wks_PifwYnCTpFOaI2kiJ",
+        "name": "Contextual Building",
+        "height": 3.4,
+        "base_elevation": 222.89,
+        "centroid_lng": -80.8846443,
+        "centroid_lat": 35.2420663
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8846427,
+              35.2421279
+            ],
+            [
+              -80.8847712,
+              35.2421081
+            ],
+            [
+              -80.8847534,
+              35.2420305
+            ],
+            [
+              -80.8846279,
+              35.2420499
+            ],
+            [
+              -80.8846155,
+              35.2419958
+            ],
+            [
+              -80.8845415,
+              35.2420073
+            ],
+            [
+              -80.8845654,
+              35.2421111
+            ],
+            [
+              -80.8846363,
+              35.2421001
+            ],
+            [
+              -80.8846427,
+              35.2421279
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1097",
+        "source_id": "1Dz5171IOgI4_mssqVZda5",
+        "name": "Contextual Building",
+        "height": 4.3,
+        "base_elevation": 222.66,
+        "centroid_lng": -80.8854322,
+        "centroid_lat": 35.2417846
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8853453,
+              35.2417619
+            ],
+            [
+              -80.8854444,
+              35.2418587
+            ],
+            [
+              -80.8855191,
+              35.2418072
+            ],
+            [
+              -80.88542,
+              35.2417105
+            ],
+            [
+              -80.8853453,
+              35.2417619
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1121",
+        "source_id": "02QaLeq_gKWU8ZqQ_TqxFv",
+        "name": "Contextual Building",
+        "height": 3.6,
+        "base_elevation": 221.93,
+        "centroid_lng": -80.884825,
+        "centroid_lat": 35.2417924
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8848426,
+              35.2418541
+            ],
+            [
+              -80.8848979,
+              35.2417912
+            ],
+            [
+              -80.8848582,
+              35.2417677
+            ],
+            [
+              -80.8848729,
+              35.241751
+            ],
+            [
+              -80.8848028,
+              35.2417095
+            ],
+            [
+              -80.8847261,
+              35.2417966
+            ],
+            [
+              -80.8847962,
+              35.2418381
+            ],
+            [
+              -80.8848029,
+              35.2418305
+            ],
+            [
+              -80.8848426,
+              35.2418541
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1143",
+        "source_id": "2ZxWtvGw4zpckrUmTAd668",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 226.07,
+        "centroid_lng": -80.8828428,
+        "centroid_lat": 35.241757
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8827443,
+              35.2417816
+            ],
+            [
+              -80.882823,
+              35.24183
+            ],
+            [
+              -80.8828899,
+              35.2417568
+            ],
+            [
+              -80.8828785,
+              35.2417498
+            ],
+            [
+              -80.8828942,
+              35.2417326
+            ],
+            [
+              -80.8828269,
+              35.2416912
+            ],
+            [
+              -80.8827443,
+              35.2417816
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1163",
+        "source_id": "0lsnf4i$VSFp8ozyVzzXYq",
+        "name": "Contextual Building",
+        "height": 3.6,
+        "base_elevation": 222.57,
+        "centroid_lng": -80.883474,
+        "centroid_lat": 35.2417421
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8833892,
+              35.2417546
+            ],
+            [
+              -80.8834888,
+              35.2418117
+            ],
+            [
+              -80.8835587,
+              35.2417296
+            ],
+            [
+              -80.8834591,
+              35.2416725
+            ],
+            [
+              -80.8833892,
+              35.2417546
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1183",
+        "source_id": "0LeX8GpV$CqDL3vU5ehyto",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 229.69,
+        "centroid_lng": -80.8803671,
+        "centroid_lat": 35.2416847
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8802657,
+              35.2416957
+            ],
+            [
+              -80.8804213,
+              35.2417559
+            ],
+            [
+              -80.8804685,
+              35.2416737
+            ],
+            [
+              -80.8803129,
+              35.2416135
+            ],
+            [
+              -80.8802657,
+              35.2416957
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1205",
+        "source_id": "38J_phJ65PyRREFU7ICaqH",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 221.17,
+        "centroid_lng": -80.8846552,
+        "centroid_lat": 35.2416766
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8845865,
+              35.2416629
+            ],
+            [
+              -80.8846487,
+              35.2416964
+            ],
+            [
+              -80.8846337,
+              35.2417151
+            ],
+            [
+              -80.8846762,
+              35.241738
+            ],
+            [
+              -80.8847453,
+              35.2416518
+            ],
+            [
+              -80.8846405,
+              35.2415953
+            ],
+            [
+              -80.8845865,
+              35.2416629
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1225",
+        "source_id": "1ynjOjRY$nl9LAcYXYdrg6",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 222.16,
+        "centroid_lng": -80.8836325,
+        "centroid_lat": 35.2416229
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.88356,
+              35.2416448
+            ],
+            [
+              -80.8836446,
+              35.2416855
+            ],
+            [
+              -80.883705,
+              35.241601
+            ],
+            [
+              -80.8836204,
+              35.2415604
+            ],
+            [
+              -80.88356,
+              35.2416448
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1245",
+        "source_id": "2LKTnBSB4BeZf0RXRzyBbu",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 228.74,
+        "centroid_lng": -80.8804356,
+        "centroid_lat": 35.2415559
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8803337,
+              35.2415714
+            ],
+            [
+              -80.8804938,
+              35.2416263
+            ],
+            [
+              -80.8805376,
+              35.2415404
+            ],
+            [
+              -80.8803775,
+              35.2414855
+            ],
+            [
+              -80.8803337,
+              35.2415714
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1265",
+        "source_id": "3QKd0F4kzolpi_YAj_jRZf",
+        "name": "Contextual Building",
+        "height": 3.8,
+        "base_elevation": 219.64,
+        "centroid_lng": -80.8850977,
+        "centroid_lat": 35.2414643
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8850035,
+              35.2414489
+            ],
+            [
+              -80.8851166,
+              35.2415416
+            ],
+            [
+              -80.8851919,
+              35.2414797
+            ],
+            [
+              -80.8850788,
+              35.241387
+            ],
+            [
+              -80.8850035,
+              35.2414489
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1285",
+        "source_id": "1wtDwNaIRll8c2TE6IclKl",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 224.2,
+        "centroid_lng": -80.8821043,
+        "centroid_lat": 35.2414767
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8820335,
+              35.2414898
+            ],
+            [
+              -80.8821262,
+              35.2415334
+            ],
+            [
+              -80.882175,
+              35.2414636
+            ],
+            [
+              -80.8820823,
+              35.24142
+            ],
+            [
+              -80.8820335,
+              35.2414898
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1305",
+        "source_id": "3Zd_$E_MpwDkDtJdMiI2Pt",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 221.05,
+        "centroid_lng": -80.8837343,
+        "centroid_lat": 35.2414599
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8836582,
+              35.2414893
+            ],
+            [
+              -80.8837311,
+              35.2415289
+            ],
+            [
+              -80.8838104,
+              35.2414306
+            ],
+            [
+              -80.8837374,
+              35.241391
+            ],
+            [
+              -80.8836582,
+              35.2414893
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1325",
+        "source_id": "1KSAP$Q5Oez1k1a70V6Zhy",
+        "name": "Contextual Building",
+        "height": 4.6,
+        "base_elevation": 224.2,
+        "centroid_lng": -80.8819512,
+        "centroid_lat": 35.2414048
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8818771,
+              35.2414167
+            ],
+            [
+              -80.8819673,
+              35.2414654
+            ],
+            [
+              -80.8820254,
+              35.2413929
+            ],
+            [
+              -80.8819351,
+              35.2413442
+            ],
+            [
+              -80.8818771,
+              35.2414167
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1347",
+        "source_id": "0FDdnCPzZrqkqw3yT$Dh48",
+        "name": "Contextual Building",
+        "height": 3.5,
+        "base_elevation": 220.52,
+        "centroid_lng": -80.8839236,
+        "centroid_lat": 35.2413286
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8837771,
+              35.2413193
+            ],
+            [
+              -80.8838346,
+              35.2414127
+            ],
+            [
+              -80.8839758,
+              35.2413542
+            ],
+            [
+              -80.8839638,
+              35.2413347
+            ],
+            [
+              -80.8840177,
+              35.2413123
+            ],
+            [
+              -80.8839722,
+              35.2412384
+            ],
+            [
+              -80.8837771,
+              35.2413193
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1367",
+        "source_id": "2ee6zEZTfUsPvUHRS4qyHe",
+        "name": "Contextual Building",
+        "height": 4.2,
+        "base_elevation": 217.72,
+        "centroid_lng": -80.8849425,
+        "centroid_lat": 35.2413202
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.88485,
+              35.2413061
+            ],
+            [
+              -80.8849641,
+              35.2413953
+            ],
+            [
+              -80.8850351,
+              35.2413343
+            ],
+            [
+              -80.884921,
+              35.241245
+            ],
+            [
+              -80.88485,
+              35.2413061
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1387",
+        "source_id": "2Dh9H6X82$6kXeZOzyqW2$",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 226.83,
+        "centroid_lng": -80.8805599,
+        "centroid_lat": 35.2412794
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8804842,
+              35.2413151
+            ],
+            [
+              -80.8805688,
+              35.2413506
+            ],
+            [
+              -80.8806356,
+              35.2412437
+            ],
+            [
+              -80.880551,
+              35.2412081
+            ],
+            [
+              -80.8804842,
+              35.2413151
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1407",
+        "source_id": "0PpTRaBWGEZathCAUF2RK5",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 225.19,
+        "centroid_lng": -80.8816265,
+        "centroid_lat": 35.241289
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8815554,
+              35.2413069
+            ],
+            [
+              -80.8816483,
+              35.2413474
+            ],
+            [
+              -80.8816977,
+              35.241271
+            ],
+            [
+              -80.8816047,
+              35.2412306
+            ],
+            [
+              -80.8815554,
+              35.2413069
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1427",
+        "source_id": "3UtTqHRwJMOpE9s1OTCn3Y",
+        "name": "Contextual Building",
+        "height": 4.7,
+        "base_elevation": 225.92,
+        "centroid_lng": -80.8811607,
+        "centroid_lat": 35.2410688
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8810816,
+              35.2410992
+            ],
+            [
+              -80.8811883,
+              35.2411369
+            ],
+            [
+              -80.8812398,
+              35.2410384
+            ],
+            [
+              -80.8811332,
+              35.2410008
+            ],
+            [
+              -80.8810816,
+              35.2410992
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1450",
+        "source_id": "1bQ$EMg6sF8gbSI$EHfUSb",
+        "name": "Contextual Building",
+        "height": 4.2,
+        "base_elevation": 220.65,
+        "centroid_lng": -80.8834588,
+        "centroid_lat": 35.2409395
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8833587,
+              35.2409524
+            ],
+            [
+              -80.8834182,
+              35.2409776
+            ],
+            [
+              -80.8835236,
+              35.2410222
+            ],
+            [
+              -80.8835856,
+              35.2409236
+            ],
+            [
+              -80.8834802,
+              35.240879
+            ],
+            [
+              -80.8834524,
+              35.2409232
+            ],
+            [
+              -80.8833929,
+              35.240898
+            ],
+            [
+              -80.8833587,
+              35.2409524
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1472",
+        "source_id": "1ICqpaa5cp__IhFx6fYVDP",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 225.91,
+        "centroid_lng": -80.8808554,
+        "centroid_lat": 35.2408861
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8807563,
+              35.2408935
+            ],
+            [
+              -80.8808914,
+              35.2409443
+            ],
+            [
+              -80.880908,
+              35.2409145
+            ],
+            [
+              -80.8808732,
+              35.2409015
+            ],
+            [
+              -80.8809019,
+              35.2408502
+            ],
+            [
+              -80.8808015,
+              35.2408125
+            ],
+            [
+              -80.8807563,
+              35.2408935
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1492",
+        "source_id": "1Ur8ygkYbJbcoXLdyDKCYs",
+        "name": "Contextual Building",
+        "height": 5.3,
+        "base_elevation": 220.1,
+        "centroid_lng": -80.8803114,
+        "centroid_lat": 35.2380374
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8802253,
+              35.2380269
+            ],
+            [
+              -80.8802825,
+              35.2381047
+            ],
+            [
+              -80.8803975,
+              35.2380479
+            ],
+            [
+              -80.8803403,
+              35.2379701
+            ],
+            [
+              -80.8802253,
+              35.2380269
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1519",
+        "source_id": "3$DdppZn7sNuSEn6abO3zp",
+        "name": "Contextual Building",
+        "height": 3.3,
+        "base_elevation": 218.82,
+        "centroid_lng": -80.8805554,
+        "centroid_lat": 35.2379212
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8805735,
+              35.237987
+            ],
+            [
+              -80.8806145,
+              35.2379681
+            ],
+            [
+              -80.8806015,
+              35.2379492
+            ],
+            [
+              -80.880623,
+              35.2379394
+            ],
+            [
+              -80.8805681,
+              35.2378591
+            ],
+            [
+              -80.8805515,
+              35.2378349
+            ],
+            [
+              -80.8805009,
+              35.2378581
+            ],
+            [
+              -80.8805175,
+              35.2378824
+            ],
+            [
+              -80.8804718,
+              35.2379034
+            ],
+            [
+              -80.8805267,
+              35.2379837
+            ],
+            [
+              -80.8805605,
+              35.2379681
+            ],
+            [
+              -80.8805735,
+              35.237987
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1543",
+        "source_id": "1SPLqg1sXiR93IfT0U0hzk",
+        "name": "Contextual Building",
+        "height": 5.5,
+        "base_elevation": 215.5,
+        "centroid_lng": -80.8824569,
+        "centroid_lat": 35.2378053
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8824696,
+              35.2376973
+            ],
+            [
+              -80.8823297,
+              35.2378219
+            ],
+            [
+              -80.8822916,
+              35.2378578
+            ],
+            [
+              -80.8824045,
+              35.2379437
+            ],
+            [
+              -80.8824473,
+              35.237912
+            ],
+            [
+              -80.8825874,
+              35.2377889
+            ],
+            [
+              -80.8826191,
+              35.2377549
+            ],
+            [
+              -80.8825059,
+              35.2376661
+            ],
+            [
+              -80.8824696,
+              35.2376973
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1566",
+        "source_id": "1LF_5QkaVPPIiaMg$5PKQm",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 216.4,
+        "centroid_lng": -80.880824,
+        "centroid_lat": 35.2377453
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8807951,
+              35.2376967
+            ],
+            [
+              -80.8807955,
+              35.2377303
+            ],
+            [
+              -80.8807556,
+              35.2377445
+            ],
+            [
+              -80.8808184,
+              35.2378279
+            ],
+            [
+              -80.8809019,
+              35.2377855
+            ],
+            [
+              -80.8808714,
+              35.2377426
+            ],
+            [
+              -80.8808299,
+              35.2376892
+            ],
+            [
+              -80.8807951,
+              35.2376967
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1587",
+        "source_id": "2TrGwaZu4s7EFpax2Cn4yS",
+        "name": "Contextual Building",
+        "height": 4.8,
+        "base_elevation": 228.03,
+        "centroid_lng": -80.8855202,
+        "centroid_lat": 35.2407716
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8853682,
+              35.2407895
+            ],
+            [
+              -80.8854864,
+              35.2408794
+            ],
+            [
+              -80.8855597,
+              35.2408145
+            ],
+            [
+              -80.8856526,
+              35.2407323
+            ],
+            [
+              -80.8855344,
+              35.2406424
+            ],
+            [
+              -80.8853682,
+              35.2407895
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1611",
+        "source_id": "0e3nFVCZdEMcWtUxbbwTNM",
+        "name": "Contextual Building",
+        "height": 3.3,
+        "base_elevation": 224.6,
+        "centroid_lng": -80.8814396,
+        "centroid_lat": 35.2406476
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8813604,
+              35.2406985
+            ],
+            [
+              -80.8814178,
+              35.240719
+            ],
+            [
+              -80.8814411,
+              35.2406751
+            ],
+            [
+              -80.8814729,
+              35.2406865
+            ],
+            [
+              -80.8815205,
+              35.2405967
+            ],
+            [
+              -80.8814888,
+              35.2405853
+            ],
+            [
+              -80.8814313,
+              35.2405648
+            ],
+            [
+              -80.8813837,
+              35.2406546
+            ],
+            [
+              -80.8813604,
+              35.2406985
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1631",
+        "source_id": "2FICRU7xeBAhfAjo7hysg8",
+        "name": "Contextual Building",
+        "height": 4.6,
+        "base_elevation": 224.73,
+        "centroid_lng": -80.8809862,
+        "centroid_lat": 35.2406321
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8809021,
+              35.2406474
+            ],
+            [
+              -80.8810289,
+              35.2406934
+            ],
+            [
+              -80.8810703,
+              35.2406167
+            ],
+            [
+              -80.8809435,
+              35.2405707
+            ],
+            [
+              -80.8809021,
+              35.2406474
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1651",
+        "source_id": "0w5k6TcALQiml__wTApY4x",
+        "name": "Contextual Building",
+        "height": 4.6,
+        "base_elevation": 217.93,
+        "centroid_lng": -80.8832172,
+        "centroid_lat": 35.2372714
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8829854,
+              35.2373419
+            ],
+            [
+              -80.8831531,
+              35.2374673
+            ],
+            [
+              -80.8834491,
+              35.2372008
+            ],
+            [
+              -80.8832814,
+              35.2370754
+            ],
+            [
+              -80.8829854,
+              35.2373419
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1671",
+        "source_id": "3ZJcgT5nhUry93Xg5Dl0V8",
+        "name": "Contextual Building",
+        "height": 4.3,
+        "base_elevation": 221.2,
+        "centroid_lng": -80.8817101,
+        "centroid_lat": 35.2402236
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8816495,
+              35.2402578
+            ],
+            [
+              -80.8817311,
+              35.2402815
+            ],
+            [
+              -80.8817707,
+              35.2401894
+            ],
+            [
+              -80.8816891,
+              35.2401658
+            ],
+            [
+              -80.8816495,
+              35.2402578
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1691",
+        "source_id": "1JLB5PKTa64e$d5$kyUUBW",
+        "name": "Contextual Building",
+        "height": 2.3,
+        "base_elevation": 222.36,
+        "centroid_lng": -80.8815095,
+        "centroid_lat": 35.2401757
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8814484,
+              35.2401947
+            ],
+            [
+              -80.8815258,
+              35.2402276
+            ],
+            [
+              -80.8815706,
+              35.2401567
+            ],
+            [
+              -80.8814933,
+              35.2401238
+            ],
+            [
+              -80.8814484,
+              35.2401947
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1711",
+        "source_id": "3qOhybPRZibV08y2OsPbKd",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 222.8,
+        "centroid_lng": -80.8812878,
+        "centroid_lat": 35.2401138
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8812119,
+              35.2401391
+            ],
+            [
+              -80.8813211,
+              35.2401752
+            ],
+            [
+              -80.8813636,
+              35.2400885
+            ],
+            [
+              -80.8812545,
+              35.2400524
+            ],
+            [
+              -80.8812119,
+              35.2401391
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1731",
+        "source_id": "2cms5P8D7dkEnM_mJlK33a",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 222.25,
+        "centroid_lng": -80.8814168,
+        "centroid_lat": 35.2399847
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8813438,
+              35.2399838
+            ],
+            [
+              -80.8814458,
+              35.2400396
+            ],
+            [
+              -80.8814897,
+              35.2399857
+            ],
+            [
+              -80.8813878,
+              35.2399298
+            ],
+            [
+              -80.8813438,
+              35.2399838
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1760",
+        "source_id": "1xqU5LXwmtNhfNDVbEYYJV",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 224.86,
+        "centroid_lng": -80.8846756,
+        "centroid_lat": 35.2394595
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8845389,
+              35.2394775
+            ],
+            [
+              -80.8846525,
+              35.2395737
+            ],
+            [
+              -80.8847144,
+              35.2395246
+            ],
+            [
+              -80.884684,
+              35.2394989
+            ],
+            [
+              -80.8847246,
+              35.2394666
+            ],
+            [
+              -80.8847502,
+              35.2394883
+            ],
+            [
+              -80.8848149,
+              35.2394369
+            ],
+            [
+              -80.8847089,
+              35.2393471
+            ],
+            [
+              -80.8846442,
+              35.2393986
+            ],
+            [
+              -80.8846779,
+              35.2394271
+            ],
+            [
+              -80.8846432,
+              35.2394547
+            ],
+            [
+              -80.8846283,
+              35.2394517
+            ],
+            [
+              -80.8846007,
+              35.2394283
+            ],
+            [
+              -80.8845389,
+              35.2394775
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1790",
+        "source_id": "08sKy2knrW5UvlQFUZNvun",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 222.82,
+        "centroid_lng": -80.8837856,
+        "centroid_lat": 35.2389393
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8838418,
+              35.2391953
+            ],
+            [
+              -80.8840404,
+              35.2390107
+            ],
+            [
+              -80.8840703,
+              35.2389829
+            ],
+            [
+              -80.8840938,
+              35.2389611
+            ],
+            [
+              -80.8840151,
+              35.2389041
+            ],
+            [
+              -80.8839916,
+              35.238926
+            ],
+            [
+              -80.8839252,
+              35.2388779
+            ],
+            [
+              -80.8839483,
+              35.2388563
+            ],
+            [
+              -80.883598,
+              35.2386027
+            ],
+            [
+              -80.8833464,
+              35.2388367
+            ],
+            [
+              -80.8834011,
+              35.2388763
+            ],
+            [
+              -80.8833667,
+              35.2389083
+            ],
+            [
+              -80.8836623,
+              35.2391223
+            ],
+            [
+              -80.8836967,
+              35.2390903
+            ],
+            [
+              -80.8838418,
+              35.2391953
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1812",
+        "source_id": "1_bfeOHQt9rlzJgw$67Y6v",
+        "name": "Contextual Building",
+        "height": 5.1,
+        "base_elevation": 223.1,
+        "centroid_lng": -80.8803394,
+        "centroid_lat": 35.2390507
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8802952,
+              35.239045
+            ],
+            [
+              -80.8803188,
+              35.2390488
+            ],
+            [
+              -80.8803089,
+              35.2390892
+            ],
+            [
+              -80.8803932,
+              35.239103
+            ],
+            [
+              -80.880414,
+              35.2390178
+            ],
+            [
+              -80.8803062,
+              35.2390001
+            ],
+            [
+              -80.8802952,
+              35.239045
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1835",
+        "source_id": "3U9bU1C2l8lXvVUIFMy2EP",
+        "name": "Contextual Building",
+        "height": 4.6,
+        "base_elevation": 216.2,
+        "centroid_lng": -80.88089,
+        "centroid_lat": 35.2382273
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8808792,
+              35.2381674
+            ],
+            [
+              -80.880843,
+              35.2381687
+            ],
+            [
+              -80.8808162,
+              35.2381997
+            ],
+            [
+              -80.8808944,
+              35.2383024
+            ],
+            [
+              -80.8809073,
+              35.2383192
+            ],
+            [
+              -80.8809906,
+              35.2382765
+            ],
+            [
+              -80.8808995,
+              35.238157
+            ],
+            [
+              -80.8808792,
+              35.2381674
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1855",
+        "source_id": "36_T6H6fdC0W9pcJxVSxy6",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 222.16,
+        "centroid_lng": -80.8800833,
+        "centroid_lat": 35.2381106
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8799917,
+              35.2380747
+            ],
+            [
+              -80.8801076,
+              35.2381914
+            ],
+            [
+              -80.8801748,
+              35.2381465
+            ],
+            [
+              -80.880059,
+              35.2380298
+            ],
+            [
+              -80.8799917,
+              35.2380747
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1875",
+        "source_id": "3DXOxWY8wW2cpxFGLA5KhR",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 222.26,
+        "centroid_lng": -80.8858195,
+        "centroid_lat": 35.2420145
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8857508,
+              35.2420392
+            ],
+            [
+              -80.8858631,
+              35.2420646
+            ],
+            [
+              -80.8858883,
+              35.2419898
+            ],
+            [
+              -80.885776,
+              35.2419644
+            ],
+            [
+              -80.8857508,
+              35.2420392
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1895",
+        "source_id": "2_sOY5cbIJ8Xsx$SiXZw4y",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 227.81,
+        "centroid_lng": -80.8808119,
+        "centroid_lat": 35.2419665
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8807312,
+              35.2420064
+            ],
+            [
+              -80.8808176,
+              35.2420437
+            ],
+            [
+              -80.8808927,
+              35.2419265
+            ],
+            [
+              -80.8808063,
+              35.2418892
+            ],
+            [
+              -80.8807312,
+              35.2420064
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1915",
+        "source_id": "0GyNj3X7HZhrTJhg43WXJG",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 229.09,
+        "centroid_lng": -80.8806651,
+        "centroid_lat": 35.2419093
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.880588,
+              35.2419403
+            ],
+            [
+              -80.8806703,
+              35.2419796
+            ],
+            [
+              -80.8807422,
+              35.2418784
+            ],
+            [
+              -80.88066,
+              35.241839
+            ],
+            [
+              -80.880588,
+              35.2419403
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1935",
+        "source_id": "2ZHqi3HrRyAXT5BTwyObxL",
+        "name": "Contextual Building",
+        "height": 3.8,
+        "base_elevation": 222.04,
+        "centroid_lng": -80.8852661,
+        "centroid_lat": 35.2416118
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8851725,
+              35.2415846
+            ],
+            [
+              -80.8852697,
+              35.2416932
+            ],
+            [
+              -80.8853598,
+              35.241639
+            ],
+            [
+              -80.8852626,
+              35.2415303
+            ],
+            [
+              -80.8851725,
+              35.2415846
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1955",
+        "source_id": "3x4BgS3TNwazqIcesJRP45",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 221.12,
+        "centroid_lng": -80.8843547,
+        "centroid_lat": 35.2414656
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8842703,
+              35.2414905
+            ],
+            [
+              -80.8843826,
+              35.2415355
+            ],
+            [
+              -80.884439,
+              35.2414406
+            ],
+            [
+              -80.8843267,
+              35.2413957
+            ],
+            [
+              -80.8842703,
+              35.2414905
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1978",
+        "source_id": "2Kfc34X0LGUhj0rGxLssxI",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 220.99,
+        "centroid_lng": -80.8820175,
+        "centroid_lat": 35.2408548
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8819272,
+              35.2408966
+            ],
+            [
+              -80.8819912,
+              35.2409229
+            ],
+            [
+              -80.8820168,
+              35.240881
+            ],
+            [
+              -80.8820378,
+              35.2408896
+            ],
+            [
+              -80.882085,
+              35.2408123
+            ],
+            [
+              -80.8820641,
+              35.2408037
+            ],
+            [
+              -80.8820001,
+              35.2407774
+            ],
+            [
+              -80.8819272,
+              35.2408966
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-1998",
+        "source_id": "2GMbVDfc7KrgEWovFtIqU_",
+        "name": "Contextual Building",
+        "height": 4.9,
+        "base_elevation": 217.45,
+        "centroid_lng": -80.8840925,
+        "centroid_lat": 35.2399391
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8839321,
+              35.2399207
+            ],
+            [
+              -80.8841185,
+              35.2400703
+            ],
+            [
+              -80.884253,
+              35.2399575
+            ],
+            [
+              -80.8840666,
+              35.2398079
+            ],
+            [
+              -80.8839321,
+              35.2399207
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2021",
+        "source_id": "2amADnBaxuPlBjvu4FJI3q",
+        "name": "Contextual Building",
+        "height": 5.3,
+        "base_elevation": 221.1,
+        "centroid_lng": -80.8815292,
+        "centroid_lat": 35.2398131
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8814752,
+              35.2397892
+            ],
+            [
+              -80.8814536,
+              35.2398181
+            ],
+            [
+              -80.8815623,
+              35.2398728
+            ],
+            [
+              -80.8815839,
+              35.2398438
+            ],
+            [
+              -80.8815493,
+              35.2398264
+            ],
+            [
+              -80.881577,
+              35.2397893
+            ],
+            [
+              -80.8815029,
+              35.239752
+            ],
+            [
+              -80.8814752,
+              35.2397892
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2043",
+        "source_id": "1yGV3X9fowORY5zfYfgmYi",
+        "name": "Contextual Building",
+        "height": 4.2,
+        "base_elevation": 220.34,
+        "centroid_lng": -80.8843352,
+        "centroid_lat": 35.2396852
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8841359,
+              35.2396741
+            ],
+            [
+              -80.8843351,
+              35.2398191
+            ],
+            [
+              -80.884418,
+              35.2397424
+            ],
+            [
+              -80.8843743,
+              35.2397106
+            ],
+            [
+              -80.8844516,
+              35.2396392
+            ],
+            [
+              -80.8842961,
+              35.239526
+            ],
+            [
+              -80.8841359,
+              35.2396741
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2065",
+        "source_id": "21Idt3qttr0FWMkhAcjgT$",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 226.24,
+        "centroid_lng": -80.8858967,
+        "centroid_lat": 35.23827
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8857226,
+              35.2382042
+            ],
+            [
+              -80.8859171,
+              35.238381
+            ],
+            [
+              -80.8859945,
+              35.2383237
+            ],
+            [
+              -80.8859596,
+              35.238292
+            ],
+            [
+              -80.885973,
+              35.2382821
+            ],
+            [
+              -80.8858134,
+              35.238137
+            ],
+            [
+              -80.8857226,
+              35.2382042
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2089",
+        "source_id": "3Ztg5B$YOmeH1kx4R0iziz",
+        "name": "Contextual Building",
+        "height": 4.8,
+        "base_elevation": 224.38,
+        "centroid_lng": -80.8818088,
+        "centroid_lat": 35.2413286
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8817208,
+              35.2413501
+            ],
+            [
+              -80.8818077,
+              35.2413979
+            ],
+            [
+              -80.8818345,
+              35.2413651
+            ],
+            [
+              -80.8818543,
+              35.2413409
+            ],
+            [
+              -80.881882,
+              35.241307
+            ],
+            [
+              -80.8818159,
+              35.2412705
+            ],
+            [
+              -80.8817881,
+              35.2413045
+            ],
+            [
+              -80.8817674,
+              35.2412931
+            ],
+            [
+              -80.8817208,
+              35.2413501
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2109",
+        "source_id": "39F4DzjHj4LZIZJayEdL4G",
+        "name": "Contextual Building",
+        "height": 4.7,
+        "base_elevation": 224.82,
+        "centroid_lng": -80.8800663,
+        "centroid_lat": 35.2397508
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8800009,
+              35.2397806
+            ],
+            [
+              -80.8800748,
+              35.2398118
+            ],
+            [
+              -80.8801318,
+              35.239721
+            ],
+            [
+              -80.8800578,
+              35.2396898
+            ],
+            [
+              -80.8800009,
+              35.2397806
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2129",
+        "source_id": "3aewOWG_XMZLahEIp$Vx3s",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 231.08,
+        "centroid_lng": -80.8804448,
+        "centroid_lat": 35.241826
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8803895,
+              35.2418419
+            ],
+            [
+              -80.8804529,
+              35.2418736
+            ],
+            [
+              -80.8805001,
+              35.24181
+            ],
+            [
+              -80.8804367,
+              35.2417784
+            ],
+            [
+              -80.8803895,
+              35.2418419
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2149",
+        "source_id": "3828c3P77GctYXhrD2_IW2",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 231.02,
+        "centroid_lng": -80.8813765,
+        "centroid_lat": 35.2416164
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8814583,
+              35.2415749
+            ],
+            [
+              -80.8813309,
+              35.2415469
+            ],
+            [
+              -80.8812946,
+              35.2416579
+            ],
+            [
+              -80.881422,
+              35.2416859
+            ],
+            [
+              -80.8814583,
+              35.2415749
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2183",
+        "source_id": "2_9wPzNWk$miC$QxoUNIXQ",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 220.55,
+        "centroid_lng": -80.8847421,
+        "centroid_lat": 35.2374957
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8850724,
+              35.2373819
+            ],
+            [
+              -80.8848898,
+              35.237245
+            ],
+            [
+              -80.8848064,
+              35.2373199
+            ],
+            [
+              -80.8848186,
+              35.237329
+            ],
+            [
+              -80.8846573,
+              35.2374738
+            ],
+            [
+              -80.884633,
+              35.2374555
+            ],
+            [
+              -80.8845774,
+              35.2375055
+            ],
+            [
+              -80.8844009,
+              35.2373731
+            ],
+            [
+              -80.8844121,
+              35.2373632
+            ],
+            [
+              -80.8842782,
+              35.2372628
+            ],
+            [
+              -80.884078,
+              35.2374425
+            ],
+            [
+              -80.8844004,
+              35.2376843
+            ],
+            [
+              -80.8843949,
+              35.2376893
+            ],
+            [
+              -80.8848877,
+              35.2380589
+            ],
+            [
+              -80.8853326,
+              35.2376595
+            ],
+            [
+              -80.8853204,
+              35.2376504
+            ],
+            [
+              -80.8853483,
+              35.2376255
+            ],
+            [
+              -80.8850501,
+              35.2374019
+            ],
+            [
+              -80.8850724,
+              35.2373819
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2203",
+        "source_id": "1lZjHUr1YR0I7thFbw93lw",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 220.41,
+        "centroid_lng": -80.880339,
+        "centroid_lat": 35.2384928
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8801486,
+              35.238522
+            ],
+            [
+              -80.8802222,
+              35.2386196
+            ],
+            [
+              -80.8805295,
+              35.2384636
+            ],
+            [
+              -80.8804559,
+              35.238366
+            ],
+            [
+              -80.8801486,
+              35.238522
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2225",
+        "source_id": "0gxroPkH4To1uicKfonHlZ",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 222.7,
+        "centroid_lng": -80.8826411,
+        "centroid_lat": 35.2405602
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8825957,
+              35.2405532
+            ],
+            [
+              -80.8826006,
+              35.2406105
+            ],
+            [
+              -80.8826994,
+              35.2406048
+            ],
+            [
+              -80.8826922,
+              35.240519
+            ],
+            [
+              -80.8826282,
+              35.2405226
+            ],
+            [
+              -80.8826306,
+              35.2405512
+            ],
+            [
+              -80.8825957,
+              35.2405532
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2245",
+        "source_id": "1NwGKdlKN8d1JsvfH05Z87",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 226.84,
+        "centroid_lng": -80.882099,
+        "centroid_lat": 35.242042
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8821013,
+              35.2419961
+            ],
+            [
+              -80.8820449,
+              35.2420301
+            ],
+            [
+              -80.8820967,
+              35.2420879
+            ],
+            [
+              -80.8821531,
+              35.2420539
+            ],
+            [
+              -80.8821013,
+              35.2419961
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2267",
+        "source_id": "1Rt5FOD4goWNO3BZbmX6rY",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 224.53,
+        "centroid_lng": -80.8824438,
+        "centroid_lat": 35.2416241
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8824949,
+              35.2416691
+            ],
+            [
+              -80.8825405,
+              35.2415821
+            ],
+            [
+              -80.8823739,
+              35.2415233
+            ],
+            [
+              -80.8823186,
+              35.241629
+            ],
+            [
+              -80.8824625,
+              35.2416797
+            ],
+            [
+              -80.8824722,
+              35.2416611
+            ],
+            [
+              -80.8824949,
+              35.2416691
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2293",
+        "source_id": "32jasopcEXCvJik55dLUqG",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 229.77,
+        "centroid_lng": -80.8803299,
+        "centroid_lat": 35.2421247
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8803842,
+              35.2420228
+            ],
+            [
+              -80.8803611,
+              35.2420587
+            ],
+            [
+              -80.8803466,
+              35.2420524
+            ],
+            [
+              -80.8803273,
+              35.2420823
+            ],
+            [
+              -80.8803054,
+              35.2420728
+            ],
+            [
+              -80.8801245,
+              35.2423539
+            ],
+            [
+              -80.8802193,
+              35.2423949
+            ],
+            [
+              -80.8804156,
+              35.2420899
+            ],
+            [
+              -80.8803937,
+              35.2420805
+            ],
+            [
+              -80.8804207,
+              35.2420386
+            ],
+            [
+              -80.8803842,
+              35.2420228
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2317",
+        "source_id": "2SCLKAIkW_EUKaV6qN4RIQ",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 213.34,
+        "centroid_lng": -80.8809212,
+        "centroid_lat": 35.2375042
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8809229,
+              35.2373756
+            ],
+            [
+              -80.8807952,
+              35.2374426
+            ],
+            [
+              -80.8808078,
+              35.2374587
+            ],
+            [
+              -80.8807784,
+              35.2374742
+            ],
+            [
+              -80.8809732,
+              35.2377239
+            ],
+            [
+              -80.8811254,
+              35.237644
+            ],
+            [
+              -80.8809808,
+              35.2374587
+            ],
+            [
+              -80.8809857,
+              35.2374561
+            ],
+            [
+              -80.8809229,
+              35.2373756
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2339",
+        "source_id": "2kwQtkIoVYp$rrt2lAZA9_",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 222.54,
+        "centroid_lng": -80.8803336,
+        "centroid_lat": 35.2387131
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8803654,
+              35.2386594
+            ],
+            [
+              -80.880359,
+              35.238679
+            ],
+            [
+              -80.8802634,
+              35.238658
+            ],
+            [
+              -80.8802207,
+              35.2387886
+            ],
+            [
+              -80.880372,
+              35.2388219
+            ],
+            [
+              -80.8804211,
+              35.2386716
+            ],
+            [
+              -80.8803654,
+              35.2386594
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2359",
+        "source_id": "0ea9k4tkyd2Hrfk1MywxbC",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 223.63,
+        "centroid_lng": -80.8830591,
+        "centroid_lat": 35.2415037
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8829791,
+              35.241506
+            ],
+            [
+              -80.8830882,
+              35.2415648
+            ],
+            [
+              -80.883139,
+              35.2415014
+            ],
+            [
+              -80.8830299,
+              35.2414426
+            ],
+            [
+              -80.8829791,
+              35.241506
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2379",
+        "source_id": "2c462tL6j$kazcd9PD4efw",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 222.62,
+        "centroid_lng": -80.8831731,
+        "centroid_lat": 35.2413911
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8831023,
+              35.2414133
+            ],
+            [
+              -80.8831681,
+              35.2414531
+            ],
+            [
+              -80.8832438,
+              35.241369
+            ],
+            [
+              -80.883178,
+              35.2413291
+            ],
+            [
+              -80.8831023,
+              35.2414133
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2399",
+        "source_id": "2Dcmx5vHkOq66Y_GQu_GkZ",
+        "name": "Contextual Building",
+        "height": 3.8,
+        "base_elevation": 221.25,
+        "centroid_lng": -80.8847035,
+        "centroid_lat": 35.2405235
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8846477,
+              35.2405408
+            ],
+            [
+              -80.884702,
+              35.2405724
+            ],
+            [
+              -80.8847593,
+              35.2405062
+            ],
+            [
+              -80.884705,
+              35.2404746
+            ],
+            [
+              -80.8846477,
+              35.2405408
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2419",
+        "source_id": "0I4F4sRdmpsluu1Un$Z1qh",
+        "name": "Contextual Building",
+        "height": 3.6,
+        "base_elevation": 224.13,
+        "centroid_lng": -80.8811292,
+        "centroid_lat": 35.2403858
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8810419,
+              35.2403991
+            ],
+            [
+              -80.8811732,
+              35.2404491
+            ],
+            [
+              -80.8812165,
+              35.2403725
+            ],
+            [
+              -80.8810851,
+              35.2403226
+            ],
+            [
+              -80.8810419,
+              35.2403991
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2439",
+        "source_id": "0ZHevaXX3pxmBgDZRWJvou",
+        "name": "Contextual Building",
+        "height": 4.3,
+        "base_elevation": 222.4,
+        "centroid_lng": -80.8818787,
+        "centroid_lat": 35.2403025
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8818104,
+              35.240315
+            ],
+            [
+              -80.881911,
+              35.2403534
+            ],
+            [
+              -80.8819469,
+              35.24029
+            ],
+            [
+              -80.8818464,
+              35.2402516
+            ],
+            [
+              -80.8818104,
+              35.240315
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2459",
+        "source_id": "3dqwg1MsMYSTsmLkXCEBdC",
+        "name": "Contextual Building",
+        "height": 4.8,
+        "base_elevation": 226.89,
+        "centroid_lng": -80.8857907,
+        "centroid_lat": 35.239424
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.885601,
+              35.2393646
+            ],
+            [
+              -80.8858696,
+              35.2395775
+            ],
+            [
+              -80.8859805,
+              35.2394834
+            ],
+            [
+              -80.8857119,
+              35.2392705
+            ],
+            [
+              -80.885601,
+              35.2393646
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2479",
+        "source_id": "0n0LgASAJBQv5OT5i6N0fZ",
+        "name": "Contextual Building",
+        "height": 4,
+        "base_elevation": 225,
+        "centroid_lng": -80.8849159,
+        "centroid_lat": 35.2387828
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8847839,
+              35.2388136
+            ],
+            [
+              -80.8848609,
+              35.2388859
+            ],
+            [
+              -80.8850478,
+              35.238752
+            ],
+            [
+              -80.8849709,
+              35.2386797
+            ],
+            [
+              -80.8847839,
+              35.2388136
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2504",
+        "source_id": "3Bn3SfXd5zI991tIGublMQ",
+        "name": "Contextual Building",
+        "height": 5.2,
+        "base_elevation": 220.38,
+        "centroid_lng": -80.8831711,
+        "centroid_lat": 35.2384603
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8830237,
+              35.2385709
+            ],
+            [
+              -80.8832195,
+              35.2387208
+            ],
+            [
+              -80.8833819,
+              35.238578
+            ],
+            [
+              -80.8834555,
+              35.2385142
+            ],
+            [
+              -80.8832575,
+              35.238361
+            ],
+            [
+              -80.8830142,
+              35.2381811
+            ],
+            [
+              -80.882879,
+              35.2383042
+            ],
+            [
+              -80.8831222,
+              35.2384841
+            ],
+            [
+              -80.8831861,
+              35.2384281
+            ],
+            [
+              -80.8830237,
+              35.2385709
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2524",
+        "source_id": "2P9Ot$rfrkE6b1PNS_k2TE",
+        "name": "Contextual Building",
+        "height": 4.1,
+        "base_elevation": 225.38,
+        "centroid_lng": -80.8855964,
+        "centroid_lat": 35.2384328
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8854422,
+              35.2384786
+            ],
+            [
+              -80.8855248,
+              35.2385538
+            ],
+            [
+              -80.8857506,
+              35.2383869
+            ],
+            [
+              -80.8856679,
+              35.2383117
+            ],
+            [
+              -80.8854422,
+              35.2384786
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2546",
+        "source_id": "3BLxMOZwBXn2kergzFov8Z",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 219.39,
+        "centroid_lng": -80.8837416,
+        "centroid_lat": 35.2376918
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8837116,
+              35.2375953
+            ],
+            [
+              -80.883676,
+              35.2376325
+            ],
+            [
+              -80.883663,
+              35.2376242
+            ],
+            [
+              -80.883597,
+              35.2376935
+            ],
+            [
+              -80.8838502,
+              35.237856
+            ],
+            [
+              -80.8839518,
+              35.2377494
+            ],
+            [
+              -80.8837116,
+              35.2375953
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2566",
+        "source_id": "3MYMNO4rNY9RPc4dn2pGkf",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 226.27,
+        "centroid_lng": -80.8809426,
+        "centroid_lat": 35.2410498
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8808832,
+              35.2410997
+            ],
+            [
+              -80.8809445,
+              35.2411195
+            ],
+            [
+              -80.881002,
+              35.241
+            ],
+            [
+              -80.8809406,
+              35.2409801
+            ],
+            [
+              -80.8808832,
+              35.2410997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2586",
+        "source_id": "2kU63s83qh$P7TQk2GKf2W",
+        "name": "Contextual Building",
+        "height": 3,
+        "base_elevation": 222.21,
+        "centroid_lng": -80.8839355,
+        "centroid_lat": 35.2415101
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8838861,
+              35.2415254
+            ],
+            [
+              -80.8839428,
+              35.241553
+            ],
+            [
+              -80.8839849,
+              35.2414948
+            ],
+            [
+              -80.8839281,
+              35.2414672
+            ],
+            [
+              -80.8838861,
+              35.2415254
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2606",
+        "source_id": "0Kcg5Nlle_15$ZKh6_XR8b",
+        "name": "Contextual Building",
+        "height": 5.1,
+        "base_elevation": 230.35,
+        "centroid_lng": -80.8802756,
+        "centroid_lat": 35.2418028
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8802048,
+              35.2418349
+            ],
+            [
+              -80.8803002,
+              35.241866
+            ],
+            [
+              -80.8803464,
+              35.2417706
+            ],
+            [
+              -80.880251,
+              35.2417395
+            ],
+            [
+              -80.8802048,
+              35.2418349
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2626",
+        "source_id": "0m1e4Ji8B1UxDusvF_tzsH",
+        "name": "Contextual Building",
+        "height": 3.4,
+        "base_elevation": 220.96,
+        "centroid_lng": -80.8845231,
+        "centroid_lat": 35.2415651
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8844358,
+              35.2415619
+            ],
+            [
+              -80.8845324,
+              35.2416363
+            ],
+            [
+              -80.8846103,
+              35.2415682
+            ],
+            [
+              -80.8845138,
+              35.2414938
+            ],
+            [
+              -80.8844358,
+              35.2415619
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2646",
+        "source_id": "2ZhF5tieLMnI1lCex6AK0$",
+        "name": "Contextual Building",
+        "height": 4.5,
+        "base_elevation": 228.75,
+        "centroid_lng": -80.8809408,
+        "centroid_lat": 35.2414525
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8808704,
+              35.2414627
+            ],
+            [
+              -80.8809679,
+              35.2415067
+            ],
+            [
+              -80.8810111,
+              35.2414422
+            ],
+            [
+              -80.8809137,
+              35.2413983
+            ],
+            [
+              -80.8808704,
+              35.2414627
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2666",
+        "source_id": "22WxcLffiV5yZTVOXzVqV0",
+        "name": "Contextual Building",
+        "height": 3.4,
+        "base_elevation": 221.48,
+        "centroid_lng": -80.8841916,
+        "centroid_lat": 35.2414079
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8841221,
+              35.2414557
+            ],
+            [
+              -80.8842371,
+              35.2414722
+            ],
+            [
+              -80.884261,
+              35.2413601
+            ],
+            [
+              -80.884146,
+              35.2413436
+            ],
+            [
+              -80.8841221,
+              35.2414557
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2686",
+        "source_id": "2zH4DgCu$L99BjnDVbH1WA",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 221.69,
+        "centroid_lng": -80.8832426,
+        "centroid_lat": 35.2412748
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8831568,
+              35.2412724
+            ],
+            [
+              -80.8832882,
+              35.2413345
+            ],
+            [
+              -80.8833284,
+              35.2412773
+            ],
+            [
+              -80.883197,
+              35.2412152
+            ],
+            [
+              -80.8831568,
+              35.2412724
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2710",
+        "source_id": "2RalkZWXDChp6432XlvYjc",
+        "name": "Contextual Building",
+        "height": 4.5,
+        "base_elevation": 223.14,
+        "centroid_lng": -80.8828513,
+        "centroid_lat": 35.241154
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8827877,
+              35.2411551
+            ],
+            [
+              -80.8828369,
+              35.241178
+            ],
+            [
+              -80.8828267,
+              35.2411927
+            ],
+            [
+              -80.882869,
+              35.2412124
+            ],
+            [
+              -80.8829231,
+              35.2411344
+            ],
+            [
+              -80.8828808,
+              35.2411146
+            ],
+            [
+              -80.8828676,
+              35.2411337
+            ],
+            [
+              -80.8828184,
+              35.2411107
+            ],
+            [
+              -80.8827877,
+              35.2411551
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2730",
+        "source_id": "0izx9lIZiVxhvBg$6b3pF2",
+        "name": "Contextual Building",
+        "height": 4.8,
+        "base_elevation": 220.3,
+        "centroid_lng": -80.8842085,
+        "centroid_lat": 35.2409477
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8841198,
+              35.2409624
+            ],
+            [
+              -80.884271,
+              35.2410015
+            ],
+            [
+              -80.8842972,
+              35.240933
+            ],
+            [
+              -80.8841461,
+              35.240894
+            ],
+            [
+              -80.8841198,
+              35.2409624
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2753",
+        "source_id": "39RaMKg0c197qULpOcvG0W",
+        "name": "Contextual Building",
+        "height": 3.9,
+        "base_elevation": 217.97,
+        "centroid_lng": -80.8806795,
+        "centroid_lat": 35.2378342
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8806463,
+              35.2377961
+            ],
+            [
+              -80.8806551,
+              35.2378078
+            ],
+            [
+              -80.8806155,
+              35.2378277
+            ],
+            [
+              -80.8806705,
+              35.2379012
+            ],
+            [
+              -80.8807233,
+              35.2378745
+            ],
+            [
+              -80.8807548,
+              35.2378586
+            ],
+            [
+              -80.880691,
+              35.2377736
+            ],
+            [
+              -80.8806463,
+              35.2377961
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2776",
+        "source_id": "0HouS7T8CM5S72ccZKABOw",
+        "name": "Contextual Building",
+        "height": 4.2,
+        "base_elevation": 223.23,
+        "centroid_lng": -80.8816655,
+        "centroid_lat": 35.2406819
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8815795,
+              35.2406996
+            ],
+            [
+              -80.8816873,
+              35.2407449
+            ],
+            [
+              -80.8817177,
+              35.2406962
+            ],
+            [
+              -80.881735,
+              35.2406685
+            ],
+            [
+              -80.8816732,
+              35.2406426
+            ],
+            [
+              -80.8816559,
+              35.2406702
+            ],
+            [
+              -80.88161,
+              35.2406509
+            ],
+            [
+              -80.8815795,
+              35.2406996
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2796",
+        "source_id": "0LJh0APmJE8u99QEItKdhF",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 222.24,
+        "centroid_lng": -80.8828145,
+        "centroid_lat": 35.2406935
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8827499,
+              35.2406978
+            ],
+            [
+              -80.8828581,
+              35.2407329
+            ],
+            [
+              -80.8828791,
+              35.2406892
+            ],
+            [
+              -80.8827709,
+              35.2406541
+            ],
+            [
+              -80.8827499,
+              35.2406978
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2823",
+        "source_id": "2EDS9Px$D7NON0$mxKPO5L",
+        "name": "Contextual Building",
+        "height": 4.9,
+        "base_elevation": 212.81,
+        "centroid_lng": -80.8803145,
+        "centroid_lat": 35.2370143
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8801273,
+              35.2368557
+            ],
+            [
+              -80.8801659,
+              35.2368859
+            ],
+            [
+              -80.8801068,
+              35.2369368
+            ],
+            [
+              -80.8800232,
+              35.2370089
+            ],
+            [
+              -80.8804871,
+              35.2373714
+            ],
+            [
+              -80.8805708,
+              35.2372993
+            ],
+            [
+              -80.8804683,
+              35.2372193
+            ],
+            [
+              -80.8806184,
+              35.23709
+            ],
+            [
+              -80.8803282,
+              35.2368633
+            ],
+            [
+              -80.8803366,
+              35.2368561
+            ],
+            [
+              -80.8802266,
+              35.2367702
+            ],
+            [
+              -80.8801273,
+              35.2368557
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2843",
+        "source_id": "3VRuMZN_MaaWi35IQg4AXF",
+        "name": "Contextual Building",
+        "height": 4.7,
+        "base_elevation": 223.58,
+        "centroid_lng": -80.882242,
+        "centroid_lat": 35.2404532
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8821733,
+              35.2404582
+            ],
+            [
+              -80.8822739,
+              35.2405033
+            ],
+            [
+              -80.8823106,
+              35.2404482
+            ],
+            [
+              -80.88221,
+              35.240403
+            ],
+            [
+              -80.8821733,
+              35.2404582
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2867",
+        "source_id": "20YOzq7cTmBp9mS1bjSIMM",
+        "name": "Contextual Building",
+        "height": 3.7,
+        "base_elevation": 222.55,
+        "centroid_lng": -80.8849701,
+        "centroid_lat": 35.2420056
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8849006,
+              35.2420208
+            ],
+            [
+              -80.8849432,
+              35.2420348
+            ],
+            [
+              -80.8849335,
+              35.2420545
+            ],
+            [
+              -80.8850197,
+              35.2420829
+            ],
+            [
+              -80.8850712,
+              35.2419777
+            ],
+            [
+              -80.884985,
+              35.2419493
+            ],
+            [
+              -80.8849752,
+              35.2419694
+            ],
+            [
+              -80.8849326,
+              35.2419554
+            ],
+            [
+              -80.8849006,
+              35.2420208
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2887",
+        "source_id": "1Y9s6a_FXUW9f_mJoYuZrH",
+        "name": "Contextual Building",
+        "height": 3.8,
+        "base_elevation": 219,
+        "centroid_lng": -80.8844051,
+        "centroid_lat": 35.241024
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8843243,
+              35.2410458
+            ],
+            [
+              -80.8844505,
+              35.241083
+            ],
+            [
+              -80.8844859,
+              35.2410023
+            ],
+            [
+              -80.8843597,
+              35.240965
+            ],
+            [
+              -80.8843243,
+              35.2410458
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2907",
+        "source_id": "3MZ1NON9CVnsk7RL82AovD",
+        "name": "Contextual Building",
+        "height": 3.1,
+        "base_elevation": 226.13,
+        "centroid_lng": -80.8858706,
+        "centroid_lat": 35.2408419
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8857659,
+              35.2408454
+            ],
+            [
+              -80.8858775,
+              35.2409277
+            ],
+            [
+              -80.8859753,
+              35.2408385
+            ],
+            [
+              -80.8858638,
+              35.2407562
+            ],
+            [
+              -80.8857659,
+              35.2408454
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2927",
+        "source_id": "1Z3PqRT_GI7UuSfNCWcRce",
+        "name": "Contextual Building",
+        "height": 4.8,
+        "base_elevation": 223.42,
+        "centroid_lng": -80.8824464,
+        "centroid_lat": 35.2405385
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8823755,
+              35.2405396
+            ],
+            [
+              -80.8824829,
+              35.2405884
+            ],
+            [
+              -80.8825174,
+              35.2405373
+            ],
+            [
+              -80.88241,
+              35.2404885
+            ],
+            [
+              -80.8823755,
+              35.2405396
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ifc-2950",
+        "source_id": "1mbWkeTLERM7QpRWA77AE7",
+        "name": "Contextual Building",
+        "height": 4.4,
+        "base_elevation": 228.52,
+        "centroid_lng": -80.8816871,
+        "centroid_lat": 35.2417713
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.8816219,
+              35.2418028
+            ],
+            [
+              -80.8816562,
+              35.2418163
+            ],
+            [
+              -80.8816675,
+              35.241797
+            ],
+            [
+              -80.8817144,
+              35.2418156
+            ],
+            [
+              -80.8817593,
+              35.2417393
+            ],
+            [
+              -80.8817125,
+              35.2417207
+            ],
+            [
+              -80.8816782,
+              35.2417071
+            ],
+            [
+              -80.8816219,
+              35.2418028
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
