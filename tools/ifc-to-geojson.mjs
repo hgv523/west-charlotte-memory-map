@@ -3,6 +3,7 @@ import path from "node:path";
 
 const inputPath = process.argv[2] || "assets/Enderly.ifc";
 const outputPath = process.argv[3] || "data/enderly-buildings.geojson";
+const terrainOutputPath = process.argv[4] || "data/enderly-terrain.geojson";
 const sourceText = fs.readFileSync(inputPath, "utf8");
 
 const statements = new Map();
@@ -25,17 +26,24 @@ const axisY = mapArgs[6] && mapArgs[6] !== "$" ? Number(mapArgs[6]) : 0;
 const zone = Number((sourceText.match(/IFCPROJECTEDCRS\('EPSG:326(\d\d)'/) || [])[1] || 17);
 
 const points = new Map();
+const pointLists3d = new Map();
 const polylines = new Map();
 const profiles = new Map();
 const placements = new Map();
 const solids = new Map();
+const triangulatedFaceSets = new Map();
 const shapeRepresentations = new Map();
 const productShapes = new Map();
 const buildings = [];
+const terrainElements = [];
 
 for (const [id, statement] of statements.entries()) {
   if (statement.entity === "IFCCARTESIANPOINT") {
     points.set(id, parseNumberTuple(statement.args[0]));
+  }
+
+  if (statement.entity === "IFCCARTESIANPOINTLIST3D") {
+    pointLists3d.set(id, parseTupleList(statement.args[0]));
   }
 
   if (statement.entity === "IFCPOLYLINE") {
@@ -58,6 +66,13 @@ for (const [id, statement] of statements.entries()) {
     });
   }
 
+  if (statement.entity === "IFCTRIANGULATEDFACESET") {
+    triangulatedFaceSets.set(id, {
+      pointList: statement.args[0],
+      faces: parseTupleList(statement.args[3]).map((face) => face.map((index) => Number(index))),
+    });
+  }
+
   if (statement.entity === "IFCSHAPEREPRESENTATION") {
     shapeRepresentations.set(id, refsFrom(statement.args[3]));
   }
@@ -71,6 +86,14 @@ for (const [id, statement] of statements.entries()) {
       id,
       globalId: unquote(statement.args[0]),
       name: unquote(statement.args[2]) || "Contextual Building",
+      representation: statement.args[6],
+    });
+  }
+
+  if (statement.entity === "IFCGEOGRAPHICELEMENT" && unquote(statement.args[2]).toLowerCase().includes("terrain")) {
+    terrainElements.push({
+      id,
+      name: unquote(statement.args[2]) || "Terrain",
       representation: statement.args[6],
     });
   }
@@ -156,9 +179,12 @@ const featureCollection = {
 
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, `${JSON.stringify(featureCollection, null, 2)}\n`);
+fs.mkdirSync(path.dirname(terrainOutputPath), { recursive: true });
+fs.writeFileSync(terrainOutputPath, `${JSON.stringify(terrainFeatureCollection(), null, 2)}\n`);
 
 console.log(`Converted ${rawFeatures.length} IFC building solids to ${outputPath}`);
 console.log(`Bounds: ${JSON.stringify(featureCollection.metadata.bounds)}`);
+console.log(`Converted IFC terrain mesh to ${terrainOutputPath}`);
 
 function findFirstEntity(entity) {
   for (const statement of statements.values()) {
@@ -210,6 +236,22 @@ function parseNumberTuple(value) {
     .split(",")
     .map((part) => Number(part.trim()))
     .filter((number) => !Number.isNaN(number));
+}
+
+function parseTupleList(value = "") {
+  const tuples = [];
+  const tuplePattern = /\(([^()]+)\)/g;
+
+  for (const match of value.matchAll(tuplePattern)) {
+    const tuple = match[1]
+      .split(",")
+      .map((part) => Number(part.trim()))
+      .filter((number) => !Number.isNaN(number));
+
+    if (tuple.length > 0) tuples.push(tuple);
+  }
+
+  return tuples;
 }
 
 function refsFrom(value = "") {
@@ -265,6 +307,89 @@ function classifyBuilding(height, area) {
   if (area >= 165 || height >= 6.5) return "community-building";
   if (area <= 80 && height <= 4.8) return "small-house";
   return "house";
+}
+
+function terrainFeatureCollection() {
+  const terrainFaces = [];
+  const terrainEdges = new Map();
+
+  for (const terrain of terrainElements) {
+    const shapeRefs = productShapes.get(terrain.representation) || [];
+    const faceSetIds = shapeRefs
+      .flatMap((shapeRef) => shapeRepresentations.get(shapeRef) || [])
+      .filter((ref) => triangulatedFaceSets.has(ref));
+
+    for (const faceSetId of faceSetIds) {
+      const faceSet = triangulatedFaceSets.get(faceSetId);
+      const facePoints = pointLists3d.get(faceSet.pointList) || [];
+
+      for (const face of faceSet.faces) {
+        if (face.length < 3) continue;
+
+        const coords = face
+          .map((pointIndex) => facePoints[pointIndex - 1])
+          .filter(Boolean)
+          .map(([x, y]) => localToLngLat(Number(x), Number(y)))
+          .map(([lng, lat]) => [round(lng, 7), round(lat, 7)]);
+
+        if (coords.length < 3) continue;
+
+        terrainFaces.push([[...coords, coords[0]]]);
+
+        for (let index = 0; index < face.length; index += 1) {
+          const current = face[index];
+          const next = face[(index + 1) % face.length];
+          const edgeKey = [current, next].sort((a, b) => a - b).join("-");
+          if (!terrainEdges.has(edgeKey)) {
+            const start = facePoints[current - 1];
+            const end = facePoints[next - 1];
+            if (start && end) {
+              terrainEdges.set(edgeKey, [
+                localToLngLat(Number(start[0]), Number(start[1])).map((number) => round(number, 7)),
+                localToLngLat(Number(end[0]), Number(end[1])).map((number) => round(number, 7)),
+              ]);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return {
+    type: "FeatureCollection",
+    name: "Enderly Park IFC terrain mesh",
+    metadata: {
+      source: path.basename(inputPath),
+      source_crs: `EPSG:326${zone}`,
+      generated_from: "tools/ifc-to-geojson.mjs",
+      triangle_count: terrainFaces.length,
+      edge_count: terrainEdges.size,
+    },
+    features: [
+      {
+        type: "Feature",
+        properties: {
+          role: "surface",
+          name: "Enderly Park terrain surface",
+        },
+        geometry: {
+          type: "MultiPolygon",
+          coordinates: terrainFaces,
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          role: "mesh",
+          name: "Enderly Park terrain mesh",
+        },
+        geometry: {
+          type: "MultiLineString",
+          coordinates: Array.from(terrainEdges.values()),
+        },
+      },
+    ],
+  };
 }
 
 function round(number, digits) {

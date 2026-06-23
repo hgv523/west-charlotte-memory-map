@@ -5,6 +5,8 @@ const defaultMapView = {
   pitch: 60,
   bearing: -28,
 };
+const assetVersion = "20260623-ifc-render-style";
+const versionedAsset = (assetPath) => `${assetPath}?v=${assetVersion}`;
 
 const enderlyModel = {
   center: [-80.8829931, 35.2395826],
@@ -12,7 +14,8 @@ const enderlyModel = {
     [-80.8859945, 35.2367702],
     [-80.8799917, 35.2423949],
   ],
-  source: "./data/enderly-buildings.geojson",
+  source: versionedAsset("./data/enderly-buildings.geojson"),
+  terrainSource: versionedAsset("./data/enderly-terrain.geojson"),
 };
 
 const corridorBounds = [
@@ -167,6 +170,9 @@ let memoryPlaces = [];
 let activeId = null;
 let activeMarker = null;
 let mapLayersReady = false;
+let mapSetupRetryCount = 0;
+let mapSetupRetryTimer = null;
+let memoryLayerEventsReady = false;
 let pendingCoords = null;
 let pendingMarker = null;
 let enderlyModelMarker = null;
@@ -256,13 +262,39 @@ const map = new maplibregl.Map({
         tileSize: 256,
         attribution: "Esri reference",
       },
-      openmaptiles: {
-        type: "vector",
-        url: "https://tiles.openfreemap.org/planet",
-        attribution: "OpenMapTiles Data from OpenStreetMap",
+      "corridor-boundary": {
+        type: "geojson",
+        data: corridorFeatureCollection(),
+      },
+      "highlighted-roads": {
+        type: "geojson",
+        data: highlightedRoadFeatureCollection(),
+      },
+      "memory-buildings": {
+        type: "geojson",
+        data: memoryFeatureCollection(),
+      },
+      "enderly-ifc-highlight": {
+        type: "geojson",
+        data: enderlyHighlightFeatureCollection(),
+      },
+      "enderly-ifc-buildings": {
+        type: "geojson",
+        data: enderlyModel.source,
+      },
+      "enderly-ifc-terrain": {
+        type: "geojson",
+        data: enderlyModel.terrainSource,
       },
     },
     layers: [
+      {
+        id: "map-background",
+        type: "background",
+        paint: {
+          "background-color": "#e8eee8",
+        },
+      },
       {
         id: "satellite-raster",
         type: "raster",
@@ -288,6 +320,200 @@ const map = new maplibregl.Map({
         source: "places",
         paint: {
           "raster-opacity": 0.78,
+        },
+      },
+      {
+        id: "corridor-fill",
+        type: "fill",
+        source: "corridor-boundary",
+        paint: {
+          "fill-color": "#1f6f5b",
+          "fill-opacity": 0.04,
+        },
+      },
+      {
+        id: "corridor-outline",
+        type: "line",
+        source: "corridor-boundary",
+        paint: {
+          "line-color": "#1f6f5b",
+          "line-dasharray": [2, 2],
+          "line-width": 2,
+          "line-opacity": 0.75,
+        },
+      },
+      {
+        id: "highlighted-roads-halo",
+        type: "line",
+        source: "highlighted-roads",
+        paint: {
+          "line-color": "#101e1a",
+          "line-opacity": 0.74,
+          "line-width": ["interpolate", ["linear"], ["zoom"], 12.7, 9, 16.5, 18],
+          "line-blur": 1.3,
+        },
+      },
+      {
+        id: "highlighted-roads-core",
+        type: "line",
+        source: "highlighted-roads",
+        paint: {
+          "line-color": ["get", "color"],
+          "line-opacity": 0.96,
+          "line-width": ["interpolate", ["linear"], ["zoom"], 12.7, 4, 16.5, 9],
+          "line-blur": 0.25,
+        },
+      },
+      {
+        id: "enderly-ifc-terrain-fill",
+        type: "fill",
+        source: "enderly-ifc-terrain",
+        filter: ["==", ["get", "role"], "surface"],
+        minzoom: 11,
+        paint: {
+          "fill-color": "#0b6f2f",
+          "fill-opacity": ["interpolate", ["linear"], ["zoom"], 11, 0.52, 14, 0.68, 16, 0.78],
+        },
+      },
+      {
+        id: "enderly-ifc-terrain-mesh",
+        type: "line",
+        source: "enderly-ifc-terrain",
+        filter: ["==", ["get", "role"], "mesh"],
+        minzoom: 11.6,
+        paint: {
+          "line-color": "#053c1b",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 11.6, 0.25, 14, 0.5, 16, 0.9],
+          "line-opacity": ["interpolate", ["linear"], ["zoom"], 11.6, 0.24, 14, 0.42, 16, 0.68],
+        },
+      },
+      {
+        id: "enderly-ifc-highlight-fill",
+        type: "fill",
+        source: "enderly-ifc-highlight",
+        minzoom: 11,
+        paint: {
+          "fill-color": "#0b6f2f",
+          "fill-opacity": ["interpolate", ["linear"], ["zoom"], 11, 0.02, 14, 0.03, 16, 0.02],
+        },
+      },
+      {
+        id: "enderly-ifc-foundations",
+        type: "fill-extrusion",
+        source: "enderly-ifc-buildings",
+        minzoom: 12.4,
+        paint: {
+          "fill-extrusion-color": "#735843",
+          "fill-extrusion-height": 0.75,
+          "fill-extrusion-base": 0,
+          "fill-extrusion-opacity": 0.36,
+        },
+      },
+      {
+        id: "enderly-ifc-model",
+        type: "fill-extrusion",
+        source: "enderly-ifc-buildings",
+        minzoom: 12.4,
+        paint: {
+          "fill-extrusion-color": [
+            "case",
+            ["==", ["get", "render_class"], "small-house"],
+            "#efe5d4",
+            ["==", ["get", "render_class"], "house"],
+            "#ddd2bf",
+            ["==", ["get", "render_class"], "community-building"],
+            "#f0eee5",
+            ["==", ["get", "render_class"], "infrastructure"],
+            "#d2cec2",
+            "#ddd2bf",
+          ],
+          "fill-extrusion-height": ["get", "height"],
+          "fill-extrusion-base": 0,
+          "fill-extrusion-opacity": 0.98,
+          "fill-extrusion-vertical-gradient": true,
+        },
+      },
+      {
+        id: "enderly-ifc-roofs",
+        type: "fill-extrusion",
+        source: "enderly-ifc-buildings",
+        minzoom: 12.4,
+        paint: {
+          "fill-extrusion-color": [
+            "case",
+            ["==", ["get", "render_class"], "infrastructure"],
+            "#b56f43",
+            ["==", ["get", "render_class"], "community-building"],
+            "#c9e2e9",
+            "#cf2027",
+          ],
+          "fill-extrusion-base": ["get", "height"],
+          "fill-extrusion-height": [
+            "+",
+            ["get", "height"],
+            [
+              "case",
+              ["==", ["get", "render_class"], "infrastructure"],
+              0.9,
+              ["==", ["get", "render_class"], "community-building"],
+              0.75,
+              0.55,
+            ],
+          ],
+          "fill-extrusion-opacity": 0.98,
+          "fill-extrusion-vertical-gradient": false,
+        },
+      },
+      {
+        id: "enderly-ifc-highlight-outline",
+        type: "line",
+        source: "enderly-ifc-highlight",
+        minzoom: 11,
+        paint: {
+          "line-color": "#083f1f",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1.3, 14, 2.6, 16, 3.6],
+          "line-opacity": 0.76,
+          "line-dasharray": [1.4, 0.85],
+          "line-blur": 0.25,
+        },
+      },
+      {
+        id: "enderly-ifc-footprint-halo",
+        type: "line",
+        source: "enderly-ifc-buildings",
+        paint: {
+          "line-color": [
+            "case",
+            ["==", ["get", "render_class"], "infrastructure"],
+            "#7d4e36",
+            ["==", ["get", "render_class"], "community-building"],
+            "#edf7f9",
+            "#8f1418",
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 12.5, 0.8, 16, 2.4],
+          "line-opacity": 0.9,
+        },
+      },
+      {
+        id: "memory-building-extrusions",
+        type: "fill-extrusion",
+        source: "memory-buildings",
+        paint: {
+          "fill-extrusion-color": ["case", ["get", "active"], "#d9ad4f", "#bd5d45"],
+          "fill-extrusion-height": ["case", ["get", "active"], ["+", ["get", "height"], 26], ["get", "height"]],
+          "fill-extrusion-base": 0,
+          "fill-extrusion-opacity": 0.92,
+          "fill-extrusion-vertical-gradient": true,
+        },
+      },
+      {
+        id: "memory-building-outlines",
+        type: "line",
+        source: "memory-buildings",
+        paint: {
+          "line-color": "#fffdfa",
+          "line-width": ["case", ["get", "active"], 4, 2],
+          "line-opacity": 0.95,
         },
       },
     ],
@@ -326,6 +552,25 @@ map.addControl(
   "top-right",
 );
 map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-right");
+
+document.body.dataset.appVersion = assetVersion;
+document.body.dataset.mapLayersReady = "false";
+
+window.MemoryAtlasDebug = {
+  getState: () => ({
+    mapLayersReady,
+    mapSetupRetryCount,
+    hasEnderlyMarker: Boolean(enderlyModelMarker),
+    sources: map.getStyle() && map.getStyle().sources ? Object.keys(map.getStyle().sources) : [],
+    enderlyLayers:
+      map.getStyle() && map.getStyle().layers
+        ? map
+            .getStyle()
+            .layers.map((layer) => layer.id)
+            .filter((id) => id.includes("enderly"))
+        : [],
+  }),
+};
 
 function memoryFeatureCollection() {
   return {
@@ -423,136 +668,8 @@ function enderlyHighlightFeatureCollection() {
   };
 }
 
-function getVectorSourceId() {
-  const sources = map.getStyle().sources;
-  return Object.keys(sources).find((id) => sources[id].type === "vector");
-}
-
-function addBase3DBuildings() {
-  const sourceId = getVectorSourceId();
-  if (!sourceId || map.getLayer("real-buildings-3d")) return;
-
-  map.addLayer({
-    id: "real-buildings-3d",
-    type: "fill-extrusion",
-    source: sourceId,
-    "source-layer": "building",
-    minzoom: 15,
-    filter: ["has", "render_height"],
-    paint: {
-      "fill-extrusion-color": [
-        "interpolate",
-        ["linear"],
-        ["coalesce", ["get", "render_height"], 12],
-        0,
-        "#d8d4c8",
-        40,
-        "#c9c1b2",
-        120,
-        "#a9b6bc",
-      ],
-      "fill-extrusion-height": [
-        "interpolate",
-        ["linear"],
-        ["zoom"],
-        15,
-        0,
-        16,
-        ["coalesce", ["get", "render_height"], 12],
-      ],
-      "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], 0],
-      "fill-extrusion-opacity": 0.72,
-    },
-  });
-}
-
-function addMemoryLayers() {
-  if (map.getSource("memory-buildings")) return;
-
-  map.addSource("corridor-boundary", {
-    type: "geojson",
-    data: corridorFeatureCollection(),
-  });
-
-  map.addLayer({
-    id: "corridor-fill",
-    type: "fill",
-    source: "corridor-boundary",
-    paint: {
-      "fill-color": "#1f6f5b",
-      "fill-opacity": 0.04,
-    },
-  });
-
-  map.addLayer({
-    id: "corridor-outline",
-    type: "line",
-    source: "corridor-boundary",
-    paint: {
-      "line-color": "#1f6f5b",
-      "line-dasharray": [2, 2],
-      "line-width": 2,
-      "line-opacity": 0.75,
-    },
-  });
-
-  map.addSource("highlighted-roads", {
-    type: "geojson",
-    data: highlightedRoadFeatureCollection(),
-  });
-
-  map.addLayer({
-    id: "highlighted-roads-halo",
-    type: "line",
-    source: "highlighted-roads",
-    paint: {
-      "line-color": "#101e1a",
-      "line-opacity": 0.74,
-      "line-width": ["interpolate", ["linear"], ["zoom"], 12.7, 9, 16.5, 18],
-      "line-blur": 1.3,
-    },
-  });
-
-  map.addLayer({
-    id: "highlighted-roads-core",
-    type: "line",
-    source: "highlighted-roads",
-    paint: {
-      "line-color": ["get", "color"],
-      "line-opacity": 0.96,
-      "line-width": ["interpolate", ["linear"], ["zoom"], 12.7, 4, 16.5, 9],
-      "line-blur": 0.25,
-    },
-  });
-
-  map.addSource("memory-buildings", {
-    type: "geojson",
-    data: memoryFeatureCollection(),
-  });
-
-  map.addLayer({
-    id: "memory-building-extrusions",
-    type: "fill-extrusion",
-    source: "memory-buildings",
-    paint: {
-      "fill-extrusion-color": ["case", ["get", "active"], "#d9ad4f", "#bd5d45"],
-      "fill-extrusion-height": ["case", ["get", "active"], ["+", ["get", "height"], 26], ["get", "height"]],
-      "fill-extrusion-base": 0,
-      "fill-extrusion-opacity": 0.92,
-      "fill-extrusion-vertical-gradient": true,
-    },
-  });
-
-  map.addLayer({
-    id: "memory-building-outlines",
-    type: "line",
-    source: "memory-buildings",
-    paint: {
-      "line-color": "#fffdfa",
-      "line-width": ["case", ["get", "active"], 4, 2],
-      "line-opacity": 0.95,
-    },
-  });
+function bindMemoryLayerEvents() {
+  if (memoryLayerEventsReady || !map.getLayer("memory-building-extrusions")) return;
 
   map.on("mouseenter", "memory-building-extrusions", () => {
     map.getCanvas().style.cursor = "pointer";
@@ -561,112 +678,8 @@ function addMemoryLayers() {
   map.on("mouseleave", "memory-building-extrusions", () => {
     map.getCanvas().style.cursor = "";
   });
-}
 
-function addEnderlyModelLayer() {
-  if (map.getSource("enderly-ifc-buildings")) return;
-
-  map.addSource("enderly-ifc-highlight", {
-    type: "geojson",
-    data: enderlyHighlightFeatureCollection(),
-  });
-
-  map.addSource("enderly-ifc-buildings", {
-    type: "geojson",
-    data: enderlyModel.source,
-  });
-
-  map.addLayer({
-    id: "enderly-ifc-highlight-fill",
-    type: "fill",
-    source: "enderly-ifc-highlight",
-    minzoom: 11,
-    paint: {
-      "fill-color": "#f7e8b5",
-      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 11, 0.08, 14, 0.12, 16, 0.06],
-    },
-  });
-
-  map.addLayer({
-    id: "enderly-ifc-foundations",
-    type: "fill-extrusion",
-    source: "enderly-ifc-buildings",
-    minzoom: 12.4,
-    paint: {
-      "fill-extrusion-color": "#4f5652",
-      "fill-extrusion-height": 0.75,
-      "fill-extrusion-base": 0,
-      "fill-extrusion-opacity": 0.48,
-    },
-  });
-
-  map.addLayer({
-    id: "enderly-ifc-model",
-    type: "fill-extrusion",
-    source: "enderly-ifc-buildings",
-    minzoom: 12.4,
-    paint: {
-      "fill-extrusion-color": [
-        "case",
-        ["==", ["get", "render_class"], "small-house"],
-        "#d9d2c4",
-        ["==", ["get", "render_class"], "house"],
-        "#c7bdae",
-        ["==", ["get", "render_class"], "community-building"],
-        "#b5bab4",
-        ["==", ["get", "render_class"], "infrastructure"],
-        "#8f9a99",
-        "#c7bdae",
-      ],
-      "fill-extrusion-height": [
-        "+",
-        ["get", "height"],
-        [
-          "case",
-          ["==", ["get", "render_class"], "infrastructure"],
-          2.2,
-          ["==", ["get", "render_class"], "community-building"],
-          1.5,
-          ["==", ["get", "render_class"], "small-house"],
-          0.6,
-          1,
-        ],
-      ],
-      "fill-extrusion-base": 0,
-      "fill-extrusion-opacity": 0.98,
-      "fill-extrusion-vertical-gradient": true,
-    },
-  });
-
-  map.addLayer({
-    id: "enderly-ifc-highlight-outline",
-    type: "line",
-    source: "enderly-ifc-highlight",
-    minzoom: 11,
-    paint: {
-      "line-color": "#f7e8b5",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 11, 2, 14, 4.5, 16, 6],
-      "line-opacity": 0.88,
-      "line-dasharray": [1.4, 0.85],
-      "line-blur": 0.25,
-    },
-  });
-
-  map.addLayer({
-    id: "enderly-ifc-footprint-halo",
-    type: "line",
-    source: "enderly-ifc-buildings",
-    paint: {
-      "line-color": [
-        "case",
-        ["==", ["get", "render_class"], "infrastructure"],
-        "#f0f2ec",
-        "#fff9ea",
-      ],
-      "line-width": ["interpolate", ["linear"], ["zoom"], 12.5, 0.8, 16, 2.4],
-      "line-opacity": 0.86,
-    },
-  });
+  memoryLayerEventsReady = true;
 }
 
 function addEnderlyModelMarker() {
@@ -1233,20 +1246,42 @@ async function searchLocations(event) {
   }
 }
 
+function scheduleMapLayerSetup() {
+  if (mapLayersReady || mapSetupRetryTimer || mapSetupRetryCount >= 40) return;
+
+  mapSetupRetryCount += 1;
+  document.body.dataset.mapSetupRetries = String(mapSetupRetryCount);
+  mapSetupRetryTimer = window.setTimeout(() => {
+    mapSetupRetryTimer = null;
+    setupMapLayers();
+  }, 250);
+}
+
 function setupMapLayers() {
-  if (mapLayersReady || !map.getStyle()) return;
+  if (mapLayersReady) return;
 
   try {
-    addBase3DBuildings();
-    addMemoryLayers();
-    addEnderlyModelLayer();
+    document.body.dataset.mapSetupStep = "memory-layer-events";
+    bindMemoryLayerEvents();
+    document.body.dataset.mapSetupStep = "road-labels";
     addRoadLabels();
+    document.body.dataset.mapSetupStep = "enderly-marker";
     addEnderlyModelMarker();
     mapLayersReady = true;
+    document.body.dataset.mapLayersReady = "true";
+    document.body.dataset.mapSetupStep = "complete";
+    delete document.body.dataset.mapSetupError;
+    mapSetupRetryCount = 0;
+    if (mapSetupRetryTimer) {
+      window.clearTimeout(mapSetupRetryTimer);
+      mapSetupRetryTimer = null;
+    }
     renderPlaces();
     resetMapView();
   } catch (error) {
-    console.warn("Map style is not ready yet", error.message);
+    document.body.dataset.mapSetupError = error.message;
+    if (mapSetupRetryCount >= 40) console.warn("Map style is not ready yet", error.message);
+    scheduleMapLayerSetup();
   }
 }
 
@@ -1345,15 +1380,31 @@ map.on("click", (event) => {
 
 renderPlaces();
 loadRemoteMemories();
-map.on("style.load", setupMapLayers);
-map.on("load", setupMapLayers);
-map.on("idle", setupMapLayers);
+window.setTimeout(() => {
+  addRoadLabels();
+  addEnderlyModelMarker();
+}, 0);
+map.on("style.load", () => {
+  document.body.dataset.styleLoadEvent = "true";
+  setupMapLayers();
+});
+map.on("styledata", () => {
+  document.body.dataset.styleDataEvents = String(Number(document.body.dataset.styleDataEvents || 0) + 1);
+  setupMapLayers();
+});
+map.on("load", () => {
+  document.body.dataset.mapLoadEvent = "true";
+  setupMapLayers();
+});
+map.on("idle", () => {
+  document.body.dataset.mapIdleEvent = "true";
+  setupMapLayers();
+});
 map.on("error", (event) => {
   console.warn("Map loading issue", event && event.error ? event.error.message : event);
 });
 
-setTimeout(setupMapLayers, 1000);
-setTimeout(setupMapLayers, 2500);
+scheduleMapLayerSetup();
 
 if (supabaseClient) {
   setInterval(() => {

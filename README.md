@@ -41,10 +41,10 @@ The delete button uses the `delete_memory` database function. It allows a visito
 
 ## Enderly Park IFC Model
 
-The source IFC file is stored at `assets/Enderly.ifc`. The web map loads the generated GeoJSON layer at `data/enderly-buildings.geojson`.
+The source IFC file is stored at `assets/Enderly.ifc`. The web map loads generated GeoJSON layers for the building extrusions at `data/enderly-buildings.geojson` and the green triangulated terrain mesh at `data/enderly-terrain.geojson`.
 
-To regenerate the browser-ready layer after replacing the IFC file, run:
+To regenerate the browser-ready layers after replacing the IFC file, run:
 
 ```powershell
-node .\tools\ifc-to-geojson.mjs .\assets\Enderly.ifc .\data\enderly-buildings.geojson
+node .\tools\ifc-to-geojson.mjs .\assets\Enderly.ifc .\data\enderly-buildings.geojson .\data\enderly-terrain.geojson
 ```
