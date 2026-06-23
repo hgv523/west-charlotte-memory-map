@@ -61,13 +61,12 @@
           <p id="searchStatus" class="search-status" aria-live="polite"></p>
           <div id="searchResults" class="search-results is-hidden"></div>
         </section>
-        <section class="angle-controls" aria-label="3D map angle presets">
-          <button type="button" data-view="enderly">Enderly</button>
-          <button type="button" data-bearing="-24" data-pitch="58">Corridor</button>
-          <button type="button" data-bearing="35" data-pitch="64">NE</button>
-          <button type="button" data-bearing="125" data-pitch="64">SE</button>
-          <button type="button" data-bearing="-145" data-pitch="64">West</button>
-          <button type="button" data-bearing="0" data-pitch="18">Top</button>
+        <section class="angle-controls compass-controls" aria-label="Map compass directions">
+          <button class="compass-n" type="button" data-bearing="0" data-pitch="60" aria-label="Face north">N</button>
+          <button class="compass-e" type="button" data-bearing="90" data-pitch="60" aria-label="Face east">E</button>
+          <span class="compass-core" aria-hidden="true"></span>
+          <button class="compass-s" type="button" data-bearing="180" data-pitch="60" aria-label="Face south">S</button>
+          <button class="compass-w" type="button" data-bearing="-90" data-pitch="60" aria-label="Face west">W</button>
         </section>
 
         <section id="detailPanel" class="detail-panel is-hidden" aria-live="polite">

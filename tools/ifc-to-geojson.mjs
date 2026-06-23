@@ -99,7 +99,9 @@ for (const building of buildings) {
 
     const baseElevation = Number(placementPoint[2] || 0);
     const height = Number(solid.depth || 0);
+    const area = polygonAreaMeters(localRing);
     const centroid = ringCentroid(ring);
+    const renderClass = classifyBuilding(height, area);
 
     rawFeatures.push({
       type: "Feature",
@@ -108,6 +110,8 @@ for (const building of buildings) {
         source_id: building.globalId,
         name: building.name,
         height: round(height, 2),
+        area_sqm: round(area, 1),
+        render_class: renderClass,
         base_elevation: round(baseElevation, 2),
         centroid_lng: round(centroid[0], 7),
         centroid_lat: round(centroid[1], 7),
@@ -241,6 +245,26 @@ function ringCentroid(ring) {
   }
 
   return [x / count, y / count];
+}
+
+function polygonAreaMeters(ring) {
+  let area = 0;
+  const count = ring.length;
+
+  for (let index = 0; index < count; index += 1) {
+    const current = ring[index];
+    const next = ring[(index + 1) % count];
+    area += Number(current[0] || 0) * Number(next[1] || 0) - Number(next[0] || 0) * Number(current[1] || 0);
+  }
+
+  return Math.abs(area / 2);
+}
+
+function classifyBuilding(height, area) {
+  if (area >= 420 || height >= 10) return "infrastructure";
+  if (area >= 165 || height >= 6.5) return "community-building";
+  if (area <= 80 && height <= 4.8) return "small-house";
+  return "house";
 }
 
 function round(number, digits) {

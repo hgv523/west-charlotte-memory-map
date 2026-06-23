@@ -310,11 +310,11 @@ button {
   left: 18px;
   top: 18px;
   z-index: 30;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  max-width: min(430px, calc(100% - 104px));
-  padding: 7px;
+  display: grid;
+  grid-template-columns: repeat(3, 34px);
+  grid-template-rows: repeat(3, 34px);
+  gap: 5px;
+  padding: 8px;
   border: 1px solid rgba(23, 32, 27, 0.14);
   border-radius: 8px;
   background: rgba(255, 253, 250, 0.92);
@@ -322,20 +322,54 @@ button {
 }
 
 .angle-controls button {
-  min-height: 30px;
-  padding: 0 10px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 6px;
   color: var(--green-dark);
   background: white;
-  font-size: 0.76rem;
-  font-weight: 900;
+  font-size: 0.78rem;
+  font-weight: 950;
 }
 
 .angle-controls button:hover,
 .angle-controls button:focus-visible {
   border-color: rgba(31, 111, 91, 0.65);
   background: #e7eee9;
+}
+
+.compass-n {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.compass-e {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.compass-s {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.compass-w {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.compass-core {
+  grid-column: 2;
+  grid-row: 2;
+  width: 18px;
+  height: 18px;
+  place-self: center;
+  border: 2px solid rgba(31, 111, 91, 0.32);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(31, 111, 91, 0.5) 0 3px, transparent 4px),
+    #eef4ef;
 }
 
 .map-error {
@@ -365,10 +399,10 @@ button {
 
 .location-search {
   position: absolute;
-  left: 18px;
-  top: 74px;
+  left: 152px;
+  top: 18px;
   z-index: 35;
-  width: min(420px, calc(100% - 110px));
+  width: min(420px, calc(100% - 262px));
   pointer-events: auto;
 }
 
@@ -650,39 +684,19 @@ button {
 
 .enderly-model-marker {
   position: relative;
-  display: grid;
-  gap: 2px;
-  padding: 8px 12px 9px;
+  padding: 9px 12px;
   color: #0e211c;
-  background: #fff3a6;
+  background: #f7e8b5;
   border: 2px solid rgba(255, 255, 255, 0.98);
   border-radius: 8px;
   box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.34),
-    0 0 0 4px rgba(255, 217, 102, 0.48),
-    0 0 0 9px rgba(31, 125, 104, 0.22);
-  animation: enderly-highlight-pulse 2.8s ease-in-out infinite;
+    0 12px 28px rgba(0, 0, 0, 0.32),
+    0 0 0 4px rgba(247, 232, 181, 0.36);
   cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 950;
   line-height: 1;
   white-space: nowrap;
-}
-
-.enderly-model-marker span,
-.enderly-model-marker strong {
-  display: block;
-}
-
-.enderly-model-marker span {
-  color: #8b3e25;
-  font-size: 0.62rem;
-  font-weight: 950;
-  text-transform: uppercase;
-}
-
-.enderly-model-marker strong {
-  color: #0e211c;
-  font-size: 0.82rem;
-  font-weight: 950;
 }
 
 .enderly-model-marker::after {
@@ -699,24 +713,7 @@ button {
 }
 
 .enderly-model-marker:hover {
-  background: #fff8c9;
-}
-
-@keyframes enderly-highlight-pulse {
-  0%,
-  100% {
-    box-shadow:
-      0 12px 28px rgba(0, 0, 0, 0.34),
-      0 0 0 4px rgba(255, 217, 102, 0.5),
-      0 0 0 9px rgba(31, 125, 104, 0.2);
-  }
-
-  50% {
-    box-shadow:
-      0 12px 28px rgba(0, 0, 0, 0.34),
-      0 0 0 7px rgba(255, 217, 102, 0.34),
-      0 0 0 14px rgba(31, 125, 104, 0.12);
-  }
+  background: #fff1c9;
 }
 
 .dialog-marker {
@@ -1042,13 +1039,12 @@ button {
   .angle-controls {
     left: 12px;
     top: 12px;
-    max-width: calc(100% - 92px);
   }
 
   .location-search {
-    left: 12px;
-    top: 68px;
-    width: min(420px, calc(100% - 92px));
+    left: 138px;
+    top: 12px;
+    width: calc(100% - 218px);
   }
 }
 
@@ -1062,8 +1058,9 @@ button {
   }
 
   .location-search {
-    top: 92px;
-    width: calc(100% - 72px);
+    left: 12px;
+    top: 136px;
+    width: calc(100% - 24px);
   }
 
   .search-form {

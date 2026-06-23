@@ -582,8 +582,21 @@ function addEnderlyModelLayer() {
     source: "enderly-ifc-highlight",
     minzoom: 11,
     paint: {
-      "fill-color": "#f6d365",
-      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 11, 0.1, 14, 0.2, 16, 0.12],
+      "fill-color": "#f7e8b5",
+      "fill-opacity": ["interpolate", ["linear"], ["zoom"], 11, 0.08, 14, 0.12, 16, 0.06],
+    },
+  });
+
+  map.addLayer({
+    id: "enderly-ifc-foundations",
+    type: "fill-extrusion",
+    source: "enderly-ifc-buildings",
+    minzoom: 12.4,
+    paint: {
+      "fill-extrusion-color": "#4f5652",
+      "fill-extrusion-height": 0.75,
+      "fill-extrusion-base": 0,
+      "fill-extrusion-opacity": 0.48,
     },
   });
 
@@ -594,19 +607,33 @@ function addEnderlyModelLayer() {
     minzoom: 12.4,
     paint: {
       "fill-extrusion-color": [
-        "interpolate",
-        ["linear"],
-        ["get", "height"],
-        2.5,
-        "#b7e7c6",
-        6,
-        "#59c99f",
-        14,
-        "#1f7d68",
+        "case",
+        ["==", ["get", "render_class"], "small-house"],
+        "#d9d2c4",
+        ["==", ["get", "render_class"], "house"],
+        "#c7bdae",
+        ["==", ["get", "render_class"], "community-building"],
+        "#b5bab4",
+        ["==", ["get", "render_class"], "infrastructure"],
+        "#8f9a99",
+        "#c7bdae",
       ],
-      "fill-extrusion-height": ["+", ["get", "height"], 1.4],
+      "fill-extrusion-height": [
+        "+",
+        ["get", "height"],
+        [
+          "case",
+          ["==", ["get", "render_class"], "infrastructure"],
+          2.2,
+          ["==", ["get", "render_class"], "community-building"],
+          1.5,
+          ["==", ["get", "render_class"], "small-house"],
+          0.6,
+          1,
+        ],
+      ],
       "fill-extrusion-base": 0,
-      "fill-extrusion-opacity": 0.96,
+      "fill-extrusion-opacity": 0.98,
       "fill-extrusion-vertical-gradient": true,
     },
   });
@@ -617,10 +644,10 @@ function addEnderlyModelLayer() {
     source: "enderly-ifc-highlight",
     minzoom: 11,
     paint: {
-      "line-color": "#ffd966",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 11, 3, 14, 6, 16, 8],
-      "line-opacity": 0.96,
-      "line-dasharray": [1.2, 0.75],
+      "line-color": "#f7e8b5",
+      "line-width": ["interpolate", ["linear"], ["zoom"], 11, 2, 14, 4.5, 16, 6],
+      "line-opacity": 0.88,
+      "line-dasharray": [1.4, 0.85],
       "line-blur": 0.25,
     },
   });
@@ -630,9 +657,14 @@ function addEnderlyModelLayer() {
     type: "line",
     source: "enderly-ifc-buildings",
     paint: {
-      "line-color": "#fff3a6",
-      "line-width": ["interpolate", ["linear"], ["zoom"], 12.5, 1.2, 16, 3],
-      "line-opacity": 0.9,
+      "line-color": [
+        "case",
+        ["==", ["get", "render_class"], "infrastructure"],
+        "#f0f2ec",
+        "#fff9ea",
+      ],
+      "line-width": ["interpolate", ["linear"], ["zoom"], 12.5, 0.8, 16, 2.4],
+      "line-opacity": 0.86,
     },
   });
 }
@@ -643,8 +675,8 @@ function addEnderlyModelMarker() {
   const element = document.createElement("button");
   element.className = "enderly-model-marker";
   element.type = "button";
-  element.innerHTML = '<span>New IFC model</span><strong>Enderly Park 3D</strong>';
-  element.setAttribute("aria-label", "Zoom to Enderly Park 3D model");
+  element.textContent = "Enderly Park";
+  element.setAttribute("aria-label", "Zoom to Enderly Park");
   element.addEventListener("click", (event) => {
     event.stopPropagation();
     flyToEnderlyModel();
@@ -1264,11 +1296,6 @@ searchResults.addEventListener("click", (event) => {
 angleControls.addEventListener("click", (event) => {
   const button = event.target.closest("button");
   if (!button) return;
-
-  if (button.dataset.view === "enderly") {
-    flyToEnderlyModel();
-    return;
-  }
 
   map.easeTo({
     bearing: Number(button.dataset.bearing),

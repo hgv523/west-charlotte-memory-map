@@ -29,6 +29,8 @@
         "source_id": "1ZiXT_ugf5vpM$gQBrTrw2",
         "name": "Contextual Building",
         "height": 5.5,
+        "area_sqm": 91.3,
+        "render_class": "house",
         "base_elevation": 221.66,
         "centroid_lng": -80.8832592,
         "centroid_lat": 35.2408642
@@ -68,6 +70,8 @@
         "source_id": "2YVhqF$caX0hexfpNRBgTP",
         "name": "Contextual Building",
         "height": 3.3,
+        "area_sqm": 129.2,
+        "render_class": "house",
         "base_elevation": 222.93,
         "centroid_lng": -80.8833696,
         "centroid_lat": 35.2419251
@@ -107,6 +111,8 @@
         "source_id": "2eTukqr2d3B7CDKm$rUE3P",
         "name": "Contextual Building",
         "height": 4.2,
+        "area_sqm": 332,
+        "render_class": "community-building",
         "base_elevation": 225.3,
         "centroid_lng": -80.8852231,
         "centroid_lat": 35.239865
@@ -178,6 +184,8 @@
         "source_id": "2kv$Lx1C6eT5m4rPXeKmJp",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 112.2,
+        "render_class": "house",
         "base_elevation": 222.03,
         "centroid_lng": -80.8818199,
         "centroid_lat": 35.2407802
@@ -229,6 +237,8 @@
         "source_id": "2tgBeNMvCBEAY4Rb8Tvwup",
         "name": "Contextual Building",
         "height": 3.1,
+        "area_sqm": 164.9,
+        "render_class": "house",
         "base_elevation": 227.16,
         "centroid_lng": -80.8857585,
         "centroid_lat": 35.2409444
@@ -268,6 +278,8 @@
         "source_id": "0c17FzlBX8pIE_mZzaTzWr",
         "name": "Contextual Building",
         "height": 3.3,
+        "area_sqm": 59.3,
+        "render_class": "small-house",
         "base_elevation": 225.15,
         "centroid_lng": -80.8826008,
         "centroid_lat": 35.2417576
@@ -307,6 +319,8 @@
         "source_id": "2yEpbkAKD6Vr3cDQ3nL6sk",
         "name": "Contextual Building",
         "height": 6.3,
+        "area_sqm": 81.4,
+        "render_class": "house",
         "base_elevation": 222.57,
         "centroid_lng": -80.8856156,
         "centroid_lat": 35.2419312
@@ -346,6 +360,8 @@
         "source_id": "0wNHL439bEGl7b1iN7XOiC",
         "name": "Contextual Building",
         "height": 3.5,
+        "area_sqm": 134.7,
+        "render_class": "house",
         "base_elevation": 225.25,
         "centroid_lng": -80.8824792,
         "centroid_lat": 35.2420608
@@ -401,6 +417,8 @@
         "source_id": "3rcPNqNhCbfNyh39Ax8Vhr",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 136.3,
+        "render_class": "house",
         "base_elevation": 224.44,
         "centroid_lng": -80.884238,
         "centroid_lat": 35.2421225
@@ -440,6 +458,8 @@
         "source_id": "3LVcEYIt_5NBXKe1JwenrI",
         "name": "Contextual Building",
         "height": 3.5,
+        "area_sqm": 163.7,
+        "render_class": "house",
         "base_elevation": 224.82,
         "centroid_lng": -80.8840725,
         "centroid_lat": 35.2421421
@@ -479,6 +499,8 @@
         "source_id": "29kk5oS3nO$CxomuSOVMVW",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 107.4,
+        "render_class": "house",
         "base_elevation": 223.79,
         "centroid_lng": -80.8844429,
         "centroid_lat": 35.2421122
@@ -518,6 +540,8 @@
         "source_id": "1ASmZnID$gZIHhT08bMmI4",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 123.6,
+        "render_class": "house",
         "base_elevation": 227.92,
         "centroid_lng": -80.8809434,
         "centroid_lat": 35.2420341
@@ -557,6 +581,8 @@
         "source_id": "2JB$LMXVsj5q0k1CyKPEy6",
         "name": "Contextual Building",
         "height": 3.4,
+        "area_sqm": 133.7,
+        "render_class": "house",
         "base_elevation": 223.02,
         "centroid_lng": -80.8835729,
         "centroid_lat": 35.2420175
@@ -608,6 +634,8 @@
         "source_id": "2XXKEyBbMEGRglQHuOjxbB",
         "name": "Contextual Building",
         "height": 3.8,
+        "area_sqm": 106.9,
+        "render_class": "house",
         "base_elevation": 227.32,
         "centroid_lng": -80.8819879,
         "centroid_lat": 35.2418763
@@ -663,6 +691,8 @@
         "source_id": "1nbS2NpmBHB$9h_eaMVM5C",
         "name": "Contextual Building",
         "height": 4.6,
+        "area_sqm": 107.3,
+        "render_class": "house",
         "base_elevation": 228.36,
         "centroid_lng": -80.8818238,
         "centroid_lat": 35.2418266
@@ -710,6 +740,8 @@
         "source_id": "0j$A5INrc$Yr0CG5HCV$3S",
         "name": "Contextual Building",
         "height": 3.6,
+        "area_sqm": 103.2,
+        "render_class": "house",
         "base_elevation": 229.79,
         "centroid_lng": -80.8815336,
         "centroid_lat": 35.2417203
@@ -753,6 +785,8 @@
         "source_id": "2Db3s$7GTSSIgkWfOvlutL",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 142.3,
+        "render_class": "house",
         "base_elevation": 224.71,
         "centroid_lng": -80.8829222,
         "centroid_lat": 35.2416208
@@ -792,6 +826,8 @@
         "source_id": "3ThGdCqXB9K2dxggJoLypN",
         "name": "Contextual Building",
         "height": 4.3,
+        "area_sqm": 80.9,
+        "render_class": "house",
         "base_elevation": 229.31,
         "centroid_lng": -80.8810844,
         "centroid_lat": 35.2415316
@@ -831,6 +867,8 @@
         "source_id": "3xIR$kADlgMCt6KDNuX8mY",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 123.4,
+        "render_class": "house",
         "base_elevation": 227.81,
         "centroid_lng": -80.8804681,
         "centroid_lat": 35.241422
@@ -878,6 +916,8 @@
         "source_id": "2JR2gynPJaqXggCyu1eBzE",
         "name": "Contextual Building",
         "height": 3.5,
+        "area_sqm": 111.5,
+        "render_class": "house",
         "base_elevation": 226.75,
         "centroid_lng": -80.8814819,
         "centroid_lat": 35.2412022
@@ -929,6 +969,8 @@
         "source_id": "3yOuK1qpKJzEyQsFWWFYfh",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 134.3,
+        "render_class": "house",
         "base_elevation": 217.55,
         "centroid_lng": -80.8847675,
         "centroid_lat": 35.2412228
@@ -976,6 +1018,8 @@
         "source_id": "0EmLX3ymph$BDCnQprK5X1",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 80.7,
+        "render_class": "house",
         "base_elevation": 227.05,
         "centroid_lng": -80.8813099,
         "centroid_lat": 35.2411532
@@ -1015,6 +1059,8 @@
         "source_id": "1XKeLcObHQCZSLVM5BWkD2",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 105.4,
+        "render_class": "house",
         "base_elevation": 217.5,
         "centroid_lng": -80.8845864,
         "centroid_lat": 35.2410877
@@ -1054,6 +1100,8 @@
         "source_id": "0dMztmAzop2vrx05oTo$2H",
         "name": "Contextual Building",
         "height": 4.5,
+        "area_sqm": 84.7,
+        "render_class": "house",
         "base_elevation": 222.33,
         "centroid_lng": -80.8826238,
         "centroid_lat": 35.2410682
@@ -1101,6 +1149,8 @@
         "source_id": "0ITrqrcYEA$7HI3g9S7Xy5",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 106.5,
+        "render_class": "house",
         "base_elevation": 226.99,
         "centroid_lng": -80.8807479,
         "centroid_lat": 35.2410064
@@ -1140,6 +1190,8 @@
         "source_id": "1To3qUUtxEyZvXBuFEGJEM",
         "name": "Contextual Building",
         "height": 3.8,
+        "area_sqm": 101.5,
+        "render_class": "house",
         "base_elevation": 221.74,
         "centroid_lng": -80.882415,
         "centroid_lat": 35.2409972
@@ -1179,6 +1231,8 @@
         "source_id": "0K7xt6CP3bLhN_fpybSTMo",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 85.5,
+        "render_class": "house",
         "base_elevation": 221.45,
         "centroid_lng": -80.8821884,
         "centroid_lat": 35.2409275
@@ -1226,6 +1280,8 @@
         "source_id": "0Rs2BNfQfNTzadpSug25vh",
         "name": "Contextual Building",
         "height": 4.6,
+        "area_sqm": 100.2,
+        "render_class": "house",
         "base_elevation": 222,
         "centroid_lng": -80.8830601,
         "centroid_lat": 35.2407617
@@ -1265,6 +1321,8 @@
         "source_id": "2550ROzUMiAjRO3__14pFd",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 102.5,
+        "render_class": "house",
         "base_elevation": 224.83,
         "centroid_lng": -80.8808936,
         "centroid_lat": 35.2407513
@@ -1304,6 +1362,8 @@
         "source_id": "0zBXWeRemLDC9_eBJH7k4b",
         "name": "Contextual Building",
         "height": 3.4,
+        "area_sqm": 111.9,
+        "render_class": "house",
         "base_elevation": 225.5,
         "centroid_lng": -80.8810642,
         "centroid_lat": 35.2405178
@@ -1359,6 +1419,8 @@
         "source_id": "2G3xcTbbTnHQfD1PfA0blF",
         "name": "Contextual Building",
         "height": 4.5,
+        "area_sqm": 123.5,
+        "render_class": "house",
         "base_elevation": 226.25,
         "centroid_lng": -80.8858707,
         "centroid_lat": 35.2404406
@@ -1398,6 +1460,8 @@
         "source_id": "0UG1vfQZ$N_aFdYiVcXFp1",
         "name": "Contextual Building",
         "height": 3.4,
+        "area_sqm": 112.7,
+        "render_class": "house",
         "base_elevation": 222.26,
         "centroid_lng": -80.8820641,
         "centroid_lat": 35.2403883
@@ -1453,6 +1517,8 @@
         "source_id": "3Jv$z_yPKJOTCj7z6zs_jg",
         "name": "Contextual Building",
         "height": 3.8,
+        "area_sqm": 283.5,
+        "render_class": "community-building",
         "base_elevation": 227.56,
         "centroid_lng": -80.8855766,
         "centroid_lat": 35.240333
@@ -1492,6 +1558,8 @@
         "source_id": "32OwbU4QVQiDF5f9FsdeLO",
         "name": "Contextual Building",
         "height": 4.3,
+        "area_sqm": 775.7,
+        "render_class": "infrastructure",
         "base_elevation": 219.41,
         "centroid_lng": -80.8848534,
         "centroid_lat": 35.2401312
@@ -1539,6 +1607,8 @@
         "source_id": "05bCMCkg6VsQOzticr_N$U",
         "name": "Contextual Building",
         "height": 4.5,
+        "area_sqm": 110.2,
+        "render_class": "house",
         "base_elevation": 223.6,
         "centroid_lng": -80.8801687,
         "centroid_lat": 35.2395871
@@ -1594,6 +1664,8 @@
         "source_id": "36bmd6rrxRPheRsryKCnix",
         "name": "Contextual Building",
         "height": 4.6,
+        "area_sqm": 76.8,
+        "render_class": "small-house",
         "base_elevation": 223.05,
         "centroid_lng": -80.8802544,
         "centroid_lat": 35.2394194
@@ -1633,6 +1705,8 @@
         "source_id": "2EM_ZKFXC8nnzFVCn0m71c",
         "name": "Contextual Building",
         "height": 4.3,
+        "area_sqm": 448.8,
+        "render_class": "infrastructure",
         "base_elevation": 222.96,
         "centroid_lng": -80.8841879,
         "centroid_lat": 35.2392809
@@ -1672,6 +1746,8 @@
         "source_id": "06mMSQO8C3ggPpFnAM1E1Z",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 83,
+        "render_class": "house",
         "base_elevation": 223.21,
         "centroid_lng": -80.8803026,
         "centroid_lat": 35.2392441
@@ -1711,6 +1787,8 @@
         "source_id": "19Wp78FWfFIvLGxfnJulKU",
         "name": "Contextual Building",
         "height": 4.7,
+        "area_sqm": 594.5,
+        "render_class": "infrastructure",
         "base_elevation": 225.79,
         "centroid_lng": -80.8853218,
         "centroid_lat": 35.2390299
@@ -1786,6 +1864,8 @@
         "source_id": "2yUP7V5DcZFUNtA2U6YaIu",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 441.3,
+        "render_class": "infrastructure",
         "base_elevation": 223.48,
         "centroid_lng": -80.8845235,
         "centroid_lat": 35.2382974
@@ -1825,6 +1905,8 @@
         "source_id": "3iGYx0CqHR5S0MaS21ya3E",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 100.3,
+        "render_class": "house",
         "base_elevation": 218.48,
         "centroid_lng": -80.8806027,
         "centroid_lat": 35.2383493
@@ -1872,6 +1954,8 @@
         "source_id": "3rxotRvIsJeKaPZGVQkWMn",
         "name": "Contextual Building",
         "height": 4.2,
+        "area_sqm": 172.8,
+        "render_class": "community-building",
         "base_elevation": 212.97,
         "centroid_lng": -80.8811095,
         "centroid_lat": 35.2381248
@@ -1911,6 +1995,8 @@
         "source_id": "1OV_SKDkips9u3F1VFaVvO",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 64.3,
+        "render_class": "small-house",
         "base_elevation": 230.76,
         "centroid_lng": -80.8805845,
         "centroid_lat": 35.2417712
@@ -1950,6 +2036,8 @@
         "source_id": "0rN7VXesBslZxa3azEAJ3E",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 123.9,
+        "render_class": "house",
         "base_elevation": 224.36,
         "centroid_lng": -80.8838811,
         "centroid_lat": 35.2421438
@@ -1989,6 +2077,8 @@
         "source_id": "2lGkLGxazXh4qIsJPVVyDN",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 121.6,
+        "render_class": "house",
         "base_elevation": 225.46,
         "centroid_lng": -80.8822718,
         "centroid_lat": 35.2421217
@@ -2060,6 +2150,8 @@
         "source_id": "1RfcweseyaxQzKoIYPDCjn",
         "name": "Contextual Building",
         "height": 4.3,
+        "area_sqm": 122.5,
+        "render_class": "house",
         "base_elevation": 228.6,
         "centroid_lng": -80.8811477,
         "centroid_lat": 35.2421021
@@ -2099,6 +2191,8 @@
         "source_id": "1UrUZKS5FUJEtyFXGoCaab",
         "name": "Contextual Building",
         "height": 3.6,
+        "area_sqm": 96.8,
+        "render_class": "house",
         "base_elevation": 223.48,
         "centroid_lng": -80.8837193,
         "centroid_lat": 35.2420943
@@ -2138,6 +2232,8 @@
         "source_id": "3wks_PifwYnCTpFOaI2kiJ",
         "name": "Contextual Building",
         "height": 3.4,
+        "area_sqm": 183,
+        "render_class": "community-building",
         "base_elevation": 222.89,
         "centroid_lng": -80.8846443,
         "centroid_lat": 35.2420663
@@ -2193,6 +2289,8 @@
         "source_id": "1Dz5171IOgI4_mssqVZda5",
         "name": "Contextual Building",
         "height": 4.3,
+        "area_sqm": 124.3,
+        "render_class": "house",
         "base_elevation": 222.66,
         "centroid_lng": -80.8854322,
         "centroid_lat": 35.2417846
@@ -2232,6 +2330,8 @@
         "source_id": "02QaLeq_gKWU8ZqQ_TqxFv",
         "name": "Contextual Building",
         "height": 3.6,
+        "area_sqm": 132.1,
+        "render_class": "house",
         "base_elevation": 221.93,
         "centroid_lng": -80.884825,
         "centroid_lat": 35.2417924
@@ -2287,6 +2387,8 @@
         "source_id": "2ZxWtvGw4zpckrUmTAd668",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 109,
+        "render_class": "house",
         "base_elevation": 226.07,
         "centroid_lng": -80.8828428,
         "centroid_lat": 35.241757
@@ -2334,6 +2436,8 @@
         "source_id": "0lsnf4i$VSFp8ozyVzzXYq",
         "name": "Contextual Building",
         "height": 3.6,
+        "area_sqm": 122.7,
+        "render_class": "house",
         "base_elevation": 222.57,
         "centroid_lng": -80.883474,
         "centroid_lat": 35.2417421
@@ -2373,6 +2477,8 @@
         "source_id": "0LeX8GpV$CqDL3vU5ehyto",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 157.7,
+        "render_class": "house",
         "base_elevation": 229.69,
         "centroid_lng": -80.8803671,
         "centroid_lat": 35.2416847
@@ -2412,6 +2518,8 @@
         "source_id": "38J_phJ65PyRREFU7ICaqH",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 113.7,
+        "render_class": "house",
         "base_elevation": 221.17,
         "centroid_lng": -80.8846552,
         "centroid_lat": 35.2416766
@@ -2459,6 +2567,8 @@
         "source_id": "1ynjOjRY$nl9LAcYXYdrg6",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 96.8,
+        "render_class": "house",
         "base_elevation": 222.16,
         "centroid_lng": -80.8836325,
         "centroid_lat": 35.2416229
@@ -2498,6 +2608,8 @@
         "source_id": "2LKTnBSB4BeZf0RXRzyBbu",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 163.1,
+        "render_class": "house",
         "base_elevation": 228.74,
         "centroid_lng": -80.8804356,
         "centroid_lat": 35.2415559
@@ -2537,6 +2649,8 @@
         "source_id": "3QKd0F4kzolpi_YAj_jRZf",
         "name": "Contextual Building",
         "height": 3.8,
+        "area_sqm": 141,
+        "render_class": "house",
         "base_elevation": 219.64,
         "centroid_lng": -80.8850977,
         "centroid_lat": 35.2414643
@@ -2576,6 +2690,8 @@
         "source_id": "1wtDwNaIRll8c2TE6IclKl",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 86.7,
+        "render_class": "house",
         "base_elevation": 224.2,
         "centroid_lng": -80.8821043,
         "centroid_lat": 35.2414767
@@ -2615,6 +2731,8 @@
         "source_id": "3Zd_$E_MpwDkDtJdMiI2Pt",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 104,
+        "render_class": "house",
         "base_elevation": 221.05,
         "centroid_lng": -80.8837343,
         "centroid_lat": 35.2414599
@@ -2654,6 +2772,8 @@
         "source_id": "1KSAP$Q5Oez1k1a70V6Zhy",
         "name": "Contextual Building",
         "height": 4.6,
+        "area_sqm": 94.5,
+        "render_class": "house",
         "base_elevation": 224.2,
         "centroid_lng": -80.8819512,
         "centroid_lat": 35.2414048
@@ -2693,6 +2813,8 @@
         "source_id": "0FDdnCPzZrqkqw3yT$Dh48",
         "name": "Contextual Building",
         "height": 3.5,
+        "area_sqm": 217.4,
+        "render_class": "community-building",
         "base_elevation": 220.52,
         "centroid_lng": -80.8839236,
         "centroid_lat": 35.2413286
@@ -2740,6 +2862,8 @@
         "source_id": "2ee6zEZTfUsPvUHRS4qyHe",
         "name": "Contextual Building",
         "height": 4.2,
+        "area_sqm": 134.3,
+        "render_class": "house",
         "base_elevation": 217.72,
         "centroid_lng": -80.8849425,
         "centroid_lat": 35.2413202
@@ -2779,6 +2903,8 @@
         "source_id": "2Dh9H6X82$6kXeZOzyqW2$",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 115.2,
+        "render_class": "house",
         "base_elevation": 226.83,
         "centroid_lng": -80.8805599,
         "centroid_lat": 35.2412794
@@ -2818,6 +2944,8 @@
         "source_id": "0PpTRaBWGEZathCAUF2RK5",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 91.8,
+        "render_class": "house",
         "base_elevation": 225.19,
         "centroid_lng": -80.8816265,
         "centroid_lat": 35.241289
@@ -2857,6 +2985,8 @@
         "source_id": "3UtTqHRwJMOpE9s1OTCn3Y",
         "name": "Contextual Building",
         "height": 4.7,
+        "area_sqm": 125.5,
+        "render_class": "house",
         "base_elevation": 225.92,
         "centroid_lng": -80.8811607,
         "centroid_lat": 35.2410688
@@ -2896,6 +3026,8 @@
         "source_id": "1bQ$EMg6sF8gbSI$EHfUSb",
         "name": "Contextual Building",
         "height": 4.2,
+        "area_sqm": 174.1,
+        "render_class": "community-building",
         "base_elevation": 220.65,
         "centroid_lng": -80.8834588,
         "centroid_lat": 35.2409395
@@ -2947,6 +3079,8 @@
         "source_id": "1ICqpaa5cp__IhFx6fYVDP",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 111.8,
+        "render_class": "house",
         "base_elevation": 225.91,
         "centroid_lng": -80.8808554,
         "centroid_lat": 35.2408861
@@ -2994,6 +3128,8 @@
         "source_id": "1Ur8ygkYbJbcoXLdyDKCYs",
         "name": "Contextual Building",
         "height": 5.3,
+        "area_sqm": 123.1,
+        "render_class": "house",
         "base_elevation": 220.1,
         "centroid_lng": -80.8803114,
         "centroid_lat": 35.2380374
@@ -3033,6 +3169,8 @@
         "source_id": "3$DdppZn7sNuSEn6abO3zp",
         "name": "Contextual Building",
         "height": 3.3,
+        "area_sqm": 129.1,
+        "render_class": "house",
         "base_elevation": 218.82,
         "centroid_lng": -80.8805554,
         "centroid_lat": 35.2379212
@@ -3100,6 +3238,8 @@
         "source_id": "1SPLqg1sXiR93IfT0U0hzk",
         "name": "Contextual Building",
         "height": 5.5,
+        "area_sqm": 419.5,
+        "render_class": "community-building",
         "base_elevation": 215.5,
         "centroid_lng": -80.8824569,
         "centroid_lat": 35.2378053
@@ -3155,6 +3295,8 @@
         "source_id": "1LF_5QkaVPPIiaMg$5PKQm",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 105.6,
+        "render_class": "house",
         "base_elevation": 216.4,
         "centroid_lng": -80.880824,
         "centroid_lat": 35.2377453
@@ -3206,6 +3348,8 @@
         "source_id": "2TrGwaZu4s7EFpax2Cn4yS",
         "name": "Contextual Building",
         "height": 4.8,
+        "area_sqm": 326.3,
+        "render_class": "community-building",
         "base_elevation": 228.03,
         "centroid_lng": -80.8855202,
         "centroid_lat": 35.2407716
@@ -3249,6 +3393,8 @@
         "source_id": "0e3nFVCZdEMcWtUxbbwTNM",
         "name": "Contextual Building",
         "height": 3.3,
+        "area_sqm": 126.4,
+        "render_class": "house",
         "base_elevation": 224.6,
         "centroid_lng": -80.8814396,
         "centroid_lat": 35.2406476
@@ -3304,6 +3450,8 @@
         "source_id": "2FICRU7xeBAhfAjo7hysg8",
         "name": "Contextual Building",
         "height": 4.6,
+        "area_sqm": 117.4,
+        "render_class": "house",
         "base_elevation": 224.73,
         "centroid_lng": -80.8809862,
         "centroid_lat": 35.2406321
@@ -3343,6 +3491,8 @@
         "source_id": "0w5k6TcALQiml__wTApY4x",
         "name": "Contextual Building",
         "height": 4.6,
+        "area_sqm": 825.7,
+        "render_class": "infrastructure",
         "base_elevation": 217.93,
         "centroid_lng": -80.8832172,
         "centroid_lat": 35.2372714
@@ -3382,6 +3532,8 @@
         "source_id": "3ZJcgT5nhUry93Xg5Dl0V8",
         "name": "Contextual Building",
         "height": 4.3,
+        "area_sqm": 85.2,
+        "render_class": "house",
         "base_elevation": 221.2,
         "centroid_lng": -80.8817101,
         "centroid_lat": 35.2402236
@@ -3421,6 +3573,8 @@
         "source_id": "1JLB5PKTa64e$d5$kyUUBW",
         "name": "Contextual Building",
         "height": 2.3,
+        "area_sqm": 70.3,
+        "render_class": "small-house",
         "base_elevation": 222.36,
         "centroid_lng": -80.8815095,
         "centroid_lat": 35.2401757
@@ -3460,6 +3614,8 @@
         "source_id": "3qOhybPRZibV08y2OsPbKd",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 111,
+        "render_class": "house",
         "base_elevation": 222.8,
         "centroid_lng": -80.8812878,
         "centroid_lat": 35.2401138
@@ -3499,6 +3655,8 @@
         "source_id": "2cms5P8D7dkEnM_mJlK33a",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 80.2,
+        "render_class": "house",
         "base_elevation": 222.25,
         "centroid_lng": -80.8814168,
         "centroid_lat": 35.2399847
@@ -3538,6 +3696,8 @@
         "source_id": "1xqU5LXwmtNhfNDVbEYYJV",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 261.8,
+        "render_class": "community-building",
         "base_elevation": 224.86,
         "centroid_lng": -80.8846756,
         "centroid_lat": 35.2394595
@@ -3613,6 +3773,8 @@
         "source_id": "08sKy2knrW5UvlQFUZNvun",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 2224.6,
+        "render_class": "infrastructure",
         "base_elevation": 222.82,
         "centroid_lng": -80.8837856,
         "centroid_lat": 35.2389393
@@ -3692,6 +3854,8 @@
         "source_id": "1_bfeOHQt9rlzJgw$67Y6v",
         "name": "Contextual Building",
         "height": 5.1,
+        "area_sqm": 86.5,
+        "render_class": "house",
         "base_elevation": 223.1,
         "centroid_lng": -80.8803394,
         "centroid_lat": 35.2390507
@@ -3739,6 +3903,8 @@
         "source_id": "3U9bU1C2l8lXvVUIFMy2EP",
         "name": "Contextual Building",
         "height": 4.6,
+        "area_sqm": 145.3,
+        "render_class": "house",
         "base_elevation": 216.2,
         "centroid_lng": -80.88089,
         "centroid_lat": 35.2382273
@@ -3790,6 +3956,8 @@
         "source_id": "36_T6H6fdC0W9pcJxVSxy6",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 131.7,
+        "render_class": "house",
         "base_elevation": 222.16,
         "centroid_lng": -80.8800833,
         "centroid_lat": 35.2381106
@@ -3829,6 +3997,8 @@
         "source_id": "3DXOxWY8wW2cpxFGLA5KhR",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 91.3,
+        "render_class": "house",
         "base_elevation": 222.26,
         "centroid_lng": -80.8858195,
         "centroid_lat": 35.2420145
@@ -3868,6 +4038,8 @@
         "source_id": "2_sOY5cbIJ8Xsx$SiXZw4y",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 130.4,
+        "render_class": "house",
         "base_elevation": 227.81,
         "centroid_lng": -80.8808119,
         "centroid_lat": 35.2419665
@@ -3907,6 +4079,8 @@
         "source_id": "0GyNj3X7HZhrTJhg43WXJG",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 112.6,
+        "render_class": "house",
         "base_elevation": 229.09,
         "centroid_lng": -80.8806651,
         "centroid_lat": 35.2419093
@@ -3946,6 +4120,8 @@
         "source_id": "2ZHqi3HrRyAXT5BTwyObxL",
         "name": "Contextual Building",
         "height": 3.8,
+        "area_sqm": 151.9,
+        "render_class": "house",
         "base_elevation": 222.04,
         "centroid_lng": -80.8852661,
         "centroid_lat": 35.2416118
@@ -3985,6 +4161,8 @@
         "source_id": "3x4BgS3TNwazqIcesJRP45",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 133.1,
+        "render_class": "house",
         "base_elevation": 221.12,
         "centroid_lng": -80.8843547,
         "centroid_lat": 35.2414656
@@ -4024,6 +4202,8 @@
         "source_id": "2Kfc34X0LGUhj0rGxLssxI",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 116.7,
+        "render_class": "house",
         "base_elevation": 220.99,
         "centroid_lng": -80.8820175,
         "centroid_lat": 35.2408548
@@ -4075,6 +4255,8 @@
         "source_id": "2GMbVDfc7KrgEWovFtIqU_",
         "name": "Contextual Building",
         "height": 4.9,
+        "area_sqm": 415.2,
+        "render_class": "community-building",
         "base_elevation": 217.45,
         "centroid_lng": -80.8840925,
         "centroid_lat": 35.2399391
@@ -4114,6 +4296,8 @@
         "source_id": "2amADnBaxuPlBjvu4FJI3q",
         "name": "Contextual Building",
         "height": 5.3,
+        "area_sqm": 81.8,
+        "render_class": "house",
         "base_elevation": 221.1,
         "centroid_lng": -80.8815292,
         "centroid_lat": 35.2398131
@@ -4165,6 +4349,8 @@
         "source_id": "1yGV3X9fowORY5zfYfgmYi",
         "name": "Contextual Building",
         "height": 4.2,
+        "area_sqm": 475.6,
+        "render_class": "infrastructure",
         "base_elevation": 220.34,
         "centroid_lng": -80.8843352,
         "centroid_lat": 35.2396852
@@ -4212,6 +4398,8 @@
         "source_id": "21Idt3qttr0FWMkhAcjgT$",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 286.1,
+        "render_class": "community-building",
         "base_elevation": 226.24,
         "centroid_lng": -80.8858967,
         "centroid_lat": 35.23827
@@ -4259,6 +4447,8 @@
         "source_id": "3Ztg5B$YOmeH1kx4R0iziz",
         "name": "Contextual Building",
         "height": 4.8,
+        "area_sqm": 105.3,
+        "render_class": "house",
         "base_elevation": 224.38,
         "centroid_lng": -80.8818088,
         "centroid_lat": 35.2413286
@@ -4314,6 +4504,8 @@
         "source_id": "39F4DzjHj4LZIZJayEdL4G",
         "name": "Contextual Building",
         "height": 4.7,
+        "area_sqm": 85.7,
+        "render_class": "house",
         "base_elevation": 224.82,
         "centroid_lng": -80.8800663,
         "centroid_lat": 35.2397508
@@ -4353,6 +4545,8 @@
         "source_id": "3aewOWG_XMZLahEIp$Vx3s",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 55.7,
+        "render_class": "small-house",
         "base_elevation": 231.08,
         "centroid_lng": -80.8804448,
         "centroid_lat": 35.241826
@@ -4392,6 +4586,8 @@
         "source_id": "3828c3P77GctYXhrD2_IW2",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 153,
+        "render_class": "house",
         "base_elevation": 231.02,
         "centroid_lng": -80.8813765,
         "centroid_lat": 35.2416164
@@ -4431,6 +4627,8 @@
         "source_id": "2_9wPzNWk$miC$QxoUNIXQ",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 4951.7,
+        "render_class": "infrastructure",
         "base_elevation": 220.55,
         "centroid_lng": -80.8847421,
         "centroid_lat": 35.2374957
@@ -4526,6 +4724,8 @@
         "source_id": "1lZjHUr1YR0I7thFbw93lw",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 418.5,
+        "render_class": "community-building",
         "base_elevation": 220.41,
         "centroid_lng": -80.880339,
         "centroid_lat": 35.2384928
@@ -4565,6 +4765,8 @@
         "source_id": "0gxroPkH4To1uicKfonHlZ",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 75.9,
+        "render_class": "small-house",
         "base_elevation": 222.7,
         "centroid_lng": -80.8826411,
         "centroid_lat": 35.2405602
@@ -4612,6 +4814,8 @@
         "source_id": "1NwGKdlKN8d1JsvfH05Z87",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 50.6,
+        "render_class": "small-house",
         "base_elevation": 226.84,
         "centroid_lng": -80.882099,
         "centroid_lat": 35.242042
@@ -4651,6 +4855,8 @@
         "source_id": "1Rt5FOD4goWNO3BZbmX6rY",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 205.3,
+        "render_class": "community-building",
         "base_elevation": 224.53,
         "centroid_lng": -80.8824438,
         "centroid_lat": 35.2416241
@@ -4698,6 +4904,8 @@
         "source_id": "32jasopcEXCvJik55dLUqG",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 387,
+        "render_class": "community-building",
         "base_elevation": 229.77,
         "centroid_lng": -80.8803299,
         "centroid_lat": 35.2421247
@@ -4761,6 +4969,8 @@
         "source_id": "2SCLKAIkW_EUKaV6qN4RIQ",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 574.3,
+        "render_class": "infrastructure",
         "base_elevation": 213.34,
         "centroid_lng": -80.8809212,
         "centroid_lat": 35.2375042
@@ -4816,6 +5026,8 @@
         "source_id": "2kwQtkIoVYp$rrt2lAZA9_",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 225.6,
+        "render_class": "community-building",
         "base_elevation": 222.54,
         "centroid_lng": -80.8803336,
         "centroid_lat": 35.2387131
@@ -4863,6 +5075,8 @@
         "source_id": "0ea9k4tkyd2Hrfk1MywxbC",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 100,
+        "render_class": "house",
         "base_elevation": 223.63,
         "centroid_lng": -80.8830591,
         "centroid_lat": 35.2415037
@@ -4902,6 +5116,8 @@
         "source_id": "2c462tL6j$kazcd9PD4efw",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 86.3,
+        "render_class": "house",
         "base_elevation": 222.62,
         "centroid_lng": -80.8831731,
         "centroid_lat": 35.2413911
@@ -4941,6 +5157,8 @@
         "source_id": "2Dcmx5vHkOq66Y_GQu_GkZ",
         "name": "Contextual Building",
         "height": 3.8,
+        "area_sqm": 54.5,
+        "render_class": "small-house",
         "base_elevation": 221.25,
         "centroid_lng": -80.8847035,
         "centroid_lat": 35.2405235
@@ -4980,6 +5198,8 @@
         "source_id": "0I4F4sRdmpsluu1Un$Z1qh",
         "name": "Contextual Building",
         "height": 3.6,
+        "area_sqm": 123.2,
+        "render_class": "house",
         "base_elevation": 224.13,
         "centroid_lng": -80.8811292,
         "centroid_lat": 35.2403858
@@ -5019,6 +5239,8 @@
         "source_id": "0ZHevaXX3pxmBgDZRWJvou",
         "name": "Contextual Building",
         "height": 4.3,
+        "area_sqm": 78.2,
+        "render_class": "small-house",
         "base_elevation": 222.4,
         "centroid_lng": -80.8818787,
         "centroid_lat": 35.2403025
@@ -5058,6 +5280,8 @@
         "source_id": "3dqwg1MsMYSTsmLkXCEBdC",
         "name": "Contextual Building",
         "height": 4.8,
+        "area_sqm": 493.4,
+        "render_class": "infrastructure",
         "base_elevation": 226.89,
         "centroid_lng": -80.8857907,
         "centroid_lat": 35.239424
@@ -5097,6 +5321,8 @@
         "source_id": "0n0LgASAJBQv5OT5i6N0fZ",
         "name": "Contextual Building",
         "height": 4,
+        "area_sqm": 240.3,
+        "render_class": "community-building",
         "base_elevation": 225,
         "centroid_lng": -80.8849159,
         "centroid_lat": 35.2387828
@@ -5136,6 +5362,8 @@
         "source_id": "3Bn3SfXd5zI991tIGublMQ",
         "name": "Contextual Building",
         "height": 5.2,
+        "area_sqm": 1317.8,
+        "render_class": "infrastructure",
         "base_elevation": 220.38,
         "centroid_lng": -80.8831711,
         "centroid_lat": 35.2384603
@@ -5195,6 +5423,8 @@
         "source_id": "2P9Ot$rfrkE6b1PNS_k2TE",
         "name": "Contextual Building",
         "height": 4.1,
+        "area_sqm": 310.5,
+        "render_class": "community-building",
         "base_elevation": 225.38,
         "centroid_lng": -80.8855964,
         "centroid_lat": 35.2384328
@@ -5234,6 +5464,8 @@
         "source_id": "3BLxMOZwBXn2kergzFov8Z",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 430.9,
+        "render_class": "infrastructure",
         "base_elevation": 219.39,
         "centroid_lng": -80.8837416,
         "centroid_lat": 35.2376918
@@ -5281,6 +5513,8 @@
         "source_id": "3MYMNO4rNY9RPc4dn2pGkf",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 85.5,
+        "render_class": "house",
         "base_elevation": 226.27,
         "centroid_lng": -80.8809426,
         "centroid_lat": 35.2410498
@@ -5320,6 +5554,8 @@
         "source_id": "2kU63s83qh$P7TQk2GKf2W",
         "name": "Contextual Building",
         "height": 3,
+        "area_sqm": 45,
+        "render_class": "small-house",
         "base_elevation": 222.21,
         "centroid_lng": -80.8839355,
         "centroid_lat": 35.2415101
@@ -5359,6 +5595,8 @@
         "source_id": "0Kcg5Nlle_15$ZKh6_XR8b",
         "name": "Contextual Building",
         "height": 5.1,
+        "area_sqm": 106.4,
+        "render_class": "house",
         "base_elevation": 230.35,
         "centroid_lng": -80.8802756,
         "centroid_lat": 35.2418028
@@ -5398,6 +5636,8 @@
         "source_id": "0m1e4Ji8B1UxDusvF_tzsH",
         "name": "Contextual Building",
         "height": 3.4,
+        "area_sqm": 124.8,
+        "render_class": "house",
         "base_elevation": 220.96,
         "centroid_lng": -80.8845231,
         "centroid_lat": 35.2415651
@@ -5437,6 +5677,8 @@
         "source_id": "2ZhF5tieLMnI1lCex6AK0$",
         "name": "Contextual Building",
         "height": 4.5,
+        "area_sqm": 82.6,
+        "render_class": "house",
         "base_elevation": 228.75,
         "centroid_lng": -80.8809408,
         "centroid_lat": 35.2414525
@@ -5476,6 +5718,8 @@
         "source_id": "22WxcLffiV5yZTVOXzVqV0",
         "name": "Contextual Building",
         "height": 3.4,
+        "area_sqm": 134,
+        "render_class": "house",
         "base_elevation": 221.48,
         "centroid_lng": -80.8841916,
         "centroid_lat": 35.2414079
@@ -5515,6 +5759,8 @@
         "source_id": "2zH4DgCu$L99BjnDVbH1WA",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 101,
+        "render_class": "house",
         "base_elevation": 221.69,
         "centroid_lng": -80.8832426,
         "centroid_lat": 35.2412748
@@ -5554,6 +5800,8 @@
         "source_id": "2RalkZWXDChp6432XlvYjc",
         "name": "Contextual Building",
         "height": 4.5,
+        "area_sqm": 73.3,
+        "render_class": "small-house",
         "base_elevation": 223.14,
         "centroid_lng": -80.8828513,
         "centroid_lat": 35.241154
@@ -5609,6 +5857,8 @@
         "source_id": "0izx9lIZiVxhvBg$6b3pF2",
         "name": "Contextual Building",
         "height": 4.8,
+        "area_sqm": 114.7,
+        "render_class": "house",
         "base_elevation": 220.3,
         "centroid_lng": -80.8842085,
         "centroid_lat": 35.2409477
@@ -5648,6 +5898,8 @@
         "source_id": "39RaMKg0c197qULpOcvG0W",
         "name": "Contextual Building",
         "height": 3.9,
+        "area_sqm": 93.3,
+        "render_class": "house",
         "base_elevation": 217.97,
         "centroid_lng": -80.8806795,
         "centroid_lat": 35.2378342
@@ -5699,6 +5951,8 @@
         "source_id": "0HouS7T8CM5S72ccZKABOw",
         "name": "Contextual Building",
         "height": 4.2,
+        "area_sqm": 88.7,
+        "render_class": "house",
         "base_elevation": 223.23,
         "centroid_lng": -80.8816655,
         "centroid_lat": 35.2406819
@@ -5750,6 +6004,8 @@
         "source_id": "0LJh0APmJE8u99QEItKdhF",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 55.2,
+        "render_class": "small-house",
         "base_elevation": 222.24,
         "centroid_lng": -80.8828145,
         "centroid_lat": 35.2406935
@@ -5789,6 +6045,8 @@
         "source_id": "2EDS9Px$D7NON0$mxKPO5L",
         "name": "Contextual Building",
         "height": 4.9,
+        "area_sqm": 1616.2,
+        "render_class": "infrastructure",
         "base_elevation": 212.81,
         "centroid_lng": -80.8803145,
         "centroid_lat": 35.2370143
@@ -5856,6 +6114,8 @@
         "source_id": "3VRuMZN_MaaWi35IQg4AXF",
         "name": "Contextual Building",
         "height": 4.7,
+        "area_sqm": 72.7,
+        "render_class": "small-house",
         "base_elevation": 223.58,
         "centroid_lng": -80.882242,
         "centroid_lat": 35.2404532
@@ -5895,6 +6155,8 @@
         "source_id": "20YOzq7cTmBp9mS1bjSIMM",
         "name": "Contextual Building",
         "height": 3.7,
+        "area_sqm": 138.9,
+        "render_class": "house",
         "base_elevation": 222.55,
         "centroid_lng": -80.8849701,
         "centroid_lat": 35.2420056
@@ -5950,6 +6212,8 @@
         "source_id": "1Y9s6a_FXUW9f_mJoYuZrH",
         "name": "Contextual Building",
         "height": 3.8,
+        "area_sqm": 116.1,
+        "render_class": "house",
         "base_elevation": 219,
         "centroid_lng": -80.8844051,
         "centroid_lat": 35.241024
@@ -5989,6 +6253,8 @@
         "source_id": "3MZ1NON9CVnsk7RL82AovD",
         "name": "Contextual Building",
         "height": 3.1,
+        "area_sqm": 181.7,
+        "render_class": "community-building",
         "base_elevation": 226.13,
         "centroid_lng": -80.8858706,
         "centroid_lat": 35.2408419
@@ -6028,6 +6294,8 @@
         "source_id": "1Z3PqRT_GI7UuSfNCWcRce",
         "name": "Contextual Building",
         "height": 4.8,
+        "area_sqm": 72.5,
+        "render_class": "small-house",
         "base_elevation": 223.42,
         "centroid_lng": -80.8824464,
         "centroid_lat": 35.2405385
@@ -6067,6 +6335,8 @@
         "source_id": "1mbWkeTLERM7QpRWA77AE7",
         "name": "Contextual Building",
         "height": 4.4,
+        "area_sqm": 85.2,
+        "render_class": "house",
         "base_elevation": 228.52,
         "centroid_lng": -80.8816871,
         "centroid_lat": 35.2417713
